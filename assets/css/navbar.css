@@ -1,0 +1,97 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI", sans-serif;
+}
+
+.header{
+  background:#fff;
+  border-bottom:2px solid #e3f2fd;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:16px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:relative;
+}
+
+.logo img{
+  height:52px;
+}
+
+.nav-menu{
+  list-style:none;
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+
+.nav-menu li{
+  position:relative;
+}
+
+.nav-menu a{
+  text-decoration:none;
+  color:#0b2c4d;
+  font-size:15px;
+  font-weight:500;
+  padding:6px 0;
+  position:relative;
+}
+
+.nav-menu a::after{
+  content:"";
+  position:absolute;
+  width:0;
+  height:2px;
+  background:linear-gradient(90deg,#1e88e5,#7ac943);
+  left:0;
+  bottom:-6px;
+  transition:0.3s;
+}
+
+.nav-menu a:hover::after,
+.nav-menu .active::after{
+  width:100%;
+}
+
+.dropdown-menu{
+  position:absolute;
+  top:calc(100% + 10px);
+  left:0;
+  background:#fff;
+  min-width:220px;
+  border-radius:10px;
+  box-shadow:0 20px 45px rgba(0,0,0,0.18);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(10px);
+  transition:0.3s;
+}
+
+.dropdown:hover .dropdown-menu{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
+.dropdown-menu a{
+  display:block;
+  padding:14px 18px;
+}
+
+.quote-btn{
+  padding:10px 26px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#1e88e5,#7ac943);
+  color:#fff !important;
+  font-weight:600;
+}
