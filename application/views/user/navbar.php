@@ -10,53 +10,52 @@
   <script src="<?php echo base_url('assets/js/about.js'); ?>" defer></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<head>
 <body>
-
-<header class="header">
-  <div class="container">
+<header class="ms-navbar">
+  <div class="ms-container">
+<div class="ms-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
 
     <!-- Logo -->
-    <div class="logo">
-      <img src="<?= base_url('assets/image/logo.png') ?>" alt="Maha Solar">
+    <div class="ms-logo">
+      <span>Maha</span>Solar
     </div>
 
     <!-- Menu -->
-    <nav>
-      <ul class="nav-menu">
-
-        <li><a href="<?= base_url('/'); ?> " class="active">Home</a></li>
-        <li><a href="<?= base_url('user/about'); ?>">About</a></li>
-        
+    <nav class="ms-menu">
+ <a href="<?= base_url('user/index') ?>" class="active">Home</a>
+<a href="<?= base_url('user/about') ?>">About</a>
 
 
+      <div class="ms-dropdown">
+        <a href="<?= base_url('user/products') ?>">Products</a>
+        <div class="ms-dropdown-menu">
+          <a href="<?= base_url('user/solar_water_heater') ?>">Solar Water Heater</a>
+          <a href="<?= base_url('user/solar_pumps') ?>">Solar Pumps</a>
+          <a href="<?= base_url('user/on_grid_solar') ?>">On Grid Solar</a>
+          <a href="<?= base_url('user/street_light') ?>">Street Light</a>
+        </div>
+      </div>
 
-        <li class="dropdown">
-          <a href="#">Products ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Solar Water Heater</a></li>
-            <li><a href="#">Solar Water Pumps</a></li>
-            <li><a href="#">On Grid Solar</a></li>
-            <li><a href="#">Solar Street Light</a></li>
-          </ul>
-        </li>
+      <div class="ms-dropdown">
+        <a href="<?= base_url('user/services') ?>">Services</a>
+        <div class="ms-dropdown-menu">
+          <a href="<?= base_url('user/residential') ?>">Residential</a>
+          <a href="<?= base_url('user/industrial') ?>">Industrial</a>
+          <a href="<?= base_url('user/commercial') ?>">Commercial</a>
+        </div>
+      </div>
 
-        <li class="dropdown">
-          <a href="#">Services ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Residential</a></li>
-            <li><a href="#">Industrial</a></li>
-            <li><a href="#">Educational</a></li>
-            <li><a href="#">Healthcare</a></li>
-          </ul>
-        </li>
+      <a href="<?= base_url('user/blogs') ?>">Blogs</a>
+      <a href="<?= base_url('user/contact') ?>">Contact</a>
 
-        <li><a href="blogs.php">Blogs</a></li>
-        <li><a href="contact.php">Contact</a></li>
-
-        <li><a href="quotation.php" class="quote-btn">Quotation</a></li>
-
-      </ul>
+      <a href="#" class="ms-btn">Get Quote</a>
     </nav>
 
   </div>
