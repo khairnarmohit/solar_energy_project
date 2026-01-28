@@ -31,6 +31,7 @@ public function services(){
     $this->load->view("user/footer");
 }
 
+
 public function solar_water_heater(){
 	$this->load->view("user/navbar");
 	$this->load->view("user/solar_water_heater");
