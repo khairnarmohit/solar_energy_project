@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="<?= base_url('assets/css/services.css') ?>">
   <link rel="stylesheet" href="<?= base_url('assets/css/residential.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/commercial.css') ?>">
+<link rel="stylesheet" href="<?= base_url('assets/css/contact.css') ?>">
+<link rel="stylesheet" href="<?= base_url('assets/css/quote.css') ?>">
 
 <link rel="stylesheet" href="<?= base_url('assets/css/industrial.css') ?>">
 
@@ -85,7 +87,7 @@
      Contact
   </a>
 
-  <a href="#" class="ms-btn">Get Quote</a>
+  <a href="<?= base_url('user/quote') ?>" class="ms-btn">Get Quote</a>
 </nav>
 
 
