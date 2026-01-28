@@ -1,0 +1,179 @@
+/* COMMON */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:70px 20px;
+}
+
+h1,h2{
+  color:#0b2c4d;
+}
+
+/* HERO */
+.ind-hero{
+  background:#f8fdfc;
+  text-align:center;
+  padding:90px 20px;
+}
+
+.ind-hero h1{
+  font-size:42px;
+  margin-bottom:12px;
+}
+
+.ind-hero p{
+  font-size:18px;
+  color:#555;
+}
+
+/* ABOUT */
+.ind-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.ind-text h2{
+  font-size:30px;
+  margin-bottom:18px;
+}
+
+.ind-text p{
+  font-size:16px;
+  color:#555;
+  margin-bottom:25px;
+}
+
+.ind-points{
+  list-style:none;
+  padding:0;
+}
+
+.ind-points li{
+  padding:8px 0;
+  font-size:15px;
+  position:relative;
+  padding-left:22px;
+}
+
+.ind-points li::before{
+  content:"✔";
+  position:absolute;
+  left:0;
+  color:#3df2f2;
+}
+
+/* IMAGE PLACEHOLDER */
+.img-placeholder{
+  width:100%;
+  height:340px;
+  background:#eef9f9;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#777;
+  font-size:16px;
+  border-radius:8px;
+}
+.res-image img,
+.com-image img,
+.ind-image img{
+  width:100%;
+  height:340px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+/* CAPABILITIES */
+.ind-capabilities{
+  background:#f9fafb;
+  text-align:center;
+}
+
+.ind-capabilities h2{
+  margin-bottom:40px;
+}
+
+.capability-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.capability-box{
+  background:#fff;
+  padding:26px 20px;
+  border-radius:6px;
+  font-weight:600;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* WHY CHOOSE */
+.ind-why{
+  text-align:center;
+}
+
+.ind-why h2{
+  margin-bottom:40px;
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.why-box{
+  background:#fff;
+  padding:26px 20px;
+  border-radius:6px;
+  font-weight:600;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* CTA */
+.ind-cta{
+  background:linear-gradient(260deg,#3df2f2,#a8fa2d);
+  text-align:center;
+}
+
+.ind-cta h2{
+  font-size:32px;
+  margin-bottom:25px;
+}
+
+/* BUTTON */
+.btn-primary{
+  display:inline-block;
+  padding:14px 36px;
+  background:#fff;
+  color:#0b2c4d;
+  font-weight:700;
+  border-radius:4px;
+  text-decoration:none;
+}
+
+.btn-primary.big{
+  padding:18px 52px;
+}
+
+/* RESPONSIVE */
+@media(max-width:991px){
+
+  .ind-grid{
+    grid-template-columns:1fr;
+  }
+
+  .capability-grid,
+  .why-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:575px){
+  .capability-grid,
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+}

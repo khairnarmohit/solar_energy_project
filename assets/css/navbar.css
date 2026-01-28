@@ -105,21 +105,21 @@
 /* CTA BUTTON */
 .ms-btn{
   padding:18px 52px;                 /* ⬅️ BIG */
-  background:linear-gradient(200deg,#86d6d6,#adb65b);
-  color:#0b2c4d !important;
+  background:linear-gradient(200deg,#b4dbec,#a0f71e);
+  color:#f7f8fa !important;
 
   font-size:19px;
   font-weight:800;
   letter-spacing:0.4px;
 
   border:none;
-  border-radius:4px;
+  border-radius:3px;
 
   display:inline-flex;
   align-items:center;
   justify-content:center;
 
-  border: 1px solid #e9eef3;
+  border: 1px dotted #343b42;
   transition:all .18s ease;
 }
 

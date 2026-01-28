@@ -1,4 +1,4 @@
-/* COMMON */
+/* ================= COMMON ================= */
 .container{
   max-width:1200px;
   margin:auto;
@@ -9,24 +9,38 @@ h1,h2,h3{
   color:#0b2c4d;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .services-hero{
-  background:#f8fdfc;
+  position:relative;
+  background:
+    linear-gradient(
+      rgba(172, 212, 207, 0.45),
+      rgba(190, 241, 210, 0.45)
+    ),
+    url("../image/servicepage.jpg") center/cover no-repeat;
+
   text-align:center;
-  padding:80px 20px;
+  padding:130px 20px;
+  color:#f5ebeb;
 }
 
 .services-hero h1{
-  font-size:42px;
-  margin-bottom:10px;
+  font-size:46px;
+  font-weight:800;
+  margin-bottom:14px;
+
+  background:linear-gradient(400deg,#042c55,#30c956);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
 .services-hero p{
   font-size:18px;
-  color:#555;
+  color:#0b2c4d;
+  font-weight:500;
 }
 
-/* SERVICES CARDS */
+/* ================= SERVICES CARDS ================= */
 .services-list .container{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -35,10 +49,18 @@ h1,h2,h3{
 
 .service-card{
   background:#fff;
-  padding:35px 30px;
-  border-radius:8px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.08);
+  padding:38px 30px;
+  border-radius:10px;
+  box-shadow:0 14px 35px rgba(0,0,0,0.08);
   text-align:center;
+  transition:.3s ease;
+}
+
+.service-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 45px rgba(0,0,0,0.12);
+  border: 1px solid #a0f71e;
+  
 }
 
 .service-card h3{
@@ -49,32 +71,44 @@ h1,h2,h3{
 .service-card p{
   font-size:15px;
   color:#555;
-  margin-bottom:25px;
+  margin-bottom:28px;
+  line-height:1.6;
 }
 
-/* WHY CHOOSE */
+/* ================= WHY CHOOSE ================= */
 .services-why{
   background:#f9fafb;
 }
 
 .services-why h2{
   text-align:center;
-  margin-bottom:30px;
+  margin-bottom:35px;
+  font-size:32px;
 }
 
 .services-why ul{
-  max-width:700px;
+  max-width:720px;
   margin:auto;
   list-style:none;
   padding:0;
 }
 
 .services-why li{
-  padding:10px 0;
+  padding:12px 0;
   font-size:16px;
+  position:relative;
+  padding-left:28px;
 }
 
-/* CTA */
+.services-why li::before{
+  content:"✔";
+  position:absolute;
+  left:0;
+  color:#3df2f2;
+  font-weight:bold;
+}
+
+/* ================= CTA ================= */
 .services-cta{
   background:linear-gradient(260deg,#3df2f2,#a8fa2d);
   text-align:center;
@@ -82,28 +116,39 @@ h1,h2,h3{
 }
 
 .services-cta h2{
-  font-size:32px;
-  margin-bottom:25px;
+  font-size:34px;
+  margin-bottom:30px;
+  font-weight:800;
 }
 
-/* BUTTON */
+/* ================= BUTTON ================= */
 .btn-primary{
   display:inline-block;
-  padding:14px 36px;
+  padding:14px 38px;
   background:#fff;
   color:#0b2c4d;
   font-weight:700;
   border-radius:4px;
   text-decoration:none;
+  transition:.25s ease;
+}
+
+.btn-primary:hover{
+  transform:translateY(-2px);
 }
 
 .btn-primary.big{
-  padding:18px 52px;
+  padding:18px 56px;
+  font-size:16px;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 @media(max-width:991px){
   .services-list .container{
     grid-template-columns:1fr;
+  }
+
+  .services-hero h1{
+    font-size:36px;
   }
 }

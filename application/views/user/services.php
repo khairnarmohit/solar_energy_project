@@ -57,12 +57,3 @@
     </ul>
   </div>
 </section>
-
-<section class="services-cta">
-  <div class="container">
-    <h2>Ready to switch to solar energy?</h2>
-    <a href="<?= base_url('user/contact') ?>" class="btn-primary big">
-      Get Free Consultation
-    </a>
-  </div>
-</section>
