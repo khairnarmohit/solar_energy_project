@@ -58,4 +58,17 @@
       <div class="benefit-box">Green & Sustainable Image</div>
     </div>
   </div>
+
 </section>
+
+</section>
+
+<section class="com-cta">
+  <div class="container">
+    <h2>Looking to Reduce Your Business Energy Costs?</h2>
+    <a href="<?= base_url('user/contact') ?>" class="btn-primary big">
+      Get Commercial Solar Proposal
+    </a>
+  </div>
+</section>
+

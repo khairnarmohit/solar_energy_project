@@ -10,9 +10,8 @@
   <link rel="stylesheet" href="<?= base_url('assets/css/services.css') ?>">
   <link rel="stylesheet" href="<?= base_url('assets/css/residential.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/commercial.css') ?>">
+
 <link rel="stylesheet" href="<?= base_url('assets/css/industrial.css') ?>">
-
-
 
 
   <script src="<?php echo base_url('assets/js/about.js'); ?>" defer></script>

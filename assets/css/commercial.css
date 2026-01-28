@@ -9,6 +9,7 @@ h1,h2{
   color:#0b2c4d;
 }
 
+
 /* ================= HERO ================= */
 .com-hero{
   position:relative;
@@ -32,14 +33,29 @@ h1,h2{
   font-weight:800;
   margin-bottom:12px;
   color:#0b2c4d;
+
+/* HERO */
+.com-hero{
+  background:#f8fdfc;
+  text-align:center;
+  padding:90px 20px;
+}
+
+.com-hero h1{
+  font-size:42px;
+  margin-bottom:12px;
+
 }
 
 .com-hero p{
   font-size:18px;
+
   color:#0b2c4d;
   font-weight:500;
 }
 
+
+}
 
 /* ABOUT */
 .com-grid{
@@ -90,12 +106,14 @@ h1,h2{
   color:#777;
   font-size:16px;
   border-radius:8px;
+
   background:
     linear-gradient(
       rgba(172,212,207,0.45),
       rgba(190,241,210,0.45)
     ),
     url("../image/commercial.jpg") center/cover no-repeat;
+
 }
 
 /* SUITABLE */
@@ -113,11 +131,13 @@ h1,h2{
   grid-template-columns:repeat(4,1fr);
   gap:20px;
 }
+
 .suitable-grid :hover{
   border: 1px solid #a0f71e;
     transform:translateY(-6px);
     box-shadow: inset 0 0 10px rgba(0,0,0,0.12) ;
 }
+
 .suitable-box{
   background:#fff;
   padding:22px 18px;
@@ -125,11 +145,15 @@ h1,h2{
   font-weight:600;
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
+
 .suitable-box :hover{
   border: 1px solid #a0f71e;
     transform:translateY(-6px);
     box-shadow: inset 0 0 10px rgba(0,0,0,0.12) ;
 }   
+
+
+
 /* BENEFITS */
 .com-benefits{
   text-align:center;

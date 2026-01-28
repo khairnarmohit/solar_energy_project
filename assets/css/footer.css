@@ -1,6 +1,6 @@
 .ms-footer{
-  background:#0b2c4d;
-  color:#cbd5e1;
+ background:linear-gradient(260deg,#3df2f2,#a8fa2d);
+  color:#222;
 }
 
 /* FOOTER CONTAINER */
@@ -21,23 +21,22 @@
 .footer-col h3{
   font-size:26px;
   margin-bottom:15px;
-  color:#fff;
+  color:#141010;
 }
 
 .footer-col h3 span{
-  color:#3df2f2;
+  color:#111616;
 }
 
 .footer-col h4{
   font-size:18px;
   margin-bottom:16px;
-  color:#fff;
+  color:#222;
 }
-
 .footer-col p{
   font-size:15px;
   line-height:1.7;
-  color:#cbd5e1;
+  color:#222;
 }
 
 .footer-col ul{
@@ -51,24 +50,24 @@
 }
 
 .footer-col ul li a{
-  color:#cbd5e1;
+  color:#222;
   text-decoration:none;
   font-size:15px;
   transition:.25s ease;
 }
 
 .footer-col ul li a:hover{
-  color:#3df2f2;
+  color:#222;
   padding-left:6px;
 }
 
 /* BOTTOM */
 .footer-bottom{
-  border-top:1px solid rgba(255,255,255,0.15);
+  border-top:1px solid rgba(15, 15, 15, 0.15);
   text-align:center;
   padding:18px;
   font-size:14px;
-  color:#9ca3af;
+  color:#222;
 }
 
 /* RESPONSIVE */

@@ -67,13 +67,7 @@ class User extends CI_Controller {
         $this->load->view("user/footer");
     }
 
-    public function residential()
-    {
-        $this->load->view("user/navbar");
-        $this->load->view("user/residential");
-        $this->load->view("user/footer");
-    }
-
+ 
     public function commercial()
     {
         $this->load->view("user/navbar");
@@ -87,4 +81,13 @@ class User extends CI_Controller {
         $this->load->view("user/industrial");
         $this->load->view("user/footer");
     }
+    
+
+    public function residential(){
+    $this->load->view("user/navbar");
+    $this->load->view("user/residential");
+    $this->load->view("user/footer");
+
+}
+
 }
