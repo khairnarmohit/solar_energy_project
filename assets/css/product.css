@@ -1,0 +1,44 @@
+/* default hidden */
+.animate-left,
+.animate-right {
+  opacity: 0;
+}
+
+/* show on scroll */
+.animate-left.show {
+  animation: slideFromLeft 1.1s ease-in-out forwards;
+}
+
+.animate-right.show {
+  animation: slideFromRight 1.1s ease-in-out forwards;
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* mobile safety */
+@media (max-width: 768px) {
+  .animate-left.show,
+  .animate-right.show {
+    animation-duration: 0.8s;
+  }
+}

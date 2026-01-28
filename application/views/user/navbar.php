@@ -65,6 +65,20 @@
         </div>
       </div>
 
+        <li class="dropdown">
+  <a href="<?=base_url()?>user/product" class="dropdown-toggle">
+    Products ▾
+  </a>
+
+  <ul class="dropdown-menu">
+    <li><a href="<?=base_url()?>user/product/solar_water_heater">Solar Water Heater</a></li>
+    <li><a href="<?=base_url()?>user/product/solar_water_pump">Solar Water Pumps</a></li>
+    <li><a href="<?=base_url()?>user/product/on_grid_solar">On Grid Solar</a></li>
+    <li><a href="<?=base_url()?>user/product/solar_street_light">Solar Street Light</a></li>
+  </ul>
+</li>
+
+
 
       <a href="<?= base_url('user/blogs') ?>">Blogs</a>
       <a href="<?= base_url('user/contact') ?>">Contact</a>
