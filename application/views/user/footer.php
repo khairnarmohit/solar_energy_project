@@ -3,9 +3,9 @@
   <div class="footer-container footer-grid">
 
     <div class="footer-col">
-      <h3><span>Maha</span>Solar</h3>
+      <h3><span>convex</span></h3>
       <p>
-        Maha Solar delivers reliable, affordable and sustainable solar energy
+        Convex delivers reliable, affordable and sustainable solar energy
         solutions for residential, commercial and industrial customers.
       </p>
     </div>
@@ -35,13 +35,23 @@
       <h4>Contact Info</h4>
       <p>📍 Pune, Maharashtra</p>
       <p>📞 +91 9XXXXXXXXX</p>
-      <p>✉ info@mahasolar.com</p>
+      <p>✉ info@convexsolar.com</p>
     </div>
 
   </div>
 
   <div class="footer-bottom">
-    © <?= date('Y') ?> Maha Solar. All Rights Reserved.
+    © <?= date('Y') ?> Convex Solar. All Rights Reserved.
   </div>
 
 </footer>
+
+<a href="https://wa.me/919XXXXXXXXX"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+
+  <ion-icon name="logo-whatsapp"></ion-icon>
+</a>
+
+

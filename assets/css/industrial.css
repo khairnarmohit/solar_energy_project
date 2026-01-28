@@ -1,4 +1,4 @@
-/* COMMON */
+/* ================= COMMON ================= */
 .container{
   max-width:1200px;
   margin:auto;
@@ -9,24 +9,45 @@ h1,h2{
   color:#0b2c4d;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+/* ================= HERO ================= */
 .ind-hero{
-  background:#f8fdfc;
+  position:relative;
   text-align:center;
-  padding:90px 20px;
+
+  /* IMPORTANT */
+  min-height:490px;              /* ⬅️ image दिसण्यासाठी */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.45),           /* dark overlay */
+      rgba(0,0,0,0.45)
+    ),
+    url("../image/industrial.jpg");
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
 }
 
 .ind-hero h1{
-  font-size:42px;
+  font-size:44px;
+  font-weight:800;
   margin-bottom:12px;
+  color:#8cd5f7;                 /* ⬅️ white text */
 }
 
 .ind-hero p{
   font-size:18px;
-  color:#555;
+  font-weight:500;
+  color:#72e7dd;
 }
 
-/* ABOUT */
+
+/* ================= ABOUT ================= */
 .ind-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -34,15 +55,11 @@ h1,h2{
   align-items:center;
 }
 
-.ind-text h2{
-  font-size:30px;
-  margin-bottom:18px;
-}
-
 .ind-text p{
   font-size:16px;
   color:#555;
   margin-bottom:25px;
+  line-height:1.6;
 }
 
 .ind-points{
@@ -64,28 +81,16 @@ h1,h2{
   color:#3df2f2;
 }
 
-/* IMAGE PLACEHOLDER */
-.img-placeholder{
-  width:100%;
-  height:340px;
-  background:#eef9f9;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#777;
-  font-size:16px;
-  border-radius:8px;
-}
-.res-image img,
-.com-image img,
+/* IMAGE */
 .ind-image img{
   width:100%;
   height:340px;
   object-fit:cover;
   border-radius:8px;
+  box-shadow:0 14px 35px rgba(0,0,0,0.12);
 }
 
-/* CAPABILITIES */
+/* ================= CAPABILITIES ================= */
 .ind-capabilities{
   background:#f9fafb;
   text-align:center;
@@ -109,7 +114,7 @@ h1,h2{
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* WHY CHOOSE */
+/* ================= WHY CHOOSE ================= */
 .ind-why{
   text-align:center;
 }
@@ -132,7 +137,7 @@ h1,h2{
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* CTA */
+/* ================= CTA ================= */
 .ind-cta{
   background:linear-gradient(260deg,#3df2f2,#a8fa2d);
   text-align:center;
@@ -158,9 +163,8 @@ h1,h2{
   padding:18px 52px;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 @media(max-width:991px){
-
   .ind-grid{
     grid-template-columns:1fr;
   }
@@ -168,6 +172,10 @@ h1,h2{
   .capability-grid,
   .why-grid{
     grid-template-columns:1fr 1fr;
+  }
+
+  .ind-hero h1{
+    font-size:36px;
   }
 }
 

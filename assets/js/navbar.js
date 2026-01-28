@@ -1,16 +1,20 @@
-const toggle = document.querySelector(".ms-toggle");
-const menu = document.querySelector(".ms-menu");
-const dropdownLinks = document.querySelectorAll(".ms-dropdown > a");
+document.addEventListener("DOMContentLoaded", () => {
 
-toggle.addEventListener("click", () => {
-  menu.classList.toggle("active");
-});
+  const toggle = document.querySelector(".ms-toggle");
+  const menu   = document.querySelector(".ms-menu");
 
-dropdownLinks.forEach(link => {
-  link.addEventListener("click", e => {
-    if (window.innerWidth <= 991) {
-      e.preventDefault();
-      link.parentElement.classList.toggle("active");
-    }
+  /* Toggle mobile menu */
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
   });
+
+  /* Close menu after clicking any link (mobile) */
+  document.querySelectorAll(".ms-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 991) {
+        menu.classList.remove("active");
+      }
+    });
+  });
+
 });

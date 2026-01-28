@@ -14,8 +14,21 @@
 <link rel="stylesheet" href="<?= base_url('assets/css/quote.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/solar_water_heater.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/solar_water_pump.css') ?>">
+
 <link rel="stylesheet" href="<?= base_url('assets/css/industrial.css') ?>">
+
+
+
 <link rel="stylesheet" href="<?= base_url('assets/css/blogs.css') ?>">
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4r5jHk9vKx5C5dYl3Q=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <script src="<?php echo base_url('assets/js/about.js'); ?>" defer></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -24,6 +37,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <head>
+  <script src="<?= base_url('assets/js/navbar.js') ?>"></script>
 <body>
 <header class="ms-navbar">
   <div class="ms-container">
@@ -65,18 +79,30 @@
     </div>
   </div>
 
-  <div class="ms-dropdown">
-    <a href="<?= base_url('user/services') ?>"
-       class="<?= ($this->uri->segment(2) == 'services') ? 'active' : '' ?>">
-       Services
+<div class="ms-dropdown">
+  <a href="<?= base_url('user/services') ?>"
+     class="<?= in_array($this->uri->segment(2), ['services','residential','commercial','industrial']) ? 'active' : '' ?>">
+     Services
+  </a>
+
+  <div class="ms-dropdown-menu">
+    <a href="<?= base_url('user/residential') ?>"
+       class="<?= ($this->uri->segment(2) == 'residential') ? 'active' : '' ?>">
+       Residential
     </a>
 
-    <div class="ms-dropdown-menu">
-      <a href="<?= base_url('user/residential') ?>">Residential</a>
-      <a href="<?= base_url('user/industrial') ?>">Industrial</a>
-      <a href="<?= base_url('user/commercial') ?>">Commercial</a>
-    </div>
+    <a href="<?= base_url('user/industrial') ?>"
+       class="<?= ($this->uri->segment(2) == 'industrial') ? 'active' : '' ?>">
+       Industrial
+    </a>
+
+    <a href="<?= base_url('user/commercial') ?>"
+       class="<?= ($this->uri->segment(2) == 'commercial') ? 'active' : '' ?>">
+       Commercial
+    </a>
   </div>
+</div>
+
 
   <a href="<?= base_url('user/blogs') ?>"
      class="<?= ($this->uri->segment(2) == 'blogs') ? 'active' : '' ?>">

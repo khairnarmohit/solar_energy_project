@@ -11,7 +11,7 @@
     <div class="com-image">
       <!-- Replace with actual image later -->
       <div class="img-placeholder">
-        Commercial Solar Image
+        
       </div>
     </div>
 

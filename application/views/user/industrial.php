@@ -1,3 +1,4 @@
+<!-- HERO -->
 <section class="ind-hero">
   <div class="container">
     <h1>Industrial Solar Solutions</h1>
@@ -5,14 +6,16 @@
   </div>
 </section>
 
+<!-- ABOUT -->
 <section class="ind-about">
   <div class="container ind-grid">
 
- <p class="seo-text">
-Maha Solar provides residential, commercial and industrial solar solutions
-across Maharashtra. We help homes, businesses and industries reduce electricity
-costs with reliable and sustainable solar energy systems.
-</p>
+    <div class="ind-text">
+      <p class="seo-text">
+        Maha Solar provides residential, commercial and industrial solar solutions
+        across Maharashtra. We help homes, businesses and industries reduce electricity
+        costs with reliable and sustainable solar energy systems.
+      </p>
 
       <ul class="ind-points">
         <li>MW-Scale Solar Power Plants</li>
@@ -23,16 +26,13 @@ costs with reliable and sustainable solar energy systems.
     </div>
 
     <div class="ind-image">
-   <img src="<?= base_url('assets/images/residential-solar.jpg') ?>" alt="Residential Solar Panels">
-
-      <div class="img-placeholder">
-        Industrial Solar Plant Image
-      </div>
+      <img src="<?= base_url('assets/image/industrial.jpg') ?>" alt="Industrial Solar Panels">
     </div>
 
   </div>
 </section>
 
+<!-- CAPABILITIES -->
 <section class="ind-capabilities">
   <div class="container">
     <h2>Our Industrial Capabilities</h2>
@@ -46,6 +46,7 @@ costs with reliable and sustainable solar energy systems.
   </div>
 </section>
 
+<!-- WHY CHOOSE -->
 <section class="ind-why">
   <div class="container">
     <h2>Why Industries Choose Maha Solar</h2>
@@ -59,6 +60,7 @@ costs with reliable and sustainable solar energy systems.
   </div>
 </section>
 
+<!-- CTA -->
 <section class="ind-cta">
   <div class="container">
     <h2>Looking for a Reliable Industrial Solar Partner?</h2>
