@@ -1,0 +1,113 @@
+/* ===============================
+   PREMIUM PRODUCT ANIMATION
+   =============================== */
+
+/* ---------- CONTENT & CAPACITY INITIAL STATE ---------- */
+.reveal-content,
+.capacity-box {
+  opacity: 0;
+}
+
+/* ---------- IMAGE : ALWAYS VISIBLE ---------- */
+.reveal-img {
+  opacity: 1;                 /* image hide होत नाही */
+  transform: scale(1);
+  transition: transform 0.6s ease;
+}
+
+/* ---------- IMAGE : SCROLL ANIMATION ---------- */
+.reveal-img.show {
+  animation: imgPremium 1s cubic-bezier(.22,.61,.36,1) forwards;
+}
+
+@keyframes imgPremium {
+  0% {
+    transform: scale(0.96) translateY(18px);
+    filter: drop-shadow(0 0 0 rgba(0,0,0,0));
+  }
+  60% {
+    transform: scale(1.02) translateY(-6px);
+    filter: drop-shadow(0 18px 30px rgba(0,0,0,0.15));
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.12));
+  }
+}
+
+
+/* ---------- CONTENT : SLIDE + BLUR ---------- */
+.reveal-content.show {
+  animation: contentReveal 1s cubic-bezier(.22,.61,.36,1) forwards;
+}
+
+@keyframes contentReveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* ---------- TITLE UNDERLINE ---------- */
+.reveal-content h1,
+.reveal-content h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.reveal-content h1::after,
+.reveal-content h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg,#2e8b57,#8fd694);
+  transition: width .6s ease;
+}
+
+.reveal-content.show h1::after,
+.reveal-content.show h2::after {
+  width: 100%;
+}
+
+/* ---------- CAPACITY : PREMIUM CASCADE ---------- */
+.capacity-box {
+  border: 1px solid #dcdcdc;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.capacity-box.show {
+  animation: capacityWave 0.45s ease forwards;
+}
+
+@keyframes capacityWave {
+  from {
+    opacity: 0;
+    transform: translateY(10px) rotate(-2deg) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0) scale(1);
+  }
+}
+
+/* ---------- MOBILE OPTIMIZATION ---------- */
+@media (max-width: 768px) {
+  .reveal-img.show,
+  .reveal-content.show {
+    animation-duration: 0.75s;
+  }
+}

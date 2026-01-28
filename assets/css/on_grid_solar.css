@@ -1,0 +1,118 @@
+/* =====================================
+   ON GRID SOLAR – PAGE STYLES & ANIMATION
+   ===================================== */
+
+/* SAFETY: horizontal scroll avoid */
+body {
+  overflow-x: hidden;
+}
+
+/* -------------------------------
+   GENERAL IMAGE SAFETY
+-------------------------------- */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* -------------------------------
+   INITIAL STATE (HIDDEN)
+-------------------------------- */
+.og-reveal-left,
+.og-reveal-right,
+.og-reveal-up {
+  opacity: 0;
+}
+
+/* -------------------------------
+   LEFT → RIGHT ANIMATION
+-------------------------------- */
+.og-reveal-left.show {
+  animation: ogSlideLeft 0.9s ease forwards;
+}
+
+@keyframes ogSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* -------------------------------
+   RIGHT → LEFT ANIMATION
+-------------------------------- */
+.og-reveal-right.show {
+  animation: ogSlideRight 0.9s ease forwards;
+}
+
+@keyframes ogSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* -------------------------------
+   FADE UP ANIMATION
+-------------------------------- */
+.og-reveal-up.show {
+  animation: ogFadeUp 0.8s ease forwards;
+}
+
+@keyframes ogFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------------------
+   SECTION SPACING POLISH
+-------------------------------- */
+section {
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  letter-spacing: 0.3px;
+}
+
+/* -------------------------------
+   LIST POLISH (Benefits)
+-------------------------------- */
+ul {
+  margin: 0;
+}
+
+/* -------------------------------
+   MOBILE OPTIMIZATION
+-------------------------------- */
+@media (max-width: 768px) {
+
+  .og-reveal-left.show,
+  .og-reveal-right.show,
+  .og-reveal-up.show {
+    animation-duration: 0.65s;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}

@@ -51,9 +51,9 @@
 
     <div class="ms-dropdown-menu">
       <a href="<?= base_url('user/solar_water_heater') ?>">Solar Water Heater</a>
-      <a href="<?= base_url('user/solar_pumps') ?>">Solar Pumps</a>
+      <a href="<?= base_url('user/solar_water_pump') ?>">Solar Pumps</a>
       <a href="<?= base_url('user/on_grid_solar') ?>">On Grid Solar</a>
-      <a href="<?= base_url('user/street_light') ?>">Street Light</a>
+      <a href="<?= base_url('user/solar_street_light') ?>">Street Light</a>
     </div>
   </div>
 

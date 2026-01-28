@@ -11,7 +11,7 @@
     <div class="overlay"></div>
 
     <div class="hero-content">
-        <h1>About Us</h1>
+        <h1>Products</h1>
     </div>
 
     <div class="triangle-curve"></div>
@@ -35,7 +35,7 @@
       <div class="col-md-5 animate-right">
         <h1 class="fw-bold">Solar Water Heater</h1>
         <button class="btn btn-warning px-4 py-2 mt-3"
-                onclick="goToProduct('solar_water_heater.php')">
+                onclick="goToProduct('solar_water_heater')">
           Know More
         </button>
       </div>
@@ -53,7 +53,7 @@
       <div class="col-md-5 animate-left">
         <h1 class="fw-bold">Solar Water Pump</h1>
         <button class="btn btn-warning px-4 py-2 mt-3"
-                onclick="goToProduct('solar-water-pump.html')">
+                onclick="goToProduct('solar_water_pump')">
           Know More
         </button>
       </div>
@@ -85,7 +85,7 @@
       <div class="col-md-5 animate-right">
         <h1 class="fw-bold">On Grid Solar Plant</h1>
         <button class="btn btn-warning px-4 py-2 mt-3"
-                onclick="goToProduct('on-grid-solar.html')">
+                onclick="goToProduct('on_grid_solar')">
           Know More
         </button>
       </div>
@@ -103,7 +103,7 @@
       <div class="col-md-5 animate-left">
         <h1 class="fw-bold">Solar Street Light</h1>
         <button class="btn btn-warning px-4 py-2 mt-3"
-                onclick="goToProduct('solar-street-light.html')">
+                onclick="goToProduct('solar_street_light')">
           Know More
         </button>
       </div>

@@ -1,0 +1,55 @@
+/* ================================
+   SOLAR STREET LIGHT PAGE
+   ================================ */
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Initial hidden */
+.ssl-reveal-left,
+.ssl-reveal-right,
+.ssl-reveal-up {
+  opacity: 0;
+}
+
+/* Left */
+.ssl-reveal-left.show {
+  animation: sslLeft 0.9s ease forwards;
+}
+@keyframes sslLeft {
+  from { opacity:0; transform:translateX(-50px); }
+  to   { opacity:1; transform:translateX(0); }
+}
+
+/* Right */
+.ssl-reveal-right.show {
+  animation: sslRight 0.9s ease forwards;
+}
+@keyframes sslRight {
+  from { opacity:0; transform:translateX(50px); }
+  to   { opacity:1; transform:translateX(0); }
+}
+
+/* Up */
+.ssl-reveal-up.show {
+  animation: sslUp 0.8s ease forwards;
+}
+@keyframes sslUp {
+  from { opacity:0; transform:translateY(35px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+/* Mobile */
+@media (max-width:768px){
+  .ssl-reveal-left.show,
+  .ssl-reveal-right.show,
+  .ssl-reveal-up.show{
+    animation-duration:.65s;
+  }
+}
