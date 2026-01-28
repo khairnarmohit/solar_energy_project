@@ -17,18 +17,19 @@ public function about(){
     $this->load->view("user/navbar");
     $this->load->view("user/about");
     $this->load->view("user/footer");
-}
-public function product()
-{
-	$this->load->view("user/navbar");
-	$this->load->view("user/product");
-	$this->load->view("user/footer");
-}
-public function solar_water_heater()
-{
-	$this->load->view("user/navbar");
-	$this->load->view("user/solar_water_heater");
-	$this->load->view("user/footer");
 
 }
+public function product(){
+    $this->load->view("user/navbar");
+    $this->load->view("user/product");
+    $this->load->view("user/footer");
+
+}
+public function services(){
+    $this->load->view("user/navbar");
+    $this->load->view("user/services");
+    $this->load->view("user/footer");
+
+}
+
 }
