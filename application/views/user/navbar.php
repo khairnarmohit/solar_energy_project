@@ -44,8 +44,8 @@
   </a>
 
   <div class="ms-dropdown">
-    <a href="<?= base_url('user/products') ?>"
-       class="<?= ($this->uri->segment(2) == 'products') ? 'active' : '' ?>">
+    <a href="<?= base_url('user/product') ?>"
+       class="<?= ($this->uri->segment(2) == 'product') ? 'active' : '' ?>">
        Products
     </a>
 

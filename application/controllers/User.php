@@ -19,6 +19,12 @@ public function about(){
     $this->load->view("user/footer");
 
 }
+public function product(){
+    $this->load->view("user/navbar");
+    $this->load->view("user/product");
+    $this->load->view("user/footer");
+
+}
 public function services(){
     $this->load->view("user/navbar");
     $this->load->view("user/services");
