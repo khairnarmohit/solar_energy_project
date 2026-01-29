@@ -257,6 +257,7 @@
     <!-- Left Column -->
     <div class="faq-column">
 
+      <!-- 1 -->
       <div class="faq-item">
         <button class="faq-question">
           What is Solar Energy?
@@ -270,6 +271,7 @@
         </div>
       </div>
 
+      <!-- 2 -->
       <div class="faq-item">
         <button class="faq-question">
           How long do solar panels last?
@@ -282,24 +284,35 @@
         </div>
       </div>
 
-    </div>
-
-    <!-- Right Column -->
-    <div class="faq-column">
-
+      <!-- 3 -->
       <div class="faq-item">
         <button class="faq-question">
-          Is solar power suitable for industries?
+          Can solar panels work on cloudy days?
           <span>+</span>
         </button>
         <div class="faq-answer">
           <p>
-            Yes, industrial solar solutions reduce electricity costs and provide
-            sustainable energy.
+            Yes, solar panels still generate electricity even on cloudy days,
+            though output may be lower.
           </p>
         </div>
       </div>
 
+      <!-- 4 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          What maintenance is required for solar systems?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Solar systems require minimal maintenance like cleaning and regular
+            inspection for best performance.
+          </p>
+        </div>
+      </div>
+
+      <!-- 5 -->
       <div class="faq-item">
         <button class="faq-question">
           Do you provide installation support?
@@ -308,14 +321,119 @@
         <div class="faq-answer">
           <p>
             Yes, we provide complete installation, service, and maintenance
-            support for all projects.
+            support for all solar projects.
+          </p>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          How long does solar installation take?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Installation usually takes 2–7 days depending on project size and site
+            requirements.
           </p>
         </div>
       </div>
 
     </div>
+
+    <!-- Right Column (Same Questions Copy) -->
+    <div class="faq-column">
+
+      <!-- 1 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          What is Solar Energy?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Solar energy is energy obtained from sunlight and converted into
+            electricity or heat using solar systems.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          How long do solar panels last?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Solar panels generally last 25–30 years with proper maintenance.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          Can solar panels work on cloudy days?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Yes, solar panels still generate electricity even on cloudy days,
+            though output may be lower.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          What maintenance is required for solar systems?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Solar systems require minimal maintenance like cleaning and regular
+            inspection for best performance.
+          </p>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          Do you provide installation support?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Yes, we provide complete installation, service, and maintenance
+            support for all solar projects.
+          </p>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          How long does solar installation take?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Installation usually takes 2–7 days depending on project size and site
+            requirements.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </section>
+
+
 <script src="<?= base_url('assets/js/index.js') ?>"></script>
 
 

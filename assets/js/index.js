@@ -26,24 +26,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-  const faqItems = document.querySelectorAll(".faq-item");
+  const faqQuestions = document.querySelectorAll(".faq-question");
 
-  faqItems.forEach(item => {
-
-    const btn = item.querySelector(".faq-question");
+  faqQuestions.forEach((btn) => {
 
     btn.addEventListener("click", () => {
 
-      faqItems.forEach(faq => {
-        if (faq !== item) faq.classList.remove("active");
+      const parent = btn.parentElement; // faq-item
+      const icon = btn.querySelector("span");
+
+      // ✅ Close all other FAQs
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        if (item !== parent) {
+          item.classList.remove("active");
+          item.querySelector("span").innerHTML = "+";
+        }
       });
 
-      item.classList.toggle("active");
+      // ✅ Toggle current FAQ
+      parent.classList.toggle("active");
+
+      // ✅ Icon Change + to ×
+      if (parent.classList.contains("active")) {
+        icon.innerHTML = "×";
+      } else {
+        icon.innerHTML = "+";
+      }
+
     });
 
   });
 
 });
+
 
