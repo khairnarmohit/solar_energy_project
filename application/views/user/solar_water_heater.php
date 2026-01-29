@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="<?= base_url('assets/css/solar_water_heater.css'); ?>">
 
 <!-- ================= SECTION 1 : CONVEX SOLAR ================= -->
-<section class="py-5 bg-white">
+<section style="margin-top: -100px;" class="py-5 bg-white">
   <div class="container">
     <div class="row align-items-center">
 
@@ -40,7 +40,7 @@
 </section>
 
 <!-- ================= SECTION 2 : CONVEX SOLAR PLUS ================= -->
-<section class="py-5 bg-white">
+<section style="margin-top: -200px;" class="py-5 bg-white">
   <div class="container">
     <div class="row align-items-center">
 
@@ -76,7 +76,7 @@
 </section>
 
 <!-- ================= SECTION 3 : CONVEX SOLAR FPC ================= -->
-<section class="py-5 bg-white">
+<section style="margin-top: -300px;" class="py-5 bg-white">
   <div class="container">
     <div class="row align-items-center">
 

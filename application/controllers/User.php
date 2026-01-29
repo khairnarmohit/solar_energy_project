@@ -90,10 +90,6 @@ class User extends CI_Controller {
 
 }
 
-
-
-
-
 public function blogs(){
     $this->load->view("user/navbar");
     $this->load->view("user/blogs");

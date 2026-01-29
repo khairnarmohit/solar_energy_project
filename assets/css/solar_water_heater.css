@@ -1,21 +1,38 @@
-/* ===============================
-   PREMIUM PRODUCT ANIMATION
-   =============================== */
+/* =====================================
+   SOLAR WATER HEATER – FINAL STYLES
+   Premium Animation + Tight Spacing
+   ===================================== */
 
-/* ---------- CONTENT & CAPACITY INITIAL STATE ---------- */
+/* -------- GLOBAL SAFETY -------- */
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* -------- SECTION SPACING FIX -------- */
+section.py-5 {
+  padding-top: 3.2rem !important;
+  padding-bottom: 3.2rem !important;
+}
+
+/* -------- INITIAL STATE -------- */
 .reveal-content,
 .capacity-box {
   opacity: 0;
 }
 
-/* ---------- IMAGE : ALWAYS VISIBLE ---------- */
+/* -------- IMAGE (ALWAYS VISIBLE) -------- */
 .reveal-img {
-  opacity: 1;                 /* image hide होत नाही */
+  opacity: 1;
   transform: scale(1);
   transition: transform 0.6s ease;
 }
 
-/* ---------- IMAGE : SCROLL ANIMATION ---------- */
+/* -------- IMAGE ANIMATION -------- */
 .reveal-img.show {
   animation: imgPremium 1s cubic-bezier(.22,.61,.36,1) forwards;
 }
@@ -35,8 +52,7 @@
   }
 }
 
-
-/* ---------- CONTENT : SLIDE + BLUR ---------- */
+/* -------- CONTENT ANIMATION -------- */
 .reveal-content.show {
   animation: contentReveal 1s cubic-bezier(.22,.61,.36,1) forwards;
 }
@@ -54,13 +70,20 @@
   }
 }
 
-/* ---------- TITLE UNDERLINE ---------- */
+/* -------- CONTENT SPACING CONTROL -------- */
 .reveal-content h1,
 .reveal-content h2 {
+  margin-bottom: 0.6rem;
   position: relative;
   display: inline-block;
 }
 
+.reveal-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* -------- HEADING UNDERLINE -------- */
 .reveal-content h1::after,
 .reveal-content h2::after {
   content: "";
@@ -69,8 +92,8 @@
   bottom: -6px;
   width: 0;
   height: 3px;
-  background: linear-gradient(90deg,#2e8b57,#8fd694);
-  transition: width .6s ease;
+  background: linear-gradient(90deg, #2e8b57, #8fd694);
+  transition: width 0.6s ease;
 }
 
 .reveal-content.show h1::after,
@@ -78,13 +101,24 @@
   width: 100%;
 }
 
-/* ---------- CAPACITY : PREMIUM CASCADE ---------- */
+/* -------- CAPACITY SECTION -------- */
+.reveal-content h5 {
+  margin-bottom: 0.4rem;
+}
+
+.reveal-content ul {
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+  gap: 8px !important;
+}
+
+/* -------- CAPACITY BOX -------- */
 .capacity-box {
   border: 1px solid #dcdcdc;
-  padding: 8px 16px;
+  padding: 6px 14px;
   border-radius: 4px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   background: #f9f9f9;
   color: #333;
 }
@@ -104,10 +138,52 @@
   }
 }
 
-/* ---------- MOBILE OPTIMIZATION ---------- */
+/* -------- ROW GAP CONTROL -------- */
+.row.align-items-center {
+  row-gap: 0.5rem;
+}
+
+/* -------- MOBILE OPTIMIZATION -------- */
 @media (max-width: 768px) {
+
+  section.py-5 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
   .reveal-img.show,
   .reveal-content.show {
     animation-duration: 0.75s;
   }
+
+  .reveal-content h1 {
+    font-size: 26px;
+  }
+
+  .reveal-content h2 {
+    font-size: 22px;
+  }
+
+	/* ===============================
+   SECTION TO SECTION GAP FIX
+   =============================== */
+
+/* Default section spacing already controlled */
+section.py-5 {
+  padding-top: 3.2rem !important;
+  padding-bottom: 3.2rem !important;
+}
+
+/* Reduce TOP space for next sections */
+section.tight-section {
+  padding-top: 1.6rem !important;   /* 🔥 gap fix */
+}
+
+/* Mobile fine tuning */
+@media (max-width: 768px) {
+  section.tight-section {
+    padding-top: 1.2rem !important;
+  }
+}
+
 }

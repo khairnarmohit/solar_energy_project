@@ -28,7 +28,7 @@
 </section>
 
 
-<section class="py-5 bg-light">
+<section style="margin-top: -50px;" class="py-5 bg-light">
   <div class="container">
     <div class="row">
 
@@ -49,7 +49,7 @@
   </div>
 </section>
 
-<section class="py-5 bg-light">
+<section style="margin-top: -100px;" class="py-5 bg-light">
   <div class="container">
     <div class="row align-items-center">
 

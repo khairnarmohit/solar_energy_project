@@ -1,0 +1,108 @@
+.quote-section {
+  background: #f8fafc;
+}
+
+.quote-form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.quote-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.quote-form label span {
+  color: red;
+}
+
+.form-control {
+  padding: 12px 14px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.checkbox-group label {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+textarea.form-control {
+  resize: none;
+}
+
+.btn-success {
+  background: linear-gradient(90deg, #2e8b57, #6bbf59);
+  border: none;
+  border-radius: 6px;
+}
+
+.btn-success:hover {
+  opacity: 0.95;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .quote-form {
+    padding: 25px;
+  }
+
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CARD STYLE */
+.quote-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* LABEL */
+.quote-card label span {
+  color: red;
+}
+
+/* CHECKBOX GROUP */
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.checkbox-group label {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* SOURCE SECTION */
+.source-section {
+  border-top: 1px dashed #ddd;
+  padding-top: 25px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .quote-card {
+    padding: 25px;
+  }
+
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+}
