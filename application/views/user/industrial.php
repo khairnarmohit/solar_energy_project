@@ -59,13 +59,3 @@
     </div>
   </div>
 </section>
-
-<!-- CTA -->
-<section class="ind-cta">
-  <div class="container">
-    <h2>Looking for a Reliable Industrial Solar Partner?</h2>
-    <a href="<?= base_url('user/contact') ?>" class="btn-primary big">
-      Contact for Industrial Solar Solutions
-    </a>
-  </div>
-</section>

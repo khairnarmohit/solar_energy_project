@@ -1,4 +1,4 @@
-/* COMMON */
+/* ================= COMMON ================= */
 .container{
   max-width:1200px;
   margin:auto;
@@ -9,21 +9,16 @@ h1,h2{
   color:#0b2c4d;
 }
 
-
 /* ================= HERO ================= */
 .com-hero{
   position:relative;
   text-align:center;
   padding:130px 20px;
-  .com-hero{
-  text-shadow:0 2px 6px rgba(255,255,255,0.6);
-}
-
 
   background:
     linear-gradient(
-      rgba(172,212,207,0.45),
-      rgba(190,241,210,0.45)
+      rgba(210,225,245,0.55),
+      rgba(185,210,240,0.55)
     ),
     url("../image/commercial.jpg") center/cover no-repeat;
 }
@@ -33,31 +28,15 @@ h1,h2{
   font-weight:800;
   margin-bottom:12px;
   color:#0b2c4d;
-
-/* HERO */
-.com-hero{
-  background:#f8fdfc;
-  text-align:center;
-  padding:90px 20px;
-}
-
-.com-hero h1{
-  font-size:42px;
-  margin-bottom:12px;
-
 }
 
 .com-hero p{
   font-size:18px;
-
-  color:#0b2c4d;
+  color:#163a5f;
   font-weight:500;
 }
 
-
-}
-
-/* ABOUT */
+/* ================= ABOUT ================= */
 .com-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -68,6 +47,7 @@ h1,h2{
 .com-text h2{
   font-size:30px;
   margin-bottom:18px;
+  color:#0b2c4d;
 }
 
 .com-text p{
@@ -92,38 +72,31 @@ h1,h2{
   content:"✔";
   position:absolute;
   left:0;
-  color:#3df2f2;
+  color:#1f6fe5;
 }
 
-/* IMAGE PLACEHOLDER */
+/* ================= IMAGE ================= */
 .img-placeholder{
   width:100%;
   height:320px;
-  background:#eef9f9;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#777;
-  font-size:16px;
   border-radius:8px;
-
   background:
     linear-gradient(
-      rgba(172,212,207,0.45),
-      rgba(190,241,210,0.45)
+      rgba(210,225,245,0.45),
+      rgba(185,210,240,0.45)
     ),
     url("../image/commercial.jpg") center/cover no-repeat;
-
 }
 
-/* SUITABLE */
+/* ================= SUITABLE ================= */
 .com-suitable{
-  background:#f9fafb;
+  background:#f4f8fd;
   text-align:center;
 }
 
 .com-suitable h2{
   margin-bottom:35px;
+  color:#0b2c4d;
 }
 
 .suitable-grid{
@@ -132,35 +105,29 @@ h1,h2{
   gap:20px;
 }
 
-.suitable-grid :hover{
-  border: 1px solid #a0f71e;
-    transform:translateY(-6px);
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.12) ;
-}
-
 .suitable-box{
   background:#fff;
   padding:22px 18px;
-  border-radius:6px;
+  border-radius:8px;
   font-weight:600;
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:.3s ease;
 }
 
-.suitable-box :hover{
-  border: 1px solid #a0f71e;
-    transform:translateY(-6px);
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.12) ;
-}   
+.suitable-box:hover{
+  border:1px solid #1f6fe5;
+  transform:translateY(-6px);
+  box-shadow:0 16px 35px rgba(0,0,0,0.12);
+}
 
-
-
-/* BENEFITS */
+/* ================= BENEFITS ================= */
 .com-benefits{
   text-align:center;
 }
 
 .com-benefits h2{
   margin-bottom:35px;
+  color:#0b2c4d;
 }
 
 .benefit-grid{
@@ -172,23 +139,30 @@ h1,h2{
 .benefit-box{
   background:#fff;
   padding:25px 20px;
-  border-radius:6px;
+  border-radius:8px;
   font-weight:600;
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:.3s ease;
 }
 
-/* CTA */
+.benefit-box:hover{
+  border:1px solid #1f6fe5;
+  transform:translateY(-6px);
+}
+
+/* ================= CTA ================= */
 .com-cta{
-  background:linear-gradient(260deg,#3df2f2,#a8fa2d);
+  background:linear-gradient(260deg,#1f6fe5,#5aa9ff);
   text-align:center;
 }
 
 .com-cta h2{
   font-size:32px;
   margin-bottom:25px;
+  color:#fff;
 }
 
-/* BUTTON (shared style) */
+/* ================= BUTTON ================= */
 .btn-primary{
   display:inline-block;
   padding:14px 36px;
@@ -203,7 +177,7 @@ h1,h2{
   padding:18px 52px;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 @media(max-width:991px){
   .com-grid{
     grid-template-columns:1fr;
@@ -219,5 +193,13 @@ h1,h2{
   .suitable-grid,
   .benefit-grid{
     grid-template-columns:1fr;
+  }
+
+  .com-hero h1{
+    font-size:30px;
+  }
+
+  .com-hero p{
+    font-size:15px;
   }
 }

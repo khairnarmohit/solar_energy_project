@@ -6,7 +6,7 @@
 }
 
 h1,h2,h3{
-  color:#507daa;
+  color:#03213f;
 }
 
 /* ================= HERO ================= */
@@ -14,14 +14,14 @@ h1,h2,h3{
   position:relative;
   background:
     linear-gradient(
-      rgba(115, 147, 235, 0.45),
-      rgba(221, 235, 250, 0.45)
+      rgba(40, 90, 160, 0.55),
+      rgba(200, 225, 255, 0.55)
     ),
     url("../image/servicepage.jpg") center/cover no-repeat;
 
   text-align:center;
   padding:130px 20px;
-  color:#f5ebeb;
+  
 }
 
 .services-hero h1{
@@ -29,15 +29,16 @@ h1,h2,h3{
   font-weight:800;
   margin-bottom:14px;
 
-  background:linear-gradient(400deg,#042c55,#30c956);
+  background:linear-gradient(260deg,#0b2c4d,#1f6fe5);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
+  
 }
 
 .services-hero p{
   font-size:18px;
-  color:#0b2c4d;
-  font-weight:500;
+  color:#2b0452;
+  font-weight:600;
 }
 
 /* ================= SERVICES CARDS ================= */
@@ -50,40 +51,42 @@ h1,h2,h3{
 .service-card{
   background:#fff;
   padding:38px 30px;
-  border-radius:10px;
+  border-radius:12px;
   box-shadow:0 14px 35px rgba(0,0,0,0.08);
   text-align:center;
-  transition:.3s ease;
+  transition:.35s ease;
+  border:1px solid transparent;
 }
 
 .service-card:hover{
   transform:translateY(-8px);
-  box-shadow:0 20px 45px rgba(0,0,0,0.12);
-  border: 1px solid #a0f71e;
-  
+  box-shadow:0 22px 45px rgba(0,0,0,0.14);
+  border-color:#1f6fe5;
 }
 
 .service-card h3{
   font-size:22px;
   margin-bottom:15px;
+  color:#0b2c4d;
 }
 
 .service-card p{
   font-size:15px;
   color:#555;
   margin-bottom:28px;
-  line-height:1.6;
+  line-height:1.7;
 }
 
 /* ================= WHY CHOOSE ================= */
 .services-why{
-  background:#f9fafb;
+  background:#f4f8fd;
 }
 
 .services-why h2{
   text-align:center;
   margin-bottom:35px;
   font-size:32px;
+  color:#0b2c4d;
 }
 
 .services-why ul{
@@ -98,27 +101,29 @@ h1,h2,h3{
   font-size:16px;
   position:relative;
   padding-left:28px;
+  color:#333;
 }
 
 .services-why li::before{
   content:"✔";
   position:absolute;
   left:0;
-  color:#3df2f2;
+  color:#1f6fe5;
   font-weight:bold;
 }
 
 /* ================= CTA ================= */
 .services-cta{
-  background:linear-gradient(260deg,#3df2f2,#a8fa2d);
+  background:linear-gradient(260deg,#1f6fe5,#5aa9ff);
   text-align:center;
-  color:#0b2c4d;
+  color:#fff;
 }
 
 .services-cta h2{
   font-size:34px;
   margin-bottom:30px;
   font-weight:800;
+  color:#fff;
 }
 
 /* ================= BUTTON ================= */
@@ -134,7 +139,7 @@ h1,h2,h3{
 }
 
 .btn-primary:hover{
-  transform:translateY(-2px);
+  transform:translateY(-3px);
 }
 
 .btn-primary.big{
@@ -149,6 +154,10 @@ h1,h2,h3{
   }
 
   .services-hero h1{
-    font-size:36px;
+    font-size:34px;
+  }
+
+  .services-hero p{
+    font-size:16px;
   }
 }
