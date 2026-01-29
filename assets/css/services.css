@@ -9,47 +9,63 @@ h1,h2,h3{
   color:#03213f;
 }
 
-/* ================= HERO ================= *//* ================= HERO ================= */
+/* ================= SERVICES HERO ONLY ================= */
+
 .services-hero{
-  position:relative;
-  background:
-    linear-gradient(
-      rgba(212, 201, 97, 0.89),
-      rgba(233, 230, 51, 0.938)
-    ),
-    url("../image/servicepage.jpg") center/cover no-repeat;
-
-  text-align:center;
-  padding:130px 20px;
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
 }
 
-/* MAIN HEADING */
-.services-hero h1{
-  font-size:46px;
-  font-weight:800;
-  margin-bottom:14px;
-
-  /* 🔥 Clean solar-blue gradient */
-  background:linear-gradient(260deg,#0a1725,#182c4d);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-
-
+/* SLIDES – ONLY inside services hero */
+.services-hero .hero-slide{
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 1s ease, transform 6s ease;
 }
 
-/* SUB TEXT */
-.services-hero p{
-  font-size:18px;
-  font-weight:600;
-
-  /* ✅ Dark readable blue */
-  color:#0b2c4d;
-
-  max-width:760px;
-  margin:0 auto;
-  line-height:1.6;
+.services-hero .hero-slide.active{
+  opacity: 1;
+  transform: scale(1.1);
 }
 
+/* CONTENT */
+.services-hero .hero-content{
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  background: linear-gradient(
+    rgba(212, 201, 97, 0.88),
+    rgba(233, 230, 51, 0.9)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* CURVE */
+.services-hero .hero-curve{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: #fff;
+  z-index: 3;
+  clip-path: polygon(0 0,50% 100%,100% 0,100% 100%,0 100%);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .services-hero{ height:55vh; }
+  .services-hero .hero-curve{ height:70px; }
+}
 
 /* ================= SERVICES CARDS ================= */
 .services-list .container{

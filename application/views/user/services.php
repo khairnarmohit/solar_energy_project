@@ -1,10 +1,25 @@
 <section class="services-hero">
-  <div class="container">
+
+  <!-- SLIDES -->
+  <div class="hero-slide active"
+       style="background-image:url('<?= base_url("assets/image/blog1.jpg") ?>')"></div>
+
+  <div class="hero-slide"
+       style="background-image:url('<?= base_url("assets/image/blog2.jpg") ?>')"></div>
+
+  <div class="hero-slide"
+       style="background-image:url('<?= base_url("assets/image/.jpg") ?>')"></div>
+
+  <!-- CONTENT -->
+  <div class="hero-content">
     <h1>Our Solar Services</h1>
     <p>Smart & Sustainable Solar Solutions</p>
   </div>
-</section>
 
+  <!-- CURVE -->
+  <div class="hero-curve"></div>
+
+</section>
 <section class="services-list">
   <div class="container">
 
@@ -57,3 +72,18 @@
     </ul>
   </div>
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".services-hero .hero-slide");
+  let i = 0;
+
+  if(slides.length){
+    setInterval(() => {
+      slides[i].classList.remove("active");
+      i = (i + 1) % slides.length;
+      slides[i].classList.add("active");
+    }, 3000);
+  }
+});
+</script>
