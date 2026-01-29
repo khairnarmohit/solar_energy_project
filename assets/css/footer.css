@@ -98,6 +98,27 @@
   box-shadow:0 16px 40px rgba(193, 206, 197, 0.6);
 }
 
+.whatsapp-float::after{
+  content:"";
+  position:absolute;
+  inset:-6px;
+  border-radius:50%;
+  border:2px solid rgba(37,211,102,.6);
+  animation:ringWave 2.5s infinite;
+}
+
+@keyframes ringWave{
+  0%{
+    transform:scale(0.8);
+    opacity:1;
+  }
+  100%{
+    transform:scale(1.6);
+    opacity:0;
+  }
+}
+
+
 /* RESPONSIVE */
 @media(max-width:991px){
   .footer-grid{
