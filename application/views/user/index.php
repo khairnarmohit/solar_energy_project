@@ -114,6 +114,35 @@
   </div>
 </section>
 
+  <!-- ===== PRODUCTS SECTION ===== -->
+  <section class="products-section">
+
+    <!-- Page Title -->
+    <h2 class="page-title">Products</h2>
+
+    <div class="products-container">
+
+      <!-- LEFT SIDE TEXT -->
+      <div class="products-text">
+        <h1>Our Solar Products</h1>
+
+        <ul>
+          <li>Solar Water Heater</li>
+          <li>Solar Pumps</li>
+          <li>On Grid Solar</li>
+          <li>Street Light</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT SIDE IMAGE -->
+      <div class="products-image">
+        <img src="<?= base_url('assets/image/CONNECT.png') ?>" alt="Solar Product">
+      </div>
+
+    </div>
+
+  </section>
+
 
 
 <!-- SERVICES SECTION -->
@@ -224,82 +253,40 @@
   </div>
 </section>
 
-<!-- FAQ SECTION -->
-<!-- FAQ SECTION --><section id="faq-section">
-  <div class="container">
-    <h1>Frequently Asked Questions</h1>
 
-    <div class="faq-grid">
 
-      <!-- LEFT COLUMN -->
-      <div class="faq-col">
+<!-- ===== HERO TOP BANNER SECTION ===== -->
+<section class="top-hero-banner">
 
-        <div class="faq-q">
-          <span>›</span> What services does Agni Solar provide?
-        </div>
-        <div class="faq-answer">
-          Agni Solar provides end-to-end solar solutions including design,
-          installation, monitoring, and maintenance for residential and
-          commercial projects.
-        </div>
+  <div class="hero-banner-container">
 
-        <div class="faq-q active">
-          <span>›</span> How do I know which solar system is right for me?
-        </div>
-        <div class="faq-answer show">
-          Our experts assess your roof space, energy usage, location, and budget.
-          We recommend the most efficient and cost-effective solar system for
-          your needs.
-        </div>
-
-        <div class="faq-q">
-          <span>›</span> What is the typical payback period for a solar system?
-        </div>
-        <div class="faq-answer">
-          Payback periods generally range from 3 to 6 years depending on
-          electricity savings, incentives, and system size.
-        </div>
-
-        <div class="faq-q">
-          <span>›</span> What is net metering?
-        </div>
-        <div class="faq-answer">
-          Net metering allows you to export excess solar power back to the grid.
-          This helps reduce your monthly electricity bills.
-        </div>
-
-        <div class="faq-q">
-          <span>›</span> How much does a solar power plant impact the environment?
-        </div>
-        <div class="faq-answer">
-          Solar energy significantly reduces carbon emissions and dependence on
-          fossil fuels, making it one of the cleanest power sources.
-        </div>
-
-        <div class="faq-q">
-          <span>›</span> Does Agni Solar handle all necessary permits and paperwork?
-        </div>
-        <div class="faq-answer">
-          Yes, Agni Solar manages all permits, approvals, documentation, and net
-          metering formalities for a smooth installation process.
-        </div>
-
+    <!-- Left Image -->
+    <div class="hero-banner-img">
+        <img src="<?= base_url('assets/image/CONNECT.png') ?>" alt="Solar Banner">
       </div>
 
-      <!-- RIGHT COLUMN (Only Questions Like Screenshot) -->
-      <div class="faq-col">
-
-        <div class="faq-q"><span>›</span> How does the new Agni Solar App help me?</div>
-        <div class="faq-q"><span>›</span> What maintenance is required for solar panels?</div>
-        <div class="faq-q"><span>›</span> How do I benefit from AI data analytics?</div>
-        <div class="faq-q"><span>›</span> Are financing options available?</div>
-        <div class="faq-q"><span>›</span> What happens during a power outage?</div>
-        <div class="faq-q"><span>›</span> How can I get started?</div>
-
-      </div>
-
+    <!-- Center Text -->
+    <div class="hero-banner-text">
+      <h1>
+        India’s Leading Integrated Solar <br>
+        Energy
+      </h1>
+      <p>Smart Solar Energy</p>
     </div>
+
+    <!-- Right Button -->
+    <div class="hero-banner-btn">
+      <a href="#" class="connect-btn">
+        <i class="fa-solid fa-phone"></i>
+        CONNECT WITH US
+      </a>
+    </div>
+
   </div>
+
 </section>
+
+
+
 </body>
 </html>
