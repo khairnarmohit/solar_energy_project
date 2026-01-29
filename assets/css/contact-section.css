@@ -1,0 +1,16 @@
+/* Contact section styles: background image, transparent yellow overlay, nav image, buttons, and fade */
+.contact-section{position:relative;overflow:hidden;min-height:420px;display:flex;align-items:center;justify-content:center;color:#111}
+.contact-section .bg-img{position:absolute;inset:0;background-position:center;background-size:cover;transition:opacity .35s ease, transform .6s ease;z-index:0}
+.contact-section .overlay{position:absolute;inset:0;background:rgba(255,200,0,0.28);z-index:1}
+.contact-section .contact-nav{position:absolute;top:18px;left:50%;transform:translateX(-50%);z-index:3;max-width:220px;opacity:0.95}
+.contact-section .contact-controls{position:absolute;top:80px;right:24px;z-index:4;display:flex;gap:8px}
+.contact-section .switch-btn{background:#fff;border:1px solid rgba(0,0,0,0.08);padding:8px 12px;border-radius:4px;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.08)}
+.contact-section .switch-btn:hover{background:#f7f7f7}
+.contact-section .contact-content{position:relative;z-index:2;text-align:center;padding:60px 20px;background:transparent}
+.contact-section .bg-img.fade-out{opacity:0}
+
+@media (max-width:720px){
+  .contact-section{min-height:360px}
+  .contact-section .contact-controls{top:70px;right:12px}
+  .contact-section .contact-nav{max-width:160px}
+}

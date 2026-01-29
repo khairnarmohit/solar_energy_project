@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="<?= base_url('assets/css/services.css') ?>">
   <link rel="stylesheet" href="<?= base_url('assets/css/residential.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/commercial.css') ?>">
-<link rel="stylesheet" href="<?= base_url('assets/css/contact.css') ?>">
+<link rel="stylesheet" href="<?= base_url("assets/css/contact.css") ?>">
+
 <link rel="stylesheet" href="<?= base_url('assets/css/quote.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/solar_water_heater.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/solar_water_pump.css') ?>">
@@ -38,6 +39,8 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <head>
   <script src="<?= base_url('assets/js/navbar.js') ?>"></script>
+
+
 <body>
 <header class="ms-navbar">
   <div class="ms-container">
