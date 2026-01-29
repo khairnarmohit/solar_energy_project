@@ -1,9 +1,17 @@
 /* ================= FOOTER ================= */
 
 .ms-footer{
-  background:linear-gradient(260deg,#3df2f2,#a8fa2d);
-  color:#222;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.35),
+      rgba(255,255,255,0.15)
+    ),
+    linear-gradient(260deg,#3df2f2,#a8fa2d);
+  color:#1b1b1b;
+  backdrop-filter:blur(4px);
 }
+
 
 /* FOOTER CONTAINER */
 .footer-container{
@@ -22,56 +30,78 @@
 /* COLUMNS */
 .footer-col h3{
   font-size:26px;
-  margin-bottom:15px;
-  color:#141010;
+  margin-bottom:14px;
+  font-weight:800;
+  letter-spacing:0.4px;
 }
 
 .footer-col h3 span{
-  color:#111616;
+  background:linear-gradient(260deg,#0b2c4d,#000);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
 .footer-col h4{
-  font-size:18px;
-  margin-bottom:16px;
-  color:#222;
+  font-size:17px;
+  margin-bottom:18px;
+  font-weight:700;
+  position:relative;
+}
+
+.footer-col h4::after{
+  content:"";
+  width:32px;
+  height:3px;
+  background:#0b2c4d;
+  display:block;
+  margin-top:6px;
 }
 
 .footer-col p{
-  font-size:15px;
-  line-height:1.7;
-  color:#222;
-}
-
-.footer-col ul{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-
-.footer-col ul li{
-  margin-bottom:10px;
+  font-size:14.5px;
+  line-height:1.8;
+  color:#1e1e1e;
+  max-width:90%;
 }
 
 .footer-col ul li a{
-  color:#222;
+  color:#1e1e1e;
+  font-size:14.5px;
   text-decoration:none;
-  font-size:15px;
+  position:relative;
+  transition:color .25s ease;
+}
+
+.footer-col ul li a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-3px;
+  width:0;
+  height:2px;
+  background:#0b2c4d;
   transition:.25s ease;
 }
 
 .footer-col ul li a:hover{
-  color:#222;
-  padding-left:6px;
+  color:#0b2c4d;
 }
+
+.footer-col ul li a:hover::after{
+  width:100%;
+}
+
 
 /* BOTTOM */
 .footer-bottom{
-  border-top:1px solid rgba(15,15,15,0.15);
+  border-top:1px solid rgba(0,0,0,0.15);
   text-align:center;
-  padding:18px;
-  font-size:14px;
-  color:#222;
+  padding:20px;
+  font-size:13.5px;
+  font-weight:500;
+  color:#1b1b1b;
 }
+
 
 /* ================= WHATSAPP FLOAT ================= */
 .whatsapp-float{
@@ -142,5 +172,21 @@
     font-size:26px;
     right:16px;
     bottom:16px;
+  }
+}
+@media(max-width:575px){
+
+  .footer-col p{
+    max-width:100%;
+  }
+
+  .footer-col h4::after{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .whatsapp-float{
+    right:14px;
+    bottom:14px;
   }
 }
