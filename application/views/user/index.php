@@ -31,7 +31,8 @@
     <h1>Power Your Future <br> With Solar Energy</h1>
     <p>Clean, Renewable & Affordable Solar Solutions</p>
 
-    <a href="#" class="btn hero-btn">Explore More</a>
+   <a href="#" class="main-btn">Explore More</a>
+
   </div>
 
 </section>
@@ -63,7 +64,9 @@
       </p>
 
       <!-- ✅ Button Added Here -->
-      <a href="about.html" class="about-btn">Learn More</a>
+      <a href="about.html" class="main-btn">Learn More</a>
+
+
     </div>
 
   </div>
@@ -109,7 +112,8 @@
       </p>
 
       <!-- ✅ Button Below Description -->
-      <a href="products.html" class="products-btn">View Products</a>
+      <a href="products.html" class="main-btn">View Products</a>
+
     </div>
 
     <!-- Right Side Image -->
@@ -146,7 +150,8 @@
       </p>
 
       <!-- ✅ Button Below Description -->
-      <a href="services.html" class="services-btn">Explore Services</a>
+      <a href="services.html" class="main-btn">Explore Services</a>
+
     </div>
 
   </div>
@@ -223,6 +228,39 @@
     </div>
   </div>
 </section>
+
+<!-- ===== HERO TOP BANNER SECTION ===== -->
+<section class="top-hero-banner">
+
+  <div class="hero-banner-container">
+
+    <!-- Left Image -->
+    <div class="hero-banner-img">
+        <img src="<?= base_url('assets/image/CONNECT.png') ?>" alt="Solar Banner">
+      </div>
+
+    <!-- Center Text -->
+    <div class="hero-banner-text">
+      <h1>
+        India’s Leading Integrated Solar <br>
+        Energy
+      </h1>
+      <p>Smart Solar Energy</p>
+    </div>
+
+    <!-- Right Button -->
+    <div class="hero-banner-btn">
+      <a href="#" class="connect-btn">
+        <i class="fa-solid fa-phone"></i>
+        CONNECT WITH US
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
 
 <!-- FAQ SECTION -->
 <section class="faq-section">
@@ -412,37 +450,6 @@
 
 <script src="<?= base_url('assets/js/index.js') ?>"></script>
 
-
-<!-- ===== HERO TOP BANNER SECTION ===== -->
-<section class="top-hero-banner">
-
-  <div class="hero-banner-container">
-
-    <!-- Left Image -->
-    <div class="hero-banner-img">
-        <img src="<?= base_url('assets/image/CONNECT.png') ?>" alt="Solar Banner">
-      </div>
-
-    <!-- Center Text -->
-    <div class="hero-banner-text">
-      <h1>
-        India’s Leading Integrated Solar <br>
-        Energy
-      </h1>
-      <p>Smart Solar Energy</p>
-    </div>
-
-    <!-- Right Button -->
-    <div class="hero-banner-btn">
-      <a href="#" class="connect-btn">
-        <i class="fa-solid fa-phone"></i>
-        CONNECT WITH US
-      </a>
-    </div>
-
-  </div>
-
-</section>
 
 
 
