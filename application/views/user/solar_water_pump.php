@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="<?= base_url('assets/css/solar_water_pump.css'); ?>">
 
-<section class="py-5 bg-white solar-pump-overview">
+<section class="py-5 solar-pump-overview section1">
+
   <div class="container">
     <div class="row align-items-center">
 
@@ -41,7 +42,7 @@
 </section>
 
 
-<section class="py-5 bg-white">
+<section class="py-5 bg-white section2">
   <div class="container">
     <div class="row align-items-center">
 

@@ -1,18 +1,18 @@
 <link rel="stylesheet" href="<?= base_url() ?>assets/css/solar_street_light.css">
 
-<section class="py-5 bg-white">
+<section class="py-5 ssl-hero section1">
   <div class="container">
     <div class="row align-items-center">
 
       <!-- CONTENT -->
       <div class="col-md-6 mb-4 mb-md-0 ssl-reveal-left">
-        <h1 class="fw-bold mb-3">Solar Street Light</h1>
+        <span class="ssl-badge">SMART OUTDOOR LIGHTING</span>
+        <h1 class="fw-bold mt-3 mb-3">Solar Street Light</h1>
 
         <p class="text-muted">
-          Solar Street Lights are standalone lighting systems powered by solar
-          energy. They provide reliable illumination without dependency on grid
-          electricity, making them ideal for streets, highways, villages, and
-          public areas.
+          Reliable outdoor lighting powered entirely by solar energy —
+          designed for streets, highways, villages, campuses, and public areas
+          without any grid dependency.
         </p>
       </div>
 
@@ -20,7 +20,7 @@
       <div class="col-md-6 text-center ssl-reveal-right">
         <img src="<?= base_url()?>assets/image/streetlight1.png"
              alt="Solar Street Light System"
-             class="img-fluid rounded">
+             class="img-fluid ssl-img">
       </div>
 
     </div>
@@ -28,20 +28,22 @@
 </section>
 
 
-<section style="margin-top: -50px;" class="py-5 bg-light">
+
+<!-- ================= WHERE IT MAKES IMPACT ================= -->
+<section class="py-5 ssl-impact section2">
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
 
-      <div class="col-12 text-center mb-4 ssl-reveal-up">
-        <h2 class="fw-bold">What is a Solar Street Light?</h2>
-      </div>
+      <div class="col-lg-9 text-center ssl-reveal-up">
+        <h2 class="fw-bold mb-3">
+          Lighting That Works Anywhere, Anytime
+        </h2>
 
-      <div class="col-md-10 mx-auto text-center ssl-reveal-up">
         <p class="text-muted">
-          A Solar Street Light is an independent lighting system that consists
-          of solar panels, LED lamps, batteries, and controllers. It stores
-          solar energy during the day and automatically provides illumination
-          at night.
+          Solar Street Lights operate independently using built-in panels,
+          batteries, and smart controllers. They charge during the day and
+          automatically illuminate at night — perfect for areas where power
+          supply is unreliable or unavailable.
         </p>
       </div>
 
@@ -49,27 +51,29 @@
   </div>
 </section>
 
-<section style="margin-top: -100px;" class="py-5 bg-light">
+
+<!-- ================= BENEFITS ================= -->
+<section class="py-5 ssl-benefits section1">
   <div class="container">
     <div class="row align-items-center">
 
       <!-- IMAGE -->
-      <div class="col-md-6 mb-4 mb-md-0 ssl-reveal-left">
-        <img style="height: 300px; width:300px;" src="<?= base_url()?>assets/image/streetlight2.jpg"
-             class="img-fluid rounded"
+      <div class="col-md-6 mb-4 mb-md-0 ssl-reveal-left text-center">
+        <img src="<?= base_url()?>assets/image/streetlight3.jpg"
+             class="img-fluid ssl-img-small"
              alt="Benefits of Solar Street Light">
       </div>
 
       <!-- CONTENT -->
       <div class="col-md-6 ssl-reveal-right">
-        <h2 class="fw-bold mb-3">Benefits of Solar Street Light</h2>
+        <h2 class="fw-bold mb-3">Why Choose Solar Street Lights?</h2>
 
-        <ul class="text-muted ps-3">
+        <ul class="ssl-list">
           <li>No electricity bills</li>
-          <li>Easy installation and low maintenance</li>
-          <li>Environment friendly and renewable</li>
-          <li>Automatic operation from dusk to dawn</li>
-          <li>Ideal for remote and rural areas</li>
+          <li>Easy installation & low maintenance</li>
+          <li>Eco-friendly renewable solution</li>
+          <li>Automatic dusk-to-dawn operation</li>
+          <li>Ideal for remote & rural locations</li>
         </ul>
       </div>
 

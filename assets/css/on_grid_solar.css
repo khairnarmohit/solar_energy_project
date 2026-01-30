@@ -116,3 +116,87 @@ ul {
     font-size: 22px;
   }
 }
+
+/* ===============================
+   ON GRID SOLAR – COLOR THEME
+   =============================== */
+
+/* HERO SECTION */
+.on-grid-hero {
+  background: linear-gradient(
+    135deg,
+    #eef5ff 0%,   /* light sky */
+    #ffffff 60%
+  );
+}
+
+/* WHAT IS ON GRID */
+.on-grid-info {
+  background: #f8fafc; /* very light grey-blue */
+}
+
+/* HOW IT WORKS */
+.on-grid-process {
+  background: #ffffff;
+}
+
+/* BENEFITS SECTION (Highlight) */
+.on-grid-benefits {
+  background: linear-gradient(
+    135deg,
+    #f0fdf4 0%,   /* very light green */
+    #ffffff 100%
+  );
+}
+
+/* Headings accent underline */
+.on-grid-hero h1::after,
+.on-grid-benefits h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #16a34a, #4ade80);
+  border-radius: 2px;
+}
+
+/* Small polish */
+.on-grid-process h5 {
+  color: #1e293b;
+}
+
+.on-grid-process p {
+  font-size: 14px;
+}
+
+.ongrid-img {
+  max-width: 92%;
+  border-radius: 22px;              /* 👈 soft rounded corners */
+  border: 1px solid rgba(0,0,0,0.08); /* 👈 light clean border */
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .ongrid-img {
+    max-width: 100%;
+    border-radius: 18px;
+  }
+}
+
+
+.ongrid-img {
+  max-width: 92%;
+  border-radius: 22px;              /* 👈 soft rounded corners */
+  border: 1px solid rgba(0,0,0,0.08); /* 👈 light clean border */
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .ongrid-img {
+    max-width: 100%;
+    border-radius: 18px;
+  }
+}

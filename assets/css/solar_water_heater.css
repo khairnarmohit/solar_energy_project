@@ -1,79 +1,67 @@
-/* =====================================
-   SOLAR WATER HEATER – FINAL STYLES
-   Premium Animation + Tight Spacing
-   ===================================== */
+/* ===============================
+   SOLAR WATER HEATER – FINAL
+   (MINIMIZED, ANIMATION SAFE)
+   =============================== */
 
-/* -------- GLOBAL SAFETY -------- */
-body {
-  overflow-x: hidden;
+body { overflow-x: hidden; }
+
+.section1,
+.section2 {
+  overflow: hidden;
+  padding-top: 1rem !important;
+
 }
+
+.section1 { background: rgb(250,241,233); }
+.section2 { background: rgba(240,239,238,.64); }
+
+section.tight-section {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.row.align-items-center { row-gap: .5rem; }
 
 img {
   max-width: 100%;
   display: block;
 }
 
-/* -------- SECTION SPACING FIX -------- */
-section.py-5 {
-  padding-top: 3.2rem !important;
-  padding-bottom: 3.2rem !important;
-}
-
-/* -------- INITIAL STATE -------- */
+/* ---------- REVEAL STATES ---------- */
 .reveal-content,
-.capacity-box {
-  opacity: 0;
-}
+.capacity-box { opacity: 0; }
 
-/* -------- IMAGE (ALWAYS VISIBLE) -------- */
 .reveal-img {
   opacity: 1;
   transform: scale(1);
-  transition: transform 0.6s ease;
+  transition: transform .6s ease;
 }
 
-/* -------- IMAGE ANIMATION -------- */
+/* ---------- IMAGE ANIMATION ---------- */
 .reveal-img.show {
   animation: imgPremium 1s cubic-bezier(.22,.61,.36,1) forwards;
 }
 
 @keyframes imgPremium {
-  0% {
-    transform: scale(0.96) translateY(18px);
-    filter: drop-shadow(0 0 0 rgba(0,0,0,0));
-  }
-  60% {
-    transform: scale(1.02) translateY(-6px);
-    filter: drop-shadow(0 18px 30px rgba(0,0,0,0.15));
-  }
-  100% {
-    transform: scale(1) translateY(0);
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.12));
-  }
+  0%   { transform: scale(.96) translateY(18px); filter: drop-shadow(0 0 0 transparent); }
+  60%  { transform: scale(1.02) translateY(-6px); filter: drop-shadow(0 18px 30px rgba(0,0,0,.15)); }
+  100% { transform: scale(1) translateY(0); filter: drop-shadow(0 10px 20px rgba(0,0,0,.12)); }
 }
 
-/* -------- CONTENT ANIMATION -------- */
+/* ---------- CONTENT ANIMATION ---------- */
 .reveal-content.show {
   animation: contentReveal 1s cubic-bezier(.22,.61,.36,1) forwards;
 }
 
 @keyframes contentReveal {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-    filter: blur(6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
+  from { opacity: 0; transform: translateY(40px); filter: blur(6px); }
+  to   { opacity: 1; transform: translateY(0);  filter: blur(0); }
 }
 
-/* -------- CONTENT SPACING CONTROL -------- */
+/* ---------- CONTENT STYLING ---------- */
 .reveal-content h1,
 .reveal-content h2 {
-  margin-bottom: 0.6rem;
+  margin-bottom: .6rem;
   position: relative;
   display: inline-block;
 }
@@ -83,7 +71,7 @@ section.py-5 {
   line-height: 1.6;
 }
 
-/* -------- HEADING UNDERLINE -------- */
+/* ---------- HEADING UNDERLINE ---------- */
 .reveal-content h1::after,
 .reveal-content h2::after {
   content: "";
@@ -92,27 +80,21 @@ section.py-5 {
   bottom: -6px;
   width: 0;
   height: 3px;
-  background: linear-gradient(90deg, #2e8b57, #8fd694);
-  transition: width 0.6s ease;
+  background: linear-gradient(90deg,#2e8b57,#8fd694);
+  transition: width .6s ease;
 }
 
 .reveal-content.show h1::after,
-.reveal-content.show h2::after {
-  width: 100%;
-}
+.reveal-content.show h2::after { width: 100%; }
 
-/* -------- CAPACITY SECTION -------- */
-.reveal-content h5 {
-  margin-bottom: 0.4rem;
-}
+/* ---------- CAPACITY ---------- */
+.reveal-content h5 { margin-bottom: .4rem; }
 
 .reveal-content ul {
-  margin-top: 0.4rem;
-  margin-bottom: 0;
+  margin: .4rem 0 0;
   gap: 8px !important;
 }
 
-/* -------- CAPACITY BOX -------- */
 .capacity-box {
   border: 1px solid #dcdcdc;
   padding: 6px 14px;
@@ -124,66 +106,32 @@ section.py-5 {
 }
 
 .capacity-box.show {
-  animation: capacityWave 0.45s ease forwards;
+  animation: capacityWave .45s ease forwards;
 }
 
 @keyframes capacityWave {
-  from {
-    opacity: 0;
-    transform: translateY(10px) rotate(-2deg) scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) rotate(0) scale(1);
-  }
+  from { opacity: 0; transform: translateY(10px) rotate(-2deg) scale(.9); }
+  to   { opacity: 1; transform: translateY(0) rotate(0) scale(1); }
 }
 
-/* -------- ROW GAP CONTROL -------- */
-.row.align-items-center {
-  row-gap: 0.5rem;
-}
-
-/* -------- MOBILE OPTIMIZATION -------- */
+/* ---------- MOBILE ---------- */
 @media (max-width: 768px) {
 
-  section.py-5 {
-    padding-top: 2.5rem !important;
-    padding-bottom: 2.5rem !important;
+  .section1,
+  .section2 {
+    padding: 1.6rem !important;
+  }
+
+  section.tight-section {
+    padding-top: 1rem !important;
+    padding-bottom: 1.4rem !important;
   }
 
   .reveal-img.show,
   .reveal-content.show {
-    animation-duration: 0.75s;
+    animation-duration: .75s;
   }
 
-  .reveal-content h1 {
-    font-size: 26px;
-  }
-
-  .reveal-content h2 {
-    font-size: 22px;
-  }
-
-	/* ===============================
-   SECTION TO SECTION GAP FIX
-   =============================== */
-
-/* Default section spacing already controlled */
-section.py-5 {
-  padding-top: 3.2rem !important;
-  padding-bottom: 3.2rem !important;
-}
-
-/* Reduce TOP space for next sections */
-section.tight-section {
-  padding-top: 1.6rem !important;   /* 🔥 gap fix */
-}
-
-/* Mobile fine tuning */
-@media (max-width: 768px) {
-  section.tight-section {
-    padding-top: 1.2rem !important;
-  }
-}
-
+  .reveal-content h1 { font-size: 26px; }
+  .reveal-content h2 { font-size: 22px; }
 }

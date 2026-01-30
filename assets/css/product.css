@@ -3,6 +3,26 @@
 .animate-right {
   opacity: 0;
 }
+.about-hero{
+		background-color: rgba(240, 239, 238, 0.639) !important;
+	overflow: hidden !important;
+}
+.section1 {
+	background-color: rgb(250, 241, 233) !important;
+	overflow: hidden !important;
+}
+.section2 {
+	background-color: rgba(240, 239, 238, 0.639) !important;
+	overflow: hidden !important;
+}
+
+.section1,
+.section2 {
+  padding-top:0px;
+  padding-bottom: 0px;
+	height: auto;
+}
+
 .hero-content h1
 {
 	font-family: 'Poppins', sans-serif;
@@ -49,3 +69,6 @@
     animation-duration: 0.8s;
   }
 }
+
+
+

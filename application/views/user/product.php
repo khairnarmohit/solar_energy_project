@@ -2,25 +2,26 @@
 
 <!-- Section I -->
 <section class="about-hero">
-    <div class="slides">
-        <div class="slide active" style="background-image:url('<?= base_url('assets/image/about_bg1.jpg'); ?>')"></div>
-        <div class="slide" style="background-image:url('<?= base_url('assets/image/about_bg2.jpg'); ?>')"></div>
-        <div class="slide" style="background-image:url('<?= base_url('assets/image/about_bg3.jpg'); ?>')"></div>
-    </div>
+  <div class="slides">
+    <div class="slide active" style="background-image:url('<?= base_url('assets/image/about_bg1.jpg'); ?>')"></div>
+    <div class="slide" style="background-image:url('<?= base_url('assets/image/about_bg2.jpg'); ?>')"></div>
+    <div class="slide" style="background-image:url('<?= base_url('assets/image/about_bg3.jpg'); ?>')"></div>
+  </div>
 
-    <div class="overlay"></div>
+  <div class="overlay"></div>
 
-    <div class="hero-content">
-        <h1>Products</h1>
-    </div>
+  <div class="hero-content">
+    <h1>Our Products</h1>
+  </div>
 
-    <div class="triangle-curve"></div>
-
+  <!-- CURVE -->
+  <div class="triangle-curve"></div>
 </section>
 
 
+
 <!-- ================= DESIGN 1 ================= -->
-<section class="py-5 overflow-hidden">
+<section class=" section1 py-5 overflow-hidden">
   <div class="container">
     <div class="row align-items-center">
 
@@ -45,7 +46,7 @@
 </section>
 
 <!-- ================= DESIGN 2 ================= -->
-<section class="py-5 overflow-hidden bg-light">
+<section style="margin-top: 0px;" class=" section2 py-5 overflow-hidden bg-light">
   <div class="container">
     <div class="row align-items-center">
 
@@ -70,7 +71,7 @@
 </section>
 
 <!-- ================= DESIGN 1 (REUSE) ================= -->
-<section class="py-5 overflow-hidden">
+<section style="margin-top: -100px;" class="section1 py-5 overflow-hidden">
   <div class="container">
     <div class="row align-items-center">
 
@@ -95,7 +96,7 @@
 </section>
 
 <!-- ================= DESIGN 2 (REUSE) ================= -->
-<section class="py-5 overflow-hidden bg-light">
+<section style="margin-top: -100px;" class="section2 py-5 overflow-hidden bg-light">
   <div class="container">
     <div class="row align-items-center">
 

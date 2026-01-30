@@ -90,3 +90,63 @@
     animation-duration: 0.7s;
   }
 }
+
+/* ===============================
+   TOP GAP FIX (NO ANIMATION CHANGE)
+   =============================== */
+
+/* Navbar below gap remove */
+header,
+.navbar {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* First section top padding reduce */
+.first-section {
+  padding-top: 1.2rem !important;
+}
+
+/* Override Bootstrap py-5 only for first section */
+.first-section.py-5 {
+  padding-top: 1.2rem !important;
+  padding-bottom: 3rem !important; /* bottom normal ठेव */
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .first-section,
+  .first-section.py-5 {
+    padding-top: 1rem !important;
+  }
+}
+
+.section1,
+.section2 {
+  overflow: hidden;
+  padding-top: 1rem !important;
+
+}
+
+.section1 { background: rgb(250,241,233); }
+.section2 { background: rgba(240,239,238,.64); }
+
+section.tight-section {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+/* Curved image corners for product images */
+.reveal-img {
+  border-radius: 22px;                 /* 👈 smooth curve */
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* Mobile fine-tune */
+@media (max-width: 768px) {
+  .reveal-img {
+    border-radius: 18px;
+  }
+}
+

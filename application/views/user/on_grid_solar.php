@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="<?= base_url() ?>assets/css/on_grid_solar.css">
 
 <!-- ================= HERO SECTION ================= -->
-<section class="py-5 bg-white">
+<section class="py-5 bg-white on-grid-hero">
   <div class="container">
     <div class="row align-items-center">
 
@@ -27,20 +27,31 @@
   </div>
 </section>
 
-<!-- ================= WHAT IS ON GRID ================= -->
-<section class="py-5 bg-light">
+<!-- ================= WHY ON GRID SOLAR ================= -->
+<section class="py-5 on-grid-info">
   <div class="container">
-    <div class="row">
+    <div class="row align-items-center">
 
-      <div class="col-12 text-center mb-4 og-reveal-up">
-        <h2 class="fw-bold">What is On Grid Solar?</h2>
+      <!-- IMAGE SIDE -->
+      <div class="col-md-6 mb-4 mb-md-0 og-reveal-left text-center">
+        <img src="<?= base_url()?>assets/image/solargrid.jpg"
+             alt="On Grid Solar Power Flow"
+             class="img-fluid ongrid-img">
       </div>
 
-      <div class="col-md-10 mx-auto text-center og-reveal-up">
+      <!-- CONTENT SIDE -->
+      <div class="col-md-6 og-reveal-right">
+        <span class="og-badge">SMART SOLAR SOLUTION</span>
+
+        <h2 class="fw-bold mt-3 mb-3">
+          Generate Power. Cut Bills. Stay Connected.
+        </h2>
+
         <p class="text-muted">
-          An On Grid Solar System works in synchronization with the electricity
-          grid. During the day, solar panels generate power which is used by your
-          home or business, and excess energy is exported to the grid.
+          On Grid Solar systems let you use solar power directly during the day
+          while staying connected to the electricity grid. You consume what you
+          generate and send the extra power back — reducing costs without
+          compromising reliability.
         </p>
       </div>
 
@@ -48,37 +59,47 @@
   </div>
 </section>
 
-<!-- ================= HOW IT WORKS ================= -->
-<section class="py-5 bg-white">
+
+<!-- ================= POWER FLOW ================= -->
+<section class="py-5 on-grid-process">
   <div class="container">
     <div class="row text-center">
 
       <div class="col-md-3 mb-4 og-reveal-up">
-        <h5 class="fw-bold">Solar Panels</h5>
-        <p class="text-muted">Convert sunlight into electricity</p>
+        <div class="process-card">
+          <h5 class="fw-bold">Sunlight Capture</h5>
+          <p>High-efficiency panels absorb solar energy</p>
+        </div>
       </div>
 
       <div class="col-md-3 mb-4 og-reveal-up">
-        <h5 class="fw-bold">Grid Inverter</h5>
-        <p class="text-muted">Converts DC to usable AC power</p>
+        <div class="process-card">
+          <h5 class="fw-bold">Smart Conversion</h5>
+          <p>Grid inverter converts power instantly</p>
+        </div>
       </div>
 
       <div class="col-md-3 mb-4 og-reveal-up">
-        <h5 class="fw-bold">Net Meter</h5>
-        <p class="text-muted">Exports excess power to the grid</p>
+        <div class="process-card">
+          <h5 class="fw-bold">Energy Sharing</h5>
+          <p>Unused power flows back to the grid</p>
+        </div>
       </div>
 
       <div class="col-md-3 mb-4 og-reveal-up">
-        <h5 class="fw-bold">Electric Grid</h5>
-        <p class="text-muted">Acts as backup when solar is unavailable</p>
+        <div class="process-card">
+          <h5 class="fw-bold">Bill Reduction</h5>
+          <p>Net metering lowers monthly electricity cost</p>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
+
 <!-- ================= BENEFITS ================= -->
-<section style="margin-top: -100px;" class="py-5 bg-light">
+<section class="py-5 bg-light on-grid-benefits">
   <div class="container">
     <div class="row align-items-center">
 

@@ -1,5 +1,10 @@
 /* ================= NAVBAR ================= */
 
+.navbar {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 .ms-navbar{
   background:linear-gradient(260deg,#eb8715,#110674);
   border-bottom:2px solid transparent;

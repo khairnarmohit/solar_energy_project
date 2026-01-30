@@ -2,13 +2,13 @@
 <link rel="stylesheet" href="<?= base_url('assets/css/solar_water_heater.css'); ?>">
 
 <!-- ================= SECTION 1 : CONVEX SOLAR ================= -->
-<section style="margin-top: -100px;" class="py-5 bg-white">
+<section class="section1 py-5">
   <div class="container">
     <div class="row align-items-center">
 
       <!-- IMAGE -->
       <div class="col-md-6 mb-4 mb-md-0 text-center">
-        <img src="<?= base_url()?>assets/image/solarheater.png"
+        <img src="<?= base_url()?>assets/image/waterheater1.png"
              alt="Convex Solar"
              class="img-fluid reveal-img">
       </div>
@@ -40,7 +40,7 @@
 </section>
 
 <!-- ================= SECTION 2 : CONVEX SOLAR PLUS ================= -->
-<section style="margin-top: -200px;" class="py-5 bg-white">
+<section class="py-5 section2 tight-section">
   <div class="container">
     <div class="row align-items-center">
 
@@ -66,7 +66,7 @@
 
       <!-- IMAGE -->
       <div class="col-md-6 mt-4 mt-md-0 text-center">
-        <img src="<?= base_url()?>assets/image/solarheater.png"
+        <img src="<?= base_url()?>assets/image/waterheater2.jpg"
              alt="Convex Solar Plus"
              class="img-fluid reveal-img">
       </div>
@@ -76,13 +76,13 @@
 </section>
 
 <!-- ================= SECTION 3 : CONVEX SOLAR FPC ================= -->
-<section style="margin-top: -300px;" class="py-5 bg-white">
+<section class="py-5 section1 tight-section">
   <div class="container">
     <div class="row align-items-center">
 
       <!-- IMAGE -->
       <div class="col-md-6 mb-4 mb-md-0 text-center">
-        <img src="<?= base_url()?>assets/image/solarheater.png"
+        <img src="<?= base_url()?>assets/image/waterheater.jpg"
              alt="Convex Solar FPC"
              class="img-fluid reveal-img">
       </div>
