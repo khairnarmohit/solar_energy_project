@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+
   <title>Solar Hero Video</title>
 
 </head>
@@ -29,56 +34,6 @@
     <a href="#" class="btn hero-btn">Explore More</a>
   </div>
 
-</section>
-<!-- WHAT WE DO SECTION -->
-<section class="what-we-do py-5">
-  <div class="container">
-
-    <!-- Section Heading -->
-    <div class="text-center mb-5">
-      <h2 class="section-title">What We Do</h2>
-
-      <p class="section-subtitle">
-        Clean, Renewable & Affordable Solar Solutions
-      </p>
-
-      <p class="section-desc">
-        Maha Solar provides sustainable solar power systems for homes and
-        industries. We help reduce electricity costs and support energy transition
-        towards a greener future.
-      </p>
-    </div>
-
-    <!-- Cards Row -->
-    <div class="row justify-content-center g-4">
-
-      <!-- Card 1 -->
-      <div class="col-md-5">
-        <div class="service-card text-center">
-          <h3>Solar Power</h3>
-          <p>
-            High efficiency rooftop solar panel installation with long-lasting
-            clean energy solutions.
-          </p>
-          <a href="#" class="btn service-btn">Know More</a>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="col-md-5">
-        <div class="service-card text-center">
-          <h3>Energy Transition</h3>
-          <p>
-            Helping individuals and businesses shift from traditional power to
-            renewable solar energy systems.
-          </p>
-          <a href="#" class="btn service-btn">Know More</a>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
 </section>
 
 <!-- ABOUT US SECTION -->
@@ -113,10 +68,31 @@
 
   </div>
 </section>
+<!-- STATS WAVE SECTION -->
+<section class="stats-wave-section">
+  <div class="stats-container">
+
+    <div class="stat-box">
+      <h2>1.3</h2>
+      <p>Tons Of Carbon Footprint Eliminated</p>
+    </div>
+
+    <div class="stat-box">
+      <h2>400</h2>
+      <p>Solar PV Installed</p>
+    </div>
+
+    <div class="stat-box">
+      <h2>60%</h2>
+      <p>Lower Electricity Consumption</p>
+    </div>
+
+  </div>
+</section>
 
 
   <!-- ===== PRODUCTS SECTION ===== -->
- <section class="products-section">
+<section class="products-section">
   <h2 class="section-title">Products</h2>
 
   <div class="products-container">
@@ -125,20 +101,20 @@
     <div class="products-text">
       <h3>Our Solar Products</h3>
 
-      <ul>
-        <li>Solar Water Heater</li>
-        <li>Solar Pumps</li>
-        <li>On Grid Solar</li>
-        <li>Street Light</li>
-      </ul>
+      <!-- ✅ Short Description (Instead of Points) -->
+      <p>
+        We provide advanced solar products including water heaters, pumps,
+        street lights, and on-grid systems designed for homes, businesses,
+        and industries.
+      </p>
 
-      <!-- ✅ Button Added Here -->
+      <!-- ✅ Button Below Description -->
       <a href="products.html" class="products-btn">View Products</a>
     </div>
 
     <!-- Right Side Image -->
     <div class="products-image">
-      <img src="<?= base_url('assets/image/CONNECT.png') ?>" alt="Solar Products">
+      <img src="<?= base_url('assets/image/solar_street.jpg') ?>" alt="Solar Products">
     </div>
 
   </div>
@@ -149,7 +125,7 @@
 
 <!-- SERVICES SECTION -->
 <section class="services-section">
-  <h2 class="section-title">Services We Provide</h2>
+  <h2 class="section-title">Services</h2>
 
   <div class="services-container">
 
@@ -160,17 +136,17 @@
 
     <!-- Right Side Content -->
     <div class="services-text">
-      <h3>Industrial & Commercial Solar Services</h3>
+      <h3>Industrial & <span>Commercial Services</span></h3>
 
-      <ul>
-        <li>Residential Solar Projects</li>
-        <li>Industrial Solar Solutions</li>
-        <li>Commercial Solar Installations</li>
-      </ul>
+      <!-- ✅ Short Description Instead of Points -->
+      <p>
+        We provide complete solar solutions for residential, commercial, and
+        industrial needs. Our expert services ensure sustainable energy,
+        lower electricity bills, and long-term reliability.
+      </p>
 
-      <!-- ✅ Button Added Here -->
+      <!-- ✅ Button Below Description -->
       <a href="services.html" class="services-btn">Explore Services</a>
-
     </div>
 
   </div>

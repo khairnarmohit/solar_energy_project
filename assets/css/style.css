@@ -63,94 +63,15 @@
     font-size: 2rem;
   }
 }
-/* WHAT WE DO SECTION */
-.what-we-do {
-  background: #f8f9fa;
-  padding: 80px 20px;
-}
 
-/* Title */
-.section-title {
-  font-size: 2.6rem;
-  font-weight: 700;
-  color: #0b2c4d;
-}
+/* ================= ABOUT SECTION (UPDATED THEME) ================= */
 
-/* Subtitle */
-.section-subtitle {
-  font-size: 1.2rem;
-  color: #555;
-  margin-top: 10px;
-}
 
-/* Description */
-.section-desc {
-  max-width: 750px;
-  margin: 20px auto;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #333;
-}
 
-/* Service Card */
-.service-card {
-  background: white;
-  padding: 35px 25px;
-  border-radius: 18px;
-  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
-  transition: 0.3s ease;
-}
-
-/* Hover Effect */
-.service-card:hover {
-  transform: translateY(-8px);
-}
-
-/* Card Title */
-.service-card h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #0b2c4d;
-  margin-bottom: 15px;
-}
-
-/* Card Text */
-.service-card p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-/* Button */
-.service-btn {
-  margin-top: 15px;
-  background: #ffb300;
-  padding: 10px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  color: black;
-  transition: 0.3s;
-}
-
-.service-btn:hover {
-  background: #ffa000;
-}
-
-/* ✅ Responsive: Mobile Stack */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .service-card {
-    padding: 25px 18px;
-  }
-}
-
-/* ABOUT SECTION */
 .about-section {
-  padding: 90px 0;
-  background: #fffaf3;
+  padding: 70px 0;
+  background: #fff8f0; /* ✅ Soft Cream Background */
+  font-family: "Poppins", sans-serif;
 }
 
 .about-container {
@@ -159,52 +80,58 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 70px;
+  gap: 50px;
 }
 
 /* Left Image */
 .about-image img {
-  width: 820px;
-  border-radius: 30px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  width: 600px;
+  border-radius: 25px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.12);
 }
 
-/* Right Text */
+/* Heading */
 .about-text h2 {
-  font-size: 60px;
-  font-weight: bold;
-  color: #000;
-  margin-bottom: 25px;
+  font-size: 46px;
+  font-weight: 700;
+  color: #0a4d3c; /* ✅ Deep Green */
+  margin-bottom: 18px;
 }
 
+/* Highlight Word */
+.about-text h2 span {
+  color: #ff9800; /* ✅ Orange Accent */
+}
+
+/* Paragraph */
 .about-text p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.8;
-  color: #333;
-  margin-bottom: 20px;
+  color: #555;
+  margin-bottom: 18px;
   max-width: 520px;
 }
 
-/* ✅ Button Same Style */
+/* ✅ Gradient Button (Different) */
 .about-btn {
   display: inline-block;
-  margin-top: 30px;
-  padding: 14px 38px;
-  background: #003366;
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 8px;
+  padding: 14px 42px;
+  border-radius: 30px;
   text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+
+  background: linear-gradient(to right, #000000, #000000); /* ✅ Purple-Pink */
+  box-shadow: 0px 8px 20px #ffffff;
+
   transition: 0.3s ease;
 }
 
-.about-btn:hover {
-  background: red;
-}
 
-/* ✅ Responsive */
-@media (max-width: 992px) {
+/* Responsive */
+@media(max-width: 992px) {
   .about-container {
     flex-direction: column;
     text-align: center;
@@ -220,75 +147,145 @@
 }
 
 
-/* ===== PRODUCTS SECTION ===== */
-.products-section {
-  padding: 80px 0;
-  background: #fffaf3;
+/* ================= STATS WAVE SECTION ================= */
+.stats-wave-section {
+  padding: 55px 0;   /* ✅ Medium height */
+  text-align: center;
+
+  background-image: url("../image/wave.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  position: relative;
 }
 
+/* ✅ Light Overlay */
+.stats-wave-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.70);
+}
+
+/* ✅ Content Layer */
+.stats-container {
+  position: relative;
+  z-index: 2;
+
+  width: 85%;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* ✅ Number */
+.stat-box h2 {
+  font-size: 58px;
+  font-weight: 700;
+  color: #444;
+
+  margin-bottom: 6px;   /* ✅ Close केले */
+  line-height: 1;       /* ✅ Tight spacing */
+}
+
+/* ✅ Text */
+.stat-box p {
+  font-size: 15px;
+  color: #666;
+
+  margin-top: 0px;      /* ✅ Gap काढला */
+  line-height: 1.4;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    gap: 22px;
+  }
+}
+
+
+
+
+/* ================= PRODUCTS SECTION (UPDATED) ================= */
+.products-section {
+  padding: 70px 0;
+  font-family: "Poppins", sans-serif;
+
+  /* ✅ Mixed Gradient Background */
+  background: linear-gradient(to right, #accae8, #eef5ff);
+}
+
+/* Title */
 .section-title {
   text-align: center;
-  font-size: 50px;
-  font-weight: bold;
-  color: #003366;
-  margin-bottom: 60px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #0b2c4d; /* Dark Blue */
 }
 
+/* Layout */
 .products-container {
   width: 85%;
   margin: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
 
-/* Left Side */
+/* Heading */
 .products-text h3 {
-  font-size: 55px;
-  font-weight: bold;
-  color: #002244;
-  margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: 700;
+  color: #0b2c4d;
 }
 
-.products-text ul {
-  list-style: disc;
-  margin-left: 20px;
+/* ✅ Highlight Word Color */
+.services-section {
+  background: #fff8f0; /* Soft Cream */
 }
 
-.products-text ul li {
-  font-size: 22px;
+/* Description */
+.products-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
   margin: 18px 0;
-  color: red;
-  font-weight: 500;
+  max-width: 520px;
 }
 
-/* ✅ Button Styling */
+/* ✅ Mixed Gradient Button */
 .products-btn {
   display: inline-block;
-  margin-top: 35px;
-  padding: 14px 35px;
-  background: #003366;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 8px;
+  padding: 14px 42px;
+  border-radius: 30px;
   text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+
+ background: linear-gradient(to right, #000000, #000000); /* ✅ Purple-Pink */
+  box-shadow: 0px 8px 10px #ffffff;
+
   transition: 0.3s ease;
 }
 
-.products-btn:hover {
-  background: red;
-}
 
-/* Right Side Image */
+
+/* Image */
 .products-image img {
-  width: 650px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  width: 580px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
-/* ✅ Responsive */
-@media (max-width: 992px) {
+/* Responsive */
+@media(max-width: 992px) {
   .products-container {
     flex-direction: column;
     text-align: center;
@@ -296,89 +293,94 @@
 
   .products-image img {
     width: 100%;
-    margin-top: 40px;
-  }
-
-  .products-text ul {
-    display: inline-block;
-    text-align: left;
   }
 }
-
 
 
 
 /* SERVICES SECTION */
+/* ================= SERVICES SECTION (UPDATED STYLE) ================= */
+
 .services-section {
-  padding: 90px 0;
-  background: #fffaf3;
+  padding: 70px 0;
+  font-family: "Poppins", sans-serif;
+  background: #fff8f0; /* ✅ Soft Cream Background */
+
+
 }
 
+
+/* Title Same Theme */
 .section-title {
   text-align: center;
-  font-size: 50px;
-  font-weight: bold;
-  color: #003366;
-  margin-bottom: 70px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #0b2c4d;
+  margin-bottom: 60px;
 }
 
-/* Container Layout */
+/* Layout */
 .services-container {
   width: 85%;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 60px;
+  gap: 50px;
 }
 
 /* Left Image */
 .services-image img {
-  width: 720px;
+  width: 620px;
   border-radius: 25px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.12);
 }
 
-/* Right Text */
+/* Right Heading */
 .services-text h3 {
-  font-size: 50px;
-  font-weight: bold;
-  color: #002244;
-  margin-bottom: 35px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #0b2c4d;
+  margin-bottom: 18px;
 }
 
-.services-text ul {
-  list-style: disc;
-  margin-left: 20px;
+/* Highlight Word */
+.services-text h3 span {
+  color: #000000; /* ✅ Pink Accent */
 }
 
-.services-text ul li {
-  font-size: 22px;
-  margin: 20px 0;
-  color: red;
-  font-weight: 500;
+
+/* ✅ Description */
+.services-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 520px;
+  margin-bottom: 25px;
 }
 
-/* ✅ Button Style Same as Products */
+/* ✅ Gradient Button Different From Products */
 .services-btn {
   display: inline-block;
-  margin-top: 35px;
-  padding: 14px 40px;
-  background: #003366;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 8px;
+  padding: 14px 42px;
+  border-radius: 30px;
   text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+
+  /* ✅ Different Gradient */
+ background: linear-gradient(to right, #000000, #000000); /* ✅ Purple-Pink */
+  box-shadow: 0px 8px 10px #ffffff;
+
   transition: 0.3s ease;
 }
 
-.services-btn:hover {
-  background: red;
-}
+
 
 /* ✅ Responsive */
-@media (max-width: 992px) {
+@media(max-width: 992px) {
   .services-container {
     flex-direction: column;
     text-align: center;
@@ -388,9 +390,8 @@
     width: 100%;
   }
 
-  .services-text ul {
-    display: inline-block;
-    text-align: left;
+  .services-text p {
+    max-width: 100%;
   }
 }
 
@@ -399,7 +400,7 @@
 
 .blogs-section {
   width: 100%;
-  background: linear-gradient(to right, #004aad, #00c96b);
+  background: linear-gradient(to right, #b7c2d0, #75cdd2);
   padding: 100px 0;
 }
 
@@ -442,7 +443,7 @@
 
 /* Button style */
 .blog-btn {
-  background: linear-gradient(to right, #004aad, #00c96b);
+  background: linear-gradient(to right, #000000, #000000);
   color: white;
   padding: 10px 25px;
   border-radius: 8px;
@@ -450,7 +451,7 @@
 }
 
 .blog-btn:hover {
-  background: linear-gradient(to right, #00c96b, #004aad);
+  background: linear-gradient(to right, #000000, #000000);
 }
 
 /* Responsive Fix */
