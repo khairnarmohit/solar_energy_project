@@ -19,160 +19,107 @@
 
 </section>
 
-<!-- Brand Section -->
-<section class="container our_brand py-5"
-    data-aos="zoom-in-up"
-    data-aos-anchor-placement="center-bottom"
-    data-aos-duration="1000">
 
-    <div class="row align-items-center">
 
-        <div class="col-12 col-md-6 order-1 order-md-2 about_brand_img text-center"
-            data-aos="fade-left">
-            <img src="<?= base_url('assets/image/about_brand_img.png') ?>"
-                alt="Brand Image"
-                class="img-fluid rounded">
-        </div>
 
-        <div class="col-12 col-md-6 order-2 order-md-1">
-            <h1 class="brand_name">Our Brand</h1>
-            <p>To make our future more vibrant and sustainable by using green energy to save the earth.</p>
-            <p>We are also committed to maintain our leadership position in the manufacture of solar products, delivering higher efficiency to the global photovoltaic industry.</p>
-            <p>To achieve 9 GW production capacity by 2025 to serve green energy demand internationally.</p>
-        </div>
+<section class="container brand-section py-5"
+    data-aos="zoom-in-up">
 
+  <div class="row align-items-center g-3">
+
+
+    <!-- TEXT -->
+    <div class="col-12 col-md-6">
+      <h1 class="title">Our Brand</h1>
+      <p>To make our future more vibrant and sustainable by using green energy.</p>
+      <p>We are committed to delivering high-efficiency solar products globally.</p>
+      <p>Targeting 9 GW production capacity by 2025.</p>
     </div>
+
+    <!-- IMAGE -->
+    <div class="col-12 col-md-6 text-center">
+      <div class="image-card">
+        <img src="<?= base_url('assets/image/about_brand_img.png') ?>"
+             class="img-fluid" alt="Our Brand">
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="container-fluid vision-section py-5"
+    data-aos="zoom-in-up">
+
+  <div class="row align-items-center g-3">
+
+
+ 
+    <!-- IMAGE -->
+    <div class="col-12 col-md-6 text-center">
+      <div class="image-card">
+        <img src="<?= base_url('assets/image/about_brand_img.png') ?>"
+             class="img-fluid" alt="Our Brand">
+      </div>
+    </div>
+       <!-- TEXT -->
+    <div class="col-12 col-md-6">
+      <h1 class="title">Our Brand</h1>
+      <p>To make our future more vibrant and sustainable by using green energy.</p>
+      <p>We are committed to delivering high-efficiency solar products globally.</p>
+      <p>Targeting 9 GW production capacity by 2025.</p>
+    </div>
+
+
+  </div>
 </section>
 
 
-<!-- Vision Section -->
-<section class="container vision py-5"
-    data-aos="zoom-in-up"
-    data-aos-duration="1000">
+<section class="team-ui" data-aos="fade-up">
+  <div class="container">
 
-    <div class="row align-items-center">
+    <h2 class="team-title">Meet Our Team</h2>
 
-        <div class="col-12 col-md-6 order-1 about_brand_img text-center">
-            <img src="<?= base_url('assets/image/about_brand_img.png') ?>"
-                alt="Brand Image"
-                class="img-fluid rounded">
+    <div class="team-row">
+
+      <!-- CARD 1 -->
+      <div class="team-card-new">
+        <div class="team-img-wrap">
+          <img src="<?= base_url('assets/image/man1.jpg') ?>" alt="John Doe">
         </div>
+        <h4 class="team-name">Pavan Mohite</h4>
+        <div class="line"></div>
+        <p class="team-role">Chief Executive Officer</p>
+        <div class="line small"></div>
+        <p class="team-exp">15+ Years Experience</p>
+      </div>
 
-        <div class="col-12 col-md-6 order-2">
-            <h1 class="title">Our Vision</h1>
-            <p>To make our future more vibrant and sustainable by using green energy to save the earth.</p>
-            <p>We are also committed to maintain our leadership position in the manufacture of solar products, delivering higher efficiency to the global photovoltaic industry.</p>
-            <p>To achieve 9 GW production capacity by 2025 to serve green energy demand internationally.</p>
+      <!-- CARD 2 -->
+      <div class="team-card-new">
+        <div class="team-img-wrap">
+          <img src="<?= base_url('assets/image/man2.jpg') ?>" alt="Rahul Sharma">
         </div>
+        <h4 class="team-name">Rahul Sharma</h4>
+        <div class="line"></div>
+        <p class="team-role">Technical Director</p>
+        <div class="line small"></div>
+        <p class="team-exp">12+ Years Experience</p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="team-card-new">
+        <div class="team-img-wrap">
+          <img src="<?= base_url('assets/image/man3.jpg') ?>" alt="Amit Patil">
+        </div>
+        <h4 class="team-name">Amit Patil</h4>
+        <div class="line"></div>
+        <p class="team-role">Project Manager</p>
+        <div class="line small"></div>
+        <p class="team-exp">10+ Years Experience</p>
+      </div>
 
     </div>
+  </div>
 </section>
 
-
-<!-- Impact & Key Statistics -->
-<section class="container-fluid text-center py-5 bg-light stats-section stats-ui"
-    data-aos="fade-up"
-    data-aos-anchor-placement="center-bottom"
-    data-aos-duration="1000">
-
-    <div class="row">
-        <h2 class="title py-2 stats-title">Impact & Key Statistics</h2>
-
-        <div class="col-md-4 stats-col" id="achievements">
-            <div class="stats-card">
-                <div class="stats-number">
-                    <span class="counter" data-target="1.3">0</span>
-                    <span class="unit">Tons</span>
-                </div>
-                <p class="count_desc">Carbon Footprint Eliminated</p>
-            </div>
-        </div>
-
-        <div class="col-md-4 stats-col">
-            <div class="stats-card">
-                <div class="stats-number">
-                    <span class="counter" data-target="400">0</span>
-                    <span class="unit">+</span>
-                </div>
-                <p class="count_desc">Solar PV Installations</p>
-            </div>
-        </div>
-
-        <div class="col-md-4 stats-col">
-            <div class="stats-card">
-                <div class="stats-number">
-                    <span class="counter" data-target="60">0</span>
-                    <span class="unit">%</span>
-                </div>
-                <p class="count_desc">Lower Energy Consumption</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Meet Our Team -->
-<section class="our_team container-fluid py-5 team-ui" data-aos="fade-up" data-aos-duration="1000">
-    <div class="row justify-content-center">
-
-        <div class="title h1 team-title">Meet Our Team</div>
-
-        <div class="col-12 col-md-4 mt-3 team-col">
-            <div class="team_member text-center team-card">
-                <img src="<?= base_url('assets/image/team1.jpg') ?>" alt="Team Member 1"
-                    class="img-fluid rounded-circle mb-3 team-img">
-                <h4>John Doe</h4>
-                <p>Chief Executive Officer</p>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-4 mt-3 team-col">
-            <div class="team_member text-center team-card">
-                <img src="<?= base_url('assets/image/team1.jpg') ?>" alt="Team Member 1"
-                    class="img-fluid rounded-circle mb-3 team-img">
-                <h4>John Doe</h4>
-                <p>Chief Executive Officer</p>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-4 mt-3 team-col">
-            <div class="team_member text-center team-card">
-                <img src="<?= base_url('assets/image/team1.jpg') ?>" alt="Team Member 1"
-                    class="img-fluid rounded-circle mb-3 team-img">
-                <h4>John Doe</h4>
-                <p>Chief Executive Officer</p>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-4 mt-3 team-col">
-            <div class="team_member text-center team-card">
-                <img src="<?= base_url('assets/image/team1.jpg') ?>" alt="Team Member 1"
-                    class="img-fluid rounded-circle mb-3 team-img">
-                <h4>John Doe</h4>
-                <p>Chief Executive Officer</p>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-4 mt-3 team-col">
-            <div class="team_member text-center team-card">
-                <img src="<?= base_url('assets/image/team1.jpg') ?>" alt="Team Member 1"
-                    class="img-fluid rounded-circle mb-3 team-img">
-                <h4>John Doe</h4>
-                <p>Chief Executive Officer</p>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-4 mt-3 team-col">
-            <div class="team_member text-center team-card">
-                <img src="<?= base_url('assets/image/team1.jpg') ?>" alt="Team Member 1"
-                    class="img-fluid rounded-circle mb-3 team-img">
-                <h4>John Doe</h4>
-                <p>Chief Executive Officer</p>
-            </div>
-        </div>
-
-    </div>
-</section>
 
 
 
