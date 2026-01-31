@@ -1,56 +1,119 @@
-<section class="about-hero">
-    <div class="slides">
-        <div class="slide active" style="background-image:url('<?= base_url('assets/image/about_bg1.jpg'); ?>')"></div>
-        <div class="slide" style="background-image:url('<?= base_url('assets/image/about_bg2.jpg'); ?>')"></div>
-        <div class="slide" style="background-image:url('<?= base_url('assets/image/about_bg3.jpg'); ?>')"></div>
+<section class="blog-section">
+
+  <div class="container">
+
+    <!-- BLOG HEADING -->
+    <div class="blog-heading center">
+      <h1>Solar Energy Blogs</h1>
+      <p>Powering a Sustainable & Greener Future</p>
     </div>
 
-    <div class="overlay"></div>
+    <!-- BLOG GRID -->
+    <div class="blog-grid">
 
-    <div class="hero-content">
-        <h1>Our Blogs</h1>
+      <!-- BLOG 1 -->
+<div class="blog-card">
+  <h3>Solar Success Story: Convex Solar Solutions, Ahilyanagar</h3>
+  <p class="date">📅 15 January, 2025</p>
+  <p class="desc">
+    Convex Solar Solutions is helping homes and businesses in Ahilyanagar switch
+    to clean, reliable, and cost-effective solar energy solutions...
+  </p>
+  <a href="<?= base_url('user/blog_details'); ?>" class="read-btn">
+    READ MORE
+  </a>
+</div>
+
+
+      <!-- BLOG 2 -->
+<div class="blog-card">
+  <h3>How to Clean and Maintain Solar Panels in Daily Life</h3>
+  <p class="date">📅 20 January, 2025</p>
+  <p class="desc">
+    Proper cleaning and regular maintenance of solar panels helps ensure maximum
+    efficiency and long-term performance for homes and businesses in Ahilyanagar...
+  </p>
+  <a href="<?= base_url('user/blog_details1'); ?>" class="read-btn">
+    READ MORE
+  </a>
+</div>
+
+
+      <!-- BLOG 3 -->
+<div class="blog-card">
+  <h3>Empowering Communities with Solar Energy</h3>
+  <p class="date">📅 22 January, 2025</p>
+  <p class="desc">
+    Convex Solar Solutions is helping rural and urban communities in Ahilyanagar
+    access clean, reliable, and affordable solar energy solutions...
+  </p>
+  <a href="<?= base_url('user/blog_details2'); ?>" class="read-btn">
+    READ MORE
+  </a>
+</div>
+
+      <!-- BLOG 4 IMAGE -->
+      <div class="blog-card image-card">
+        <img src="<?= base_url('assets/image/blog1.jpg') ?>">
+        <h3>Everything about Solar Panels Subsidies in India 2024</h3>
+        <p class="date">📅 28 March, 2024</p>
+      </div>
+
+      <!-- BLOG 5 IMAGE -->
+      <div class="blog-card image-card">
+        <img src="<?= base_url('assets/image/blog2.jpg') ?>">
+        <h3>Exploring New Types of Solar Panels in the Market</h3>
+        <p class="date">📅 26 March, 2024</p>
+      </div>
+
+      <!-- BLOG 6 IMAGE -->
+      <div class="blog-card image-card">
+        <img src="<?= base_url('assets/image/blog3.jpg') ?>">
+        <h3>What type of Solar Panel is best for you?</h3>
+        <p class="date">📅 24 March, 2024</p>
+      </div>
+
+      <!-- BLOG 7 -->
+<div class="blog-card">
+  <h3>Benefits of Installing Rooftop Solar System</h3>
+  <p class="date">📅 25 January, 2025</p>
+  <p class="desc">
+    Rooftop solar systems help homes and businesses in Ahilyanagar reduce electricity
+    bills, achieve energy independence, and contribute to a greener environment...
+  </p>
+  <a href="<?= base_url('user/blog_details3'); ?>" class="read-btn">
+    READ MORE
+  </a>
+</div>
+
+      <!-- BLOG 8 -->
+<div class="blog-card">
+  <h3>Solar Energy vs Traditional Energy</h3>
+  <p class="date">📅 28 January, 2025</p>
+  <p class="desc">
+    Solar energy offers clean, renewable, and cost-effective power compared to
+    traditional energy sources, helping homes and businesses in Ahilyanagar
+    move towards a sustainable future...
+  </p>
+  <a href="<?= base_url('user/blog_details4'); ?>" class="read-btn">
+    READ MORE
+  </a>
+</div>
+
+      <!-- BLOG 9 -->
+<div class="blog-card">
+  <h3>Why Solar is the Future of India</h3>
+  <p class="date">📅 30 January, 2025</p>
+  <p class="desc">
+    With abundant sunlight, strong government policies, and rising energy demands,
+    solar power is shaping India’s future while helping regions like Ahilyanagar
+    move towards sustainable development...
+  </p>
+  <a href="<?= base_url('user/blog_details5'); ?>" class="read-btn">
+    READ MORE
+  </a>
+</div>
+
     </div>
-
-    <div class="triangle-curve"></div>
-
-</section>
-
-
-<section class="container-fluid py-5">
-    <div class="row px-lg-5 px-3 align-items-center blog-item">
-
-        <div class="col-md-6 py-4 order-1 order-md-1 text-center">
-            <img src="<?= base_url('assets/image/blog1.jpg') ?>" class="blog_img img-fluid" alt="">
-        </div>
-
-        <div class="col-md-6 py-4 order-2 order-md-2">
-            <h2 class="blog-title">
-                Chairperson & Joint MD, Hardik Kothiya, Shines on the Hurun List
-            </h2>
-            <p class="blog-desc">
-                Rayzon solar firmly and proudly believes in ‘success is brighter when it lights up an entire industry—not just an individual’.
-            </p>
-            <a href="<?= base_url('user/blogs_details/1') ?>" class="read_more_btn mt-2">Read More</a>
-        </div>
-
-    </div>
-
-    <!-- 2nd row (Repeat)-->
-    <div class="row px-lg-5 px-3 align-items-center blog-item">
-
-        <div class="col-md-6 py-4 order-1 order-md-1 text-center">
-            <img src="<?= base_url('assets/image/blog2.jpg') ?>" class="blog_img img-fluid" alt="">
-        </div>
-
-        <div class="col-md-6 py-4 order-2 order-md-2">
-            <h2 class="blog-title">
-                Chairperson & Joint MD, Hardik Kothiya, Shines on the Hurun List
-            </h2>
-            <p class="blog-desc">
-                Rayzon solar firmly and proudly believes in ‘success is brighter when it lights up an entire industry—not just an individual’.
-            </p>
-            <a href="<?= base_url('user/blogs_details/1') ?>" class="read_more_btn mt-2">Read More</a>
-        </div>
-
-    </div>
+  </div>
 </section>

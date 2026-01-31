@@ -93,19 +93,62 @@ public function blogs(){
     $this->load->view("user/blogs");
     $this->load->view("user/footer");
 }
+public function blog_details()
+{
+    $this->load->view("user/navbar");
+    $this->load->view("user/blog_details");
+    $this->load->view("user/footer");
+}
+
+public function blog_details1()
+{
+    $this->load->view('user/navbar');
+    $this->load->view('user/blog_details1');
+    $this->load->view('user/footer');
+}
+
+public function  blog_details2()
+{
+     $this->load->view('user/navbar');
+     $this->load->view('user/blog_details2');
+     $this->load->view('user/footer');
+}
+
+public function  blog_details3()
+{
+     $this->load->view('user/navbar');
+     $this->load->view('user/blog_details3');
+     $this->load->view('user/footer');
+}
+
+public function blog_details4()
+{
+     $this->load->view('user/navbar');
+     $this->load->view('user/blog_details4');
+     $this->load->view('user/footer');
+
+}
+
+public function blog_details5()
+{
+     $this->load->view('user/navbar');
+     $this->load->view('user/blog_details5');
+     $this->load->view('user/footer');
+
+}
+
+
+
+
 public function contact(){
     $this->load->view("user/navbar");
     $this->load->view("user/contact");
     $this->load->view("user/footer");
-}
+}  
 
 
-public function blogs_details($id){
-    // $data['blog']=$this->My_model->get_blog_details($id);
-    $this->load->view("user/navbar");
-    $this->load->view("user/blogs_details",$id);
-    $this->load->view("user/footer");
 
-}
+
+
 
 }
