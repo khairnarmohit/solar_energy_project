@@ -394,6 +394,7 @@ section {
 
 .connect-btn:hover {
   opacity: 0.9;
+	background-color: orange;
 }
 
 /* ✅ Responsive */
@@ -576,7 +577,7 @@ section {
 }
 
 .blog-btn:hover {
-  background-color: #002a88;
+  background-color: orange;
 }
 
 /* ================= TESTIMONIALS SECTION ================= */
