@@ -121,8 +121,10 @@
 
 .ms-btn{
   padding:50px 100px;
-  background:linear-gradient(260deg,#eb8715,#7a75ad);
+  background-color:rgb(253, 162, 17);
   color:#ffffff !important;
+	padding:10px !important;
+	border-radius: 7px !important;
 
   font-size:19px;
   font-weight:800;
