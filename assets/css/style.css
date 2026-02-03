@@ -56,7 +56,7 @@ section {
 }
 
 .main-btn:hover {
-  background-color: #eb8715;
+  opacity: 0.9;
 }
 
 /* ✅ Common Section Title */
@@ -392,7 +392,7 @@ section {
 }
 
 .connect-btn:hover {
-  background-color: #eb8715;
+  opacity: 0.9;
 }
 
 /* ✅ Responsive */
@@ -474,6 +474,12 @@ section {
 
   cursor: pointer;
   color: #0b2c4d;
+  transition: 0.3s ease;
+}
+
+.faq-question:hover {
+  background: #eb8715 !important;
+  color: white !important;
 }
 
 /* Icon */
@@ -554,8 +560,7 @@ section {
 }
 
 .blog-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 15px 35px rgba(0,0,0,0.2);
+  transform: translateY(-8px);
 }
 
 /* Image */
@@ -573,23 +578,31 @@ section {
   border-radius: 6px;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.3s ease;
 }
 
 .blog-btn:hover {
-  background-color: #eb8715;
+  background-color: #002a88;
 }
 
 /* ================= TESTIMONIALS SECTION ================= */
 
 .testimonials-section {
-  padding: 40px 0;
+  padding: 60px 0;
   font-family: "Poppins", sans-serif;
 
-  /* Background removed */
-  background: #f7f7f7;
+  /* ✅ Background Image */
+  background: url("../image/People.jpg") no-repeat center;
+  background-size: cover;
 
   position: relative;
+}
+
+/* ✅ Light Overlay for Card Visibility */
+.testimonials-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
 }
 
 /* ✅ Content Above Overlay */
@@ -602,7 +615,7 @@ section {
 /* Title */
 .testimonials-heading {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .testimonials-heading h2 {
@@ -630,16 +643,10 @@ section {
 /* Common Card */
 .testimonial-card {
   background: white;
-  padding: 25px;
+  padding: 40px;
   border-radius: 14px;
 
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
 }
 
 /* Left Big Card */
@@ -652,7 +659,7 @@ section {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 
 /* Small Cards */
@@ -754,85 +761,4 @@ section {
     font-size: 32px;
     margin-bottom: 35px;
   }
-
-/* ================= INDUSTRIAL ANIMATIONS ================= */
-
-/* Initial state for animations */
-.about-section,
-.product-section,
-.services-section,
-.blog-section,
-.testimonials-section,
-.faq-section {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: industrialFadeInUp 1s ease forwards;
-}
-
-/* Staggered delays */
-.about-section { animation-delay: 0.2s; }
-.product-section { animation-delay: 0.4s; }
-.services-section { animation-delay: 0.6s; }
-.blog-section { animation-delay: 0.8s; }
-.testimonials-section { animation-delay: 1s; }
-.faq-section { animation-delay: 1.2s; }
-
-/* Hero content animation */
-.hero-content {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: industrialFadeInUp 1.2s ease forwards;
-  animation-delay: 0.5s;
-}
-
-/* Product cards slide in */
-.product-card {
-  opacity: 0;
-  transform: translateX(-50px);
-  animation: slideInLeft 0.8s ease forwards;
-}
-
-.product-card:nth-child(2) { animation-delay: 0.2s; }
-.product-card:nth-child(3) { animation-delay: 0.4s; }
-.product-card:nth-child(4) { animation-delay: 0.6s; }
-
-/* Service boxes industrial blink */
-.service-box {
-  animation: industrialGlow 2s ease-in-out infinite alternate;
-}
-
-/* Blog cards fade up */
-.blog-card {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: industrialFadeInUp 0.8s ease forwards;
-}
-
-.blog-card:nth-child(1) { animation-delay: 0.1s; }
-.blog-card:nth-child(2) { animation-delay: 0.3s; }
-.blog-card:nth-child(3) { animation-delay: 0.5s; }
-
-/* Keyframes */
-@keyframes industrialFadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInLeft {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes industrialGlow {
-  from {
-    box-shadow: 0 0 5px rgba(235, 135, 21, 0.3);
-  }
-  to {
-    box-shadow: 0 0 20px rgba(235, 135, 21, 0.6);
-  }
-}
 }
