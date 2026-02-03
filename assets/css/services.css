@@ -44,6 +44,13 @@
   font-weight: 500;
   z-index: 2;
 	text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.service-box:hover {
+  background: #eb8715;
+  transform: translateY(-50%) translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
 /* Positions */
