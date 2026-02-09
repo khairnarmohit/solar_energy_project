@@ -28,8 +28,7 @@
   display:block;
 }
 
-.edit-body input,
-.edit-body textarea{
+.edit-body input{
   width:100%;
   padding:12px 14px;
   border:1px solid #dcdcdc;
@@ -37,15 +36,12 @@
   margin-bottom:18px;
 }
 
-.edit-body textarea{
-  resize:vertical;
-}
-
 .edit-body img{
-  width:120px;
+  width:140px;
   border-radius:6px;
   margin:10px 0 18px;
   border:1px solid #eee;
+  display:block;
 }
 
 .btn-orange{
@@ -55,7 +51,6 @@
   padding:10px 26px;
   border-radius:6px;
   font-weight:600;
-  cursor:pointer;
 }
 
 .btn-orange:hover{
@@ -74,49 +69,53 @@
 
 <div class="edit-wrap">
 
+  <!-- HEADER -->
   <div class="edit-header">
-    Update Business Vertical
+    Update About Hero
   </div>
 
+  <!-- BODY -->
   <div class="edit-body">
 
     <form method="post"
-          action="<?= base_url('about/update_vertical/'.$row->id) ?>"
-          enctype="multipart/form-data">
+      action="<?= base_url('about/update/about_hero/'.$row->id.'/about/about') ?>"
+      enctype="multipart/form-data">
 
-      <label>Vertical Title</label>
+      <!-- TITLE -->
+      <label>Hero Title</label>
       <input type="text"
              name="title"
              value="<?= $row->title ?>"
              required>
 
-      <label>Description</label>
-      <textarea name="description"
-                rows="4"
-                required><?= $row->description ?></textarea>
+      <!-- BG 1 -->
+      <label>Background Image 1</label>
+      <?php if(!empty($row->bg1)){ ?>
+        <img src="<?= base_url('assets/image/'.$row->bg1) ?>">
+      <?php } else { echo '<p>- No Image</p>'; } ?>
+      <input type="file" name="bg1">
 
-      <label>Color Code</label>
-      <input type="text"
-             name="color"
-             value="<?= $row->color ?>"
-             placeholder="#ff7a00"
-             required>
+      <!-- BG 2 -->
+      <label>Background Image 2</label>
+      <?php if(!empty($row->bg2)){ ?>
+        <img src="<?= base_url('assets/image/'.$row->bg2) ?>">
+      <?php } else { echo '<p>- No Image</p>'; } ?>
+      <input type="file" name="bg2">
 
-      <label>Current Image</label>
-      <?php if(!empty($row->image1)){ ?>
-        <img src="<?= base_url('uploads/'.$row->image1) ?>">
-      <?php } else { ?>
-        <p class="text-muted">No Image</p>
-      <?php } ?>
+      <!-- BG 3 -->
+      <label>Background Image 3</label>
+      <?php if(!empty($row->bg3)){ ?>
+        <img src="<?= base_url('assets/image/'.$row->bg3) ?>">
+      <?php } else { echo '<p>- No Image</p>'; } ?>
+      <input type="file" name="bg3">
 
-      <label>Change Image</label>
-      <input type="file" name="image1">
-
+      <!-- BUTTONS -->
       <button type="submit" class="btn-orange">
-        Update Vertical
+        Update Hero
       </button>
 
-      <a href="<?= base_url('about/home_verticals') ?>" class="btn-gray">
+      <a href="<?= base_url('about/about') ?>"
+         class="btn-gray">
         Back
       </a>
 

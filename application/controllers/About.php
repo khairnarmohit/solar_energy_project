@@ -9,7 +9,7 @@ class About extends CI_Controller
         $this->load->model('My_about');
     }
 
-    /* ================= COMMON PAGE ================= */
+    /* ================= COMMON PAGE LOADER ================= */
 
     private function page($view, $data = [])
     {
@@ -19,36 +19,33 @@ class About extends CI_Controller
     }
 
     /* ================= UPLOAD HELPER ================= */
-private function upload_files($fields)
-{
-    $config['upload_path']   = FCPATH.'uploads/';
-    $config['allowed_types'] = '*'; // 🔥 IMPORTANT (localhost fix)
-    $config['encrypt_name']  = TRUE;
-    $config['max_size']      = 4096;
-    $config['detect_mime']   = FALSE;
 
-    $this->load->library('upload');
-    $uploaded = [];
+    private function upload_files($fields)
+    {
+        $config['upload_path']   = FCPATH.'uploads/';
+        $config['allowed_types'] = 'jpg|jpeg|png|webp';
+        $config['encrypt_name']  = TRUE;
+        $config['max_size']      = 4096;
 
-    foreach ($fields as $field) {
-        if (!empty($_FILES[$field]['name'])) {
+        $this->load->library('upload');
+        $uploaded = [];
 
-            $this->upload->initialize($config);
+        foreach ($fields as $field) {
+            if (!empty($_FILES[$field]['name'])) {
 
-            if (!$this->upload->do_upload($field)) {
-                echo '<pre>';
-                print_r($_FILES[$field]);
-                echo $this->upload->display_errors();
-                exit;
+                $this->upload->initialize($config);
+
+                if (!$this->upload->do_upload($field)) {
+                    echo $this->upload->display_errors();
+                    exit;
+                }
+
+                $data = $this->upload->data();
+                $uploaded[$field] = $data['file_name'];
             }
-
-            $data = $this->upload->data();
-            $uploaded[$field] = $data['file_name'];
         }
+        return $uploaded;
     }
-    return $uploaded;
-}
-
 
     /* ================= LIST PAGES ================= */
 
@@ -76,20 +73,87 @@ private function upload_files($fields)
         $this->page('home_verticals', $data);
     }
 
+    /* ================= ADD ================= */
+
+    public function add_brand()
+    {
+        $data = [
+            'title'       => $this->input->post('title'),
+            'description' => $this->input->post('description'),
+        ];
+
+        if (!empty($_FILES['image']['name'])) {
+            $file = $this->upload_files(['image']);
+            $data['image'] = $file['image'];
+        }
+
+        $this->My_about->insert_brand($data);
+        redirect('about/home_brand');
+    }
+
+    public function add_vision()
+    {
+        $data = [
+            'title'       => $this->input->post('title'),
+            'description' => $this->input->post('description'),
+        ];
+
+        if (!empty($_FILES['image']['name'])) {
+            $file = $this->upload_files(['image']);
+            $data['image'] = $file['image'];
+        }
+
+        $this->My_about->insert_vision($data);
+        redirect('about/home_vision');
+    }
+
+    public function add_team()
+    {
+        $data = [
+            'name'       => $this->input->post('name'),
+            'role'       => $this->input->post('role'),
+            'experience' => $this->input->post('experience'),
+        ];
+
+        if (!empty($_FILES['image']['name'])) {
+            $file = $this->upload_files(['image']);
+            $data['image'] = $file['image'];
+        }
+
+        $this->My_about->insert_team($data);
+        redirect('about/home_team');
+    }
+
+    public function add_vertical()
+    {
+        $data = [
+            'title'       => $this->input->post('title'),
+            'description' => $this->input->post('description'),
+            'color'       => $this->input->post('color'),
+        ];
+
+        $files = $this->upload_files(['image1']);
+        if (!empty($files['image1'])) {
+            $data['image1'] = $files['image1'];
+        }
+
+        $this->My_about->insert_vertical($data);
+        redirect('about/home_verticals');
+    }
+
     /* ================= EDIT ================= */
 
     public function edit($table, $id, $view)
     {
         $data['row'] = $this->My_about->get_by_id($table, $id);
         if (!$data['row']) {
-            redirect('about/home_verticals');
+            redirect('about/home_brand');
         }
         $this->page($view, $data);
     }
 
     /* ================= UPDATE ================= */
 
-    // BRAND (single image)
     public function update_brand($id)
     {
         $data = [
@@ -106,7 +170,6 @@ private function upload_files($fields)
         redirect('about/home_brand');
     }
 
-    // VISION (single image)
     public function update_vision($id)
     {
         $data = [
@@ -123,7 +186,6 @@ private function upload_files($fields)
         redirect('about/home_vision');
     }
 
-    // TEAM (single image)
     public function update_team($id)
     {
         $data = [
@@ -140,22 +202,29 @@ private function upload_files($fields)
         $this->My_about->update_by_id('team_members', $id, $data);
         redirect('about/home_team');
     }
-public function update_vertical($id)
-{
-    $data = [
-        'title'       => $this->input->post('title'),
-        'description' => $this->input->post('description'),
-        'color'       => $this->input->post('color'),
-    ];
 
-    $files = $this->upload_files(['image1','image2','image3']);
+    public function update_vertical($id)
+    {
+        $data = [
+            'title'       => $this->input->post('title'),
+            'description' => $this->input->post('description'),
+            'color'       => $this->input->post('color'),
+        ];
 
-    if (!empty($files['image1'])) $data['image1'] = $files['image1'];
-    if (!empty($files['image2'])) $data['image2'] = $files['image2'];
-    if (!empty($files['image3'])) $data['image3'] = $files['image3'];
+        $files = $this->upload_files(['image1']);
+        if (!empty($files['image1'])) {
+            $data['image1'] = $files['image1'];
+        }
 
-    $this->My_about->update_by_id('business_verticals', $id, $data);
-    redirect('about/home_verticals');
-}
+        $this->My_about->update_by_id('business_verticals', $id, $data);
+        redirect('about/home_verticals');
+    }
 
+    /* ================= DELETE ================= */
+
+    public function delete($table, $id, $redirect)
+    {
+        $this->My_about->delete_by_id($table, $id);
+        redirect($redirect);
+    }
 }

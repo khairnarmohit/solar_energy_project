@@ -74,18 +74,15 @@
 
 <div class="edit-wrap">
 
-  <!-- HEADER -->
   <div class="edit-header">
     Update Vision Details
   </div>
 
-  <!-- BODY -->
   <div class="edit-body">
 
-<form method="post"
-      action="<?= base_url('about/update_vision/'.$row->id) ?>"
-      enctype="multipart/form-data">
-
+    <form method="post"
+          action="<?= base_url('about/update_vision/'.$row->id) ?>"
+          enctype="multipart/form-data">
 
       <label>Vision Title</label>
       <input type="text"
@@ -98,13 +95,12 @@
                 rows="4"
                 required><?= $row->description ?></textarea>
 
-     <label>Current Image</label>
-<?php if(!empty($row->image)){ ?>
-  <img src="<?= base_url('uploads/'.$row->image) ?>">
-<?php } else { ?>
-  <p>- No Image</p>
-<?php } ?>
-
+      <label>Current Image</label>
+      <?php if(!empty($row->image)){ ?>
+        <img src="<?= base_url('uploads/'.$row->image) ?>">
+      <?php } else { ?>
+        <p class="text-muted">No Image</p>
+      <?php } ?>
 
       <label>Change Image</label>
       <input type="file" name="image">

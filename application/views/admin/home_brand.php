@@ -5,21 +5,10 @@
     <div class="col-12 col-lg-10 mx-auto">
 
       <!-- ===== FORM ===== -->
-      <div style="
-        background:#fff;
-        border-radius:6px;
-        overflow:hidden;
-        margin-bottom:30px;
-      ">
+      <div style="background:#fff;border-radius:6px;overflow:hidden;margin-bottom:30px;">
 
         <!-- ORANGE HEADER -->
-        <div style="
-          background:#ff7a00;
-          color:#fff;
-          padding:14px 20px;
-          font-size:18px;
-          font-weight:600;
-        ">
+        <div style="background:#ff7a00;color:#fff;padding:14px 20px;font-size:18px;font-weight:600;">
           Add Brand
         </div>
 
@@ -63,66 +52,59 @@
       </div>
 
       <!-- ===== TABLE ===== -->
-      <div style="
-        background:#fff;
-        border-radius:6px;
-        padding:20px;
-      ">
+      <div style="background:#fff;border-radius:6px;padding:20px;">
 
-        <table class="table table-bordered align-middle">
-          <thead style="background:#f2f2f2;">
-            <tr>
-              <th width="60">#</th>
-              <th width="120">Image</th>
-              <th>Brand Title</th>
-              <th>Description</th>
-              <th width="180">Action</th>
-            </tr>
-          </thead>
+        <div class="table-responsive">
+          <table class="table table-bordered align-middle">
+            <thead style="background:#f2f2f2;">
+              <tr>
+                <th width="60">#</th>
+                <th width="120">Image</th>
+                <th>Brand Title</th>
+                <th>Description</th>
+                <th width="180">Action</th>
+              </tr>
+            </thead>
 
-          <tbody>
-          <?php if(!empty($brand)){ $i=1; foreach($brand as $b){ ?>
-            <tr>
-              <!-- SERIAL -->
-              <td><?= $i++; ?></td>
+            <tbody>
+            <?php if(!empty($brand)){ $i=1; foreach($brand as $b){ ?>
+              <tr>
+                <td><?= $i++; ?></td>
 
-              <!-- IMAGE -->
-              <td>
-                <?php if(!empty($b->image)){ ?>
-                  <img src="<?= base_url('uploads/'.$b->image) ?>"
-                       style="width:90px;border-radius:4px;">
-                <?php } else { ?>
-                  -
-                <?php } ?>
-              </td>
+                <!-- IMAGE -->
+                <td>
+                  <?php if(!empty($b->image)){ ?>
+                    <img src="<?= base_url('uploads/'.$b->image) ?>"
+                         style="width:90px;border-radius:4px;">
+                  <?php } else { ?>
+                    -
+                  <?php } ?>
+                </td>
 
-              <!-- TITLE -->
-              <td><strong><?= $b->title ?></strong></td>
+                <td><strong><?= $b->title ?></strong></td>
+                <td><?= $b->description ?></td>
 
-              <!-- DESCRIPTION -->
-              <td><?= $b->description ?></td>
+                <td>
+                  <a href="<?= base_url('about/edit/about_brand/'.$b->id.'/edit_brand') ?>"
+                     class="btn btn-sm btn-primary mb-1">
+                    Edit
+                  </a>
 
-              <!-- ACTION -->
-              <td>
-                <a href="<?= base_url('about/edit/about_brand/'.$b->id.'/edit_brand') ?>"
-                   class="btn btn-sm btn-primary mb-1">
-                  Edit
-                </a>
-
-                <a href="<?= base_url('about/delete/about_brand/'.$b->id.'/about/home_brand') ?>"
-                   class="btn btn-sm btn-danger"
-                   onclick="return confirm('Delete this record?')">
-                  Delete
-                </a>
-              </td>
-            </tr>
-          <?php }} else { ?>
-            <tr>
-              <td colspan="5" class="text-center">No data found</td>
-            </tr>
-          <?php } ?>
-          </tbody>
-        </table>
+                  <a href="<?= base_url('about/delete/about_brand/'.$b->id.'/about/home_brand') ?>"
+                     class="btn btn-sm btn-danger"
+                     onclick="return confirm('Delete this record?')">
+                    Delete
+                  </a>
+                </td>
+              </tr>
+            <?php }} else { ?>
+              <tr>
+                <td colspan="5" class="text-center">No data found</td>
+              </tr>
+            <?php } ?>
+            </tbody>
+          </table>
+        </div>
 
       </div>
 

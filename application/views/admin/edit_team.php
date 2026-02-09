@@ -76,9 +76,13 @@
 
   <!-- BODY -->
   <div class="edit-body">
+
 <form method="post"
       action="<?= base_url('about/update_team/'.$row->id) ?>"
       enctype="multipart/form-data">
+
+
+
 
 
       <label>Name</label>
@@ -100,12 +104,15 @@
              required>
 
       <label>Current Image</label>
+
 <?php if(!empty($row->image)){ ?>
   <img src="<?= base_url('uploads/'.$row->image) ?>">
 <?php } else { ?>
   <p>- No Image</p>
 <?php } ?>
 
+
+  
 
       <label>Change Image</label>
       <input type="file" name="image">

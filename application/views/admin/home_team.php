@@ -5,21 +5,10 @@
     <div class="col-12 col-lg-10 mx-auto">
 
       <!-- ===== FORM ===== -->
-      <div style="
-        background:#fff;
-        border-radius:6px;
-        overflow:hidden;
-        margin-bottom:30px;
-      ">
+      <div style="background:#fff;border-radius:6px;overflow:hidden;margin-bottom:30px;">
 
         <!-- ORANGE HEADER -->
-        <div style="
-          background:#ff7a00;
-          color:#fff;
-          padding:14px 20px;
-          font-size:18px;
-          font-weight:600;
-        ">
+        <div style="background:#ff7a00;color:#fff;padding:14px 20px;font-size:18px;font-weight:600;">
           Add Team Member
         </div>
 
@@ -72,66 +61,61 @@
       </div>
 
       <!-- ===== TABLE ===== -->
-      <div style="
-        background:#fff;
-        border-radius:6px;
-        padding:20px;
-      ">
+      <div style="background:#fff;border-radius:6px;padding:20px;">
 
-        <table class="table table-bordered align-middle">
-          <thead style="background:#f2f2f2;">
-            <tr>
-              <th width="60">#</th>
-              <th width="120">Image</th>
-              <th>Name</th>
-              <th>Role</th>
-              <th>Experience</th>
-              <th width="180">Action</th>
-            </tr>
-          </thead>
+        <div class="table-responsive">
+          <table class="table table-bordered align-middle">
+            <thead style="background:#f2f2f2;">
+              <tr>
+                <th width="60">#</th>
+                <th width="120">Image</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Experience</th>
+                <th width="180">Action</th>
+              </tr>
+            </thead>
 
-          <tbody>
-          <?php if(!empty($team)){ $i=1; foreach($team as $t){ ?>
-            <tr>
-              <!-- SERIAL -->
-              <td><?= $i++; ?></td>
+            <tbody>
+            <?php if(!empty($team)){ $i=1; foreach($team as $t){ ?>
+              <tr>
+                <td><?= $i++; ?></td>
 
-              <!-- IMAGE -->
-              <td>
-                <?php if(!empty($t->image)){ ?>
-                  <img src="<?= base_url('uploads/'.$t->image) ?>"
-                       style="width:90px;border-radius:4px;">
-                <?php } else { ?>
-                  -
-                <?php } ?>
-              </td>
+                <!-- IMAGE -->
+                <td>
+                  <?php if(!empty($t->image)){ ?>
+                    <img src="<?= base_url('uploads/'.$t->image) ?>"
+                         style="width:90px;border-radius:4px;">
+                  <?php } else { ?>
+                    -
+                  <?php } ?>
+                </td>
 
-              <!-- DATA -->
-              <td><strong><?= $t->name ?></strong></td>
-              <td><?= $t->role ?></td>
-              <td><?= $t->experience ?></td>
+                <td><strong><?= $t->name ?></strong></td>
+                <td><?= $t->role ?></td>
+                <td><?= $t->experience ?></td>
 
-              <!-- ACTION -->
-              <td>
-                <a href="<?= base_url('about/edit/team_members/'.$t->id.'/edit_team') ?>"
-                   class="btn btn-sm btn-primary mb-1">
-                  Edit
-                </a>
+                <td>
+                  <a href="<?= base_url('about/edit/team_members/'.$t->id.'/edit_team') ?>"
+                     class="btn btn-sm btn-primary mb-1">
+                    Edit
+                  </a>
 
-                <a href="<?= base_url('about/delete/team_members/'.$t->id.'/about/home_team') ?>"
-                   class="btn btn-sm btn-danger"
-                   onclick="return confirm('Delete this record?')">
-                  Delete
-                </a>
-              </td>
-            </tr>
-          <?php }} else { ?>
-            <tr>
-              <td colspan="6" class="text-center">No team data found</td>
-            </tr>
-          <?php } ?>
-          </tbody>
-        </table>
+                  <a href="<?= base_url('about/delete/team_members/'.$t->id.'/about/home_team') ?>"
+                     class="btn btn-sm btn-danger"
+                     onclick="return confirm('Delete this record?')">
+                    Delete
+                  </a>
+                </td>
+              </tr>
+            <?php }} else { ?>
+              <tr>
+                <td colspan="6" class="text-center">No team data found</td>
+              </tr>
+            <?php } ?>
+            </tbody>
+          </table>
+        </div>
 
       </div>
 
