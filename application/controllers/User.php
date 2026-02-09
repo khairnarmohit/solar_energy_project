@@ -5,6 +5,7 @@ class User extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('My_model');
+          $this->load->model('My_about');
     }
 
     /* ================= HOME ================= */
@@ -16,12 +17,19 @@ class User extends CI_Controller {
     }
 
     /* ================= ABOUT ================= */
-    public function about()
-    {
-        $this->load->view("user/navbar");
-        $this->load->view("user/about");
-        $this->load->view("user/footer");
-    }
+ public function about()
+{
+    $data['brand']     = $this->My_about->get_brand();
+    $data['vision']    = $this->My_about->get_vision();
+    $data['team']      = $this->My_about->get_team();
+    $data['verticals'] = $this->My_about->get_verticals();
+
+    $this->load->view('user/navbar');
+    $this->load->view('user/about', $data);
+    $this->load->view('user/footer');
+}
+
+
 
     /* ================= PRODUCTS ================= */
     public function product()

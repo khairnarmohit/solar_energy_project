@@ -88,262 +88,159 @@
 }
 /* ===============================
    COMMON
-================================ */
-.vision .title {
-	color: rgb(9, 87, 118);
-}
-.brand-section .image-card{
-	height: 290px;
-	width: 370px;
-  text-align: center;
-  padding-top: 26px;
-}
-.brand_name {
-	color: rgb(230, 183, 59);
-}
-.vision-section .image-card{
-	height: 290px;
-	width: 370px;
-  text-align: center;
-  padding-top: 26px;
+================================ *//* =================================
+   RESET & BASE
+================================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* ===============================
-   COUNTERS / STATS
-================================ */
-.counter {
-	color: rgb(0, 76, 137);
-	font-size: 55px;
-	font-weight: 700;
-	background-color: #8cb3da;
+body{
+  font-family:"Segoe UI", Inter, sans-serif;
+  color:#1f2937;
+  line-height:1.7;
 }
 
-.unit {
-	color: rgb(0, 76, 137);
-	font-size: 55px;
-	font-weight: 700;
+h1,h2,h3,h4{
+  letter-spacing:.4px;
 }
 
-.stats-section .title {
-	font-size: 40px;
-	font-weight: 500;
-	color: rgb(0, 76, 137);
-}
-
-.count_desc {
-	font-size: 20px;
-	font-weight: 500;
-}
-
-/* FIXED px ISSUE */
-.team_member img {
-	height: 215px;
-	width: 248px;
-}
-
-/* ===============================
-   STATS UI
-================================ */
-.stats-ui {
-	padding: 80px 0;
-}
-
-.stats-title {
-	margin-bottom: 50px;
-	font-weight: 600;
-	letter-spacing: 0.5px;
-}
-
-.stats-col {
-	padding: 15px;
-}
-
-.stats-card {
-	background: #ffffff;
-	border-radius: 18px;
-	padding: 40px 25px;
-	height: 100%;
-	box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
-	transition: all 0.35s ease;
-}
-
-.stats-card:hover {
-	transform: translateY(-8px);
-	box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.stats-number {
-	display: flex;
-	justify-content: center;
-	align-items: baseline;
-	gap: 6px;
-	margin-bottom: 12px;
-}
-
-.stats-ui .counter,
-.stats-ui .unit {
-	font-size: 52px;
-	font-weight: 700;
-	line-height: 1;
-}
-
-.stats-ui .count_desc {
-	font-size: 18px;
-	font-weight: 500;
-	color: #555;
-	margin: 0;
-}
-
-/* ===============================
-   IMAGE CARD
-================================ */
-.image-card{
-  display:inline-block;
-  background:#fff;
-  padding:18px;
-  border-radius:18px;
-  border:1px solid rgba(0,0,0,0.08);
-  box-shadow:0 18px 40px rgba(0,0,0,0.15);
-  transition:all .4s ease;
-}
-
-.image-card img{
-  border-radius:14px;
-  max-width:100%;
-}
-
-.image-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 26px 55px rgba(0,0,0,0.22);
-}
-
-/* ===============================
+/* =================================
    BRAND & VISION SECTIONS
-================================ */
-
-
+================================= */
+.brand-section,
 .vision-section{
-  background: linear-gradient(180deg,#eef4fa,#ffffff);
-  padding:60px 0;
-}
-
-/* ===============================
-   BUSINESS VERTICALS
-================================ *//* SECTION *//* ===============================
-   BUSINESS VERTICALS – FINAL FIX
-================================ */
-
-.business_verticals{
-  background:#fff6ed;
-  padding:70px 0;
-}
-
-/* OUTER BOX (for color base) */
-.bv-box{
   position:relative;
-  padding-bottom:60px;
 }
 
-/* WHITE CARD */
-.bv-content{
-  background:#fff;
-  border-radius:18px;
-  padding:18px;
-  text-align:center;
-  box-shadow:0 20px 40px rgba(0,0,0,0.12);
-}
-
-/* IMAGE */
-.bv-content img{
-  width:100%;
-  height:240px;
-  object-fit:cover;
-  border-radius:14px;
+.brand-section .title,
+.vision-section .title{
+  font-size:42px;
+  font-weight:600;
+  color:#003b6f;
   margin-bottom:18px;
 }
 
-/* TEXT */
-.bv-content h5{
-  font-size:18px;
+.brand-section p,
+.vision-section p{
+  font-size:16px;
+  color:#475569;
+  line-height:1.75;
+}
+
+/* IMAGE CARD – UNIQUE & RESPONSIVE */
+.image-card{
+  display:inline-block;
+  width:100%;
+  max-width:380px;
+  height:auto;
+  padding:56px;
+  margin:auto;
+  background:linear-gradient(180deg,#ffffff,#f3f8ff);
+  border-radius:22px;
+  border:1px solid rgba(0,76,137,.12);
+  box-shadow:
+    0 20px 45px rgba(0,0,0,.12),
+    inset 0 0 0 1px rgba(255,255,255,.6);
+  
+}
+
+.image-card img{
+  width:100%;
+  border-radius:16px;
+  height: 250px;
+}
+
+.image-card:hover{
+  transform:translateY(-12px) scale(1.03);
+}
+
+/* Vision background */
+.vision-section{
+  background:linear-gradient(180deg,#eef4fa,#ffffff);
+  padding:50px 0;
+}
+
+/* =================================
+   STATS / COUNTERS
+================================= */
+.stats-ui{
+  padding:80px 0;
+}
+
+.stats-title{
+  margin-bottom:50px;
   font-weight:600;
-  margin-bottom:10px;
+}
+
+.stats-card{
+  background:linear-gradient(180deg,#ffffff,#f8fbff);
+  border-radius:18px;
+  padding:30px 20px;
+  margin: 50px;
+  box-shadow:0 12px 35px rgba(0,0,0,.08);
+  height: 250px;
+  
+}
+
+.stats-card:hover{
+  transform:translateY(-12px);
+}
+
+.stats-number{
+  display:flex;
+  justify-content:center;
+  align-items:baseline;
+  gap:6px;
+}
+
+.counter{
+  font-size:56px;
+  font-weight:700;
   color:#004c89;
 }
 
-.bv-content p{
-  font-size:14.5px;
-  line-height:1.7;
+.unit{
+  font-size:42px;
+  font-weight:600;
+  color:#f1b600;
+}
+
+.count_desc{
+  font-size:18px;
   color:#555;
-  margin:0;
 }
 
-/* COLOR BASE */
-.bv-box::after{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  height:60px;
-  border-radius:0 0 20px 20px;
-  z-index:-1;
-}
-
-/* COLORS */
-.bv-box.orange::after{ background:#f39c12; }
-.bv-box.red::after{ background:#e74c3c; }
-.bv-box.yellow::after{ background:#f1c40f; }
-
-/* DESKTOP WIDTH */
-@media(min-width:768px){
-  .bv-box{
-    max-width:360px;
-    margin:auto;
-  }
-}
-
-/* MOBILE – 1 BELOW 1 PERFECT */
-@media(max-width:767px){
-  .business_verticals{
-    padding:50px 0;
-  }
-
-  .bv-content img{
-    height:210px;
-  }
-
-  .bv-content{
-    padding:16px;
-  }
-}
-
-
-/* ===============================
-   TEAM SECTION
-================================ */
+/* =================================
+   TEAM SECTION – UNIQUE CARDS
+================================= */
 .team-ui{
   background:#f7fbff;
-  padding:30px 0 90px;
+  padding:49px 0 100px;
 }
 
 .team-title{
   text-align:center;
-  font-size:40px;
+  font-size:50px;
+  font-family: POPPINS, Inter, sans-serif;
   font-weight:600;
   color:#004c89;
-  margin-bottom:110px;
+    
+  margin-bottom:140px;
 }
 
 .team-row{
   display:flex;
   justify-content:center;
-  gap:30px;
+  gap:60px;
 }
 
 .team-card-new{
-  background:#fff;
-  width:250px;
-  min-height:300px;
+  background:linear-gradient(180deg,#ffffff,#eef6ff);
+  width:260px;
+  min-height:350px;
   padding:85px 20px 35px;
   border-radius:20px;
   position:relative;
@@ -352,24 +249,34 @@
   box-shadow:
     0 25px 55px rgba(0,0,0,.22),
     0 10px 25px rgba(0,76,137,.12);
-  transition:.35s ease;
+  transition:.4s ease;
+}
+
+.team-card-new::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:20px;
+  box-shadow:inset 0 0 0 1px rgba(0,76,137,.1);
+  pointer-events:none;
 }
 
 .team-card-new:hover{
-  transform:translateY(-10px);
+  transform:translateY(-16px);
 }
 
 .team-img-wrap{
-  width:130px;
-  height:130px;
+  width:150px;
+  height:150px;
   background:#fff;
   border-radius:50%;
-  padding:6px;
+  padding:2px;
   position:absolute;
   top:-65px;
   left:50%;
   transform:translateX(-50%);
   box-shadow:0 10px 22px rgba(0,0,0,.15);
+  
 }
 
 .team-img-wrap img{
@@ -383,6 +290,7 @@
   font-size:19px;
   font-weight:600;
   color:#004c89;
+  margin-top:55px;
 }
 
 .team-role{font-size:14px;color:#444;}
@@ -401,25 +309,94 @@
   background:#f1b600;
 }
 
-/* ===============================
-   MOBILE RESPONSIVE
+/* =================================
+   BUSINESS VERTICALS
+================================= */
+/* ==============================
+   BUSINESS VERTICALS – POLISHED
 ================================ */
+
+.business_verticals{
+  background:#fff6ed;
+  padding:80px 0;
+}
+
+.bv-box{
+  position:relative;
+  height:100%;                 /* 🔥 equal height */
+  display:flex;
+  transition:.45s ease;
+}
+
+.bv-box:hover{
+  transform:translateY(-12px);
+}
+
+.bv-content{
+  background:linear-gradient(180deg,#ffffff,#fdfdfd);
+  border-radius:22px;
+  padding:22px;
+  text-align:center;
+  box-shadow:0 22px 45px rgba(0,0,0,0.14);
+  width:100%;
+  display:flex;
+  flex-direction:column;       /* 🔥 text alignment fix */
+}
+
+/* IMAGE */
+.bv-content img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  border-radius:16px;
+  margin-bottom:18px;
+  transition:.6s ease;
+}
+
+.bv-box:hover img{
+  transform:scale(1.06);
+}
+
+/* TITLE */
+.bv-content h5{
+  font-size:19px;
+  font-weight:600;
+  color:#004c89;
+  margin-bottom:8px;
+}
+
+/* DESCRIPTION */
+.bv-content p{
+  font-size:14.5px;
+  color:#555;
+  line-height:1.7;
+  margin-bottom:0;
+  flex-grow:1;                 /* 🔥 equal text spacing */
+}
+
+/* TOP COLOR LINE (clean & sharp) */
+.bv-box{
+  border-top:4px solid transparent;
+  border-radius:22px;
+}
+
+/* OPTIONAL: subtle hover glow */
+.bv-box:hover{
+  box-shadow:0 18px 40px rgba(0,76,137,0.18);
+}
+
+
+
+/* =================================
+   RESPONSIVE
+================================= */
 @media(max-width:768px){
 
   h1,h2{font-size:28px;}
 
-  .stats-ui{padding:55px 0;}
-
-  .stats-ui .counter,
-  .stats-ui .unit{font-size:38px;}
-
   .brand-section,
-  .vision-section{text-align:center;}
-
- 
-  .team-title{
-    font-size:30px;
-    margin-bottom:80px;
+  .vision-section{
+    text-align:center;
   }
 
   .team-row{
@@ -431,5 +408,30 @@
   .team-card-new{
     width:100%;
     max-width:320px;
+  }
+
+  .team-title{
+    font-size:30px;
+    margin-bottom:80px;
+  }
+
+  .counter{font-size:38px;}
+  .unit{font-size:28px;}
+}
+
+@media(max-width:576px){
+
+  .brand-section .title,
+  .vision-section .title{
+    font-size:30px;
+  }
+
+  .brand-section p,
+  .vision-section p{
+    font-size:15px;
+  }
+
+  .image-card{
+    padding:20px;
   }
 }

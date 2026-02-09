@@ -30,23 +30,24 @@
 
     <!-- TEXT -->
     <div class="col-12 col-md-6">
-      <h1 class="title">Our Brand</h1>
-      <p>To make our future more vibrant and sustainable by using green energy.</p>
-      <p>We are committed to delivering high-efficiency solar products globally.</p>
-      <p>Targeting 9 GW production capacity by 2025.</p>
+     <h1 class="title"><?= $brand->title ?></h1>
+<p><?= nl2br($brand->description) ?></p>
+
     </div>
 
     <!-- IMAGE -->
     <div class="col-12 col-md-6 text-center">
       <div class="image-card">
-        <img src="<?= base_url('assets/image/about_brand_img.png') ?>"
-             class="img-fluid" alt="Our Brand">
+       <img src="<?= base_url('uploads/'.$brand->image) ?>"
+     class="img-fluid"
+     alt="<?= $brand->title ?>">
+             <!-- class="img-fluid" alt="Our Brand"> -->
       </div>
     </div>
 
   </div>
 </section>
-<section class="container-fluid vision-section py-5"
+<section class="container vision-section py-5"
     data-aos="zoom-in-up">
 
   <div class="row align-items-center g-3">
@@ -56,16 +57,18 @@
     <!-- IMAGE -->
     <div class="col-12 col-md-6 text-center">
       <div class="image-card">
-        <img src="<?= base_url('assets/image/about_brand_img.png') ?>"
-             class="img-fluid" alt="Our Brand">
+     <img src="<?= base_url('uploads/'.$vision->image) ?>"
+     class="img-fluid"
+     alt="<?= $vision->title ?>">
+
+             <!-- class="img-fluid" alt="Our Brand"> -->
       </div>
     </div>
        <!-- TEXT -->
     <div class="col-12 col-md-6">
-      <h1 class="title">Our Brand</h1>
-      <p>To make our future more vibrant and sustainable by using green energy.</p>
-      <p>We are committed to delivering high-efficiency solar products globally.</p>
-      <p>Targeting 9 GW production capacity by 2025.</p>
+     <h1 class="title"><?= $vision->title ?></h1>
+<p><?= nl2br($vision->description) ?></p>
+
     </div>
 
 
@@ -79,48 +82,26 @@
     <h2 class="team-title">Meet Our Team</h2>
 
     <div class="team-row">
+<?php foreach($team as $t){ ?>
+  <div class="team-card-new">
+    <div class="team-img-wrap">
+      <img src="<?= base_url('uploads/'.$t->image) ?>"
+           alt="<?= $t->name ?>">
+    </div>
 
-      <!-- CARD 1 -->
-      <div class="team-card-new">
-        <div class="team-img-wrap">
-          <img src="<?= base_url('assets/image/man1.jpg') ?>" alt="John Doe">
-        </div>
-        <h4 class="team-name">Pavan Mohite</h4>
-        <div class="line"></div>
-        <p class="team-role">Chief Executive Officer</p>
-        <div class="line small"></div>
-        <p class="team-exp">15+ Years Experience</p>
-      </div>
+    <h4 class="team-name"><?= $t->name ?></h4>
+    <div class="line"></div>
+    <p class="team-role"><?= $t->role ?></p>
+    <div class="line small"></div>
+    <p class="team-exp"><?= $t->experience ?></p>
+  </div>
+<?php } ?>
 
-      <!-- CARD 2 -->
-      <div class="team-card-new">
-        <div class="team-img-wrap">
-          <img src="<?= base_url('assets/image/man2.jpg') ?>" alt="Rahul Sharma">
-        </div>
-        <h4 class="team-name">Rahul Sharma</h4>
-        <div class="line"></div>
-        <p class="team-role">Technical Director</p>
-        <div class="line small"></div>
-        <p class="team-exp">12+ Years Experience</p>
-      </div>
 
-      <!-- CARD 3 -->
-      <div class="team-card-new">
-        <div class="team-img-wrap">
-          <img src="<?= base_url('assets/image/man3.jpg') ?>" alt="Amit Patil">
-        </div>
-        <h4 class="team-name">Amit Patil</h4>
-        <div class="line"></div>
-        <p class="team-role">Project Manager</p>
-        <div class="line small"></div>
-        <p class="team-exp">10+ Years Experience</p>
-      </div>
 
     </div>
   </div>
 </section>
-
-
 
 <section class="business_verticals">
   <div class="container">
@@ -129,46 +110,24 @@
 
     <div class="row g-4 justify-content-center">
 
-      <div class="col-12 col-md-4">
-        <div class="bv-box orange">
-          <div class="bv-content">
-            <img src="<?= base_url('assets/image/vertical1.jpg') ?>" alt="">
-            <h5>Card Title</h5>
-            <p>
-              Some quick example text to build on the card title and make up
-              the bulk of the card's content.
-            </p>
-          </div>
-        </div>
-      </div>
+      <?php foreach($verticals as $v){ ?>
+        <div class="col-12 col-md-4">
 
-      <div class="col-12 col-md-4">
-        <div class="bv-box red">
-          <div class="bv-content">
-            <img src="<?= base_url('assets/image/vertical1.jpg') ?>" alt="">
-            <h5>Card Title</h5>
-            <p>
-              Some quick example text to build on the card title and make up
-              the bulk of the card's content.
-            </p>
-          </div>
-        </div>
-      </div>
+          <div class="bv-box" style="border-top:4px solid <?= $v->color ?>">
 
-      <div class="col-12 col-md-4">
-        <div class="bv-box yellow">
-          <div class="bv-content">
-            <img src="<?= base_url('assets/image/vertical1.jpg') ?>" alt="">
-            <h5>Card Title</h5>
-            <p>
-              Some quick example text to build on the card title and make up
-              the bulk of the card's content.
-            </p>
+            <div class="bv-content">
+              <img src="<?= base_url('uploads/'.$v->image1) ?>" alt="<?= $v->title ?>">
+              <h5><?= $v->title ?></h5>
+              <p><?= $v->description ?></p>
+            </div>
+
           </div>
+
         </div>
-      </div>
+      <?php } ?>
 
     </div>
+
   </div>
 </section>
 
