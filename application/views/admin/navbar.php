@@ -97,6 +97,10 @@
       <a class="sidebar-link" href="<?= base_url('industrial/industrial_about') ?>">About Section</a>
     </li>
 
+     <li class="sidebar-item">
+      <a class="sidebar-link" href="<?= base_url('industrial/industrial_points') ?>">Points Section</a>
+    </li>
+
     <li class="sidebar-item">
       <a class="sidebar-link" href="<?= base_url('industrial/industrial_capabilities') ?>">Capabilities Section</a>
     </li>
@@ -111,6 +115,28 @@
   </ul>
 </li>
 
+
+      <li class="sidebar-item">
+  <a data-bs-toggle="collapse" href="#residentialPages" class="sidebar-link">
+    <span class="align-middle">Residential Page</span>
+  </a>
+
+  <ul id="residentialPages" class="sidebar-dropdown list-unstyled collapse">
+   
+
+    <li class="sidebar-item">
+      <a class="sidebar-link" href="<?= base_url('residential/residential_about') ?>">About Section</a>
+    </li>
+
+     <li class="sidebar-item">
+      <a class="sidebar-link" href="<?= base_url('residential/residential_points') ?>">Points Section</a>
+    </li>
+
+    <li class="sidebar-item">
+      <a class="sidebar-link" href="<?= base_url('residential/residential_capabilities') ?>">Capabilities Section</a>
+    </li>
+  </ul>
+</li>
 
 
 

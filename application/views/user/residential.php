@@ -12,22 +12,26 @@
 
     <div class="res-text">
       <h2>Solar for Your Home</h2>
+
       <p>
-        Maha Solar provides reliable and cost-effective rooftop solar solutions
-        for homes. Our systems help reduce electricity bills while ensuring
-        long-term savings using clean and renewable energy.
+        <?= !empty($about->description)
+              ? $about->description
+              : 'Maha Solar provides reliable and cost-effective rooftop solar solutions for homes. Our systems help reduce electricity bills while ensuring long-term savings using clean and renewable energy.' ?>
       </p>
 
       <ul class="res-points">
-        <li>Rooftop Solar Panel Installation</li>
-        <li>Net Metering Assistance</li>
-        <li>On-Grid & Hybrid Solar Systems</li>
-        <li>Maintenance & After-Sales Support</li>
+        <?php if(!empty($points)){ foreach($points as $p){ ?>
+          <li><?= $p->point ?></li>
+        <?php }} ?>
       </ul>
     </div>
 
     <div class="res-image">
-      <img src="<?= base_url('assets/image/service.webp') ?>" alt="Residential Solar">
+      <?php if(!empty($about->image) && file_exists(FCPATH.'uploads/'.$about->image)){ ?>
+        <img src="<?= base_url('uploads/'.$about->image) ?>" alt="Residential Solar">
+      <?php } else { ?>
+        <img src="<?= base_url('assets/image/service.webp') ?>" alt="Residential Solar">
+      <?php } ?>
     </div>
 
   </div>
@@ -39,10 +43,12 @@
     <h2>Benefits of Residential Solar</h2>
 
     <div class="benefit-grid">
-      <div class="benefit-box">Lower Electricity Bills</div>
-      <div class="benefit-box">Clean & Renewable Energy</div>
-      <div class="benefit-box">Long-Term Savings</div>
-      <div class="benefit-box">Increase Property Value</div>
+      <?php if(!empty($benefits)){ foreach($benefits as $b){ ?>
+        <div class="benefit-box">
+          <?= $b->title ?>
+        </div>
+      <?php }} ?>
     </div>
+
   </div>
 </section>
