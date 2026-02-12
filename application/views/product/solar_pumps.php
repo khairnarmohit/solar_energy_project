@@ -43,10 +43,11 @@
 
 
 <div class="container mt-4">
+
+    <!-- ================= FORM SECTION ================= -->
     <div class="row justify-content-center">
         <div class="col-lg-7 col-md-9">
 
-            <!-- FORM SECTION -->
             <div class="custom-header">
                 Solar Water Pump
             </div>
@@ -64,7 +65,7 @@
 
                     <div class="mb-3">
                         <label class="fw-bold">Enter Description</label>
-                        <textarea name="pump_description"
+                        <textarea name="pump_details"
                                   rows="4"
                                   class="form-control" required></textarea>
                     </div>
@@ -77,7 +78,7 @@
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input"
                                        type="checkbox"
-                                       name="applications[]"
+                                       name="pump_applications[]"
                                        value="<?= $app ?>">
                                 <label class="form-check-label"><?= $app ?></label>
                             </div>
@@ -86,7 +87,7 @@
 
                     <div class="mb-3">
                         <label class="fw-bold">Upload Image</label>
-                        <input type="file" name="pump_image" accept=".jpg,.jpeg,.png"
+                        <input type="file" name="pump_image"
                                class="form-control" required>
                     </div>
 
@@ -97,64 +98,81 @@
                     </div>
 
                 </form>
-            </div>
 
-            <!-- TABLE SECTION -->
-            <div class="table-box mt-4">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= TABLE SECTION (FULL WIDTH) ================= -->
+    <div class="row mt-5">
+        <div class="col-12">
+
+            <div class="table-box">
 
                 <h5 class="mb-3 text-center fw-bold">
                     Solar Water Pump List
                 </h5>
 
-                <table class="table table-bordered table-hover text-center align-middle">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Title</th>
-                            <th>Description</th>
-                            <th>Applications</th>
-                            <th>Image</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php if(!empty($pumps)): $i=1; foreach($pumps as $p): ?>
-                        <tr>
-                            <td><?= $i++ ?></td>
-                            <td><?= $p->pump_title ?></td>
-                            <td><?= $p->pump_description ?></td>
-                            <td>
-                                <?php
-                                  $apps = explode(',', $p->applications);
-                                  foreach($apps as $a){
-                                      echo '<span class="badge bg-secondary me-1">'.$a.'</span>';
-                                  }
-                                ?>
-                            </td>
-                            <td>
-                                <img src="<?= base_url('uploads/'.$p->pump_image) ?>" 
-                                     width="60" 
-                                     class="rounded shadow-sm">
-                            </td>
-                            <td>
-                                <a href="#" 
-                                   class="btn btn-sm btn-danger">
-                                   Delete
-                                </a>
-                            </td>
-                        </tr>
-                    <?php endforeach; else: ?>
-                        <tr>
-                            <td colspan="5" class="text-danger">
-                                No Pumps Found
-                            </td>
-                        </tr>
-                    <?php endif; ?>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
 
+                    <table class="table table-bordered table-hover text-center align-middle">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Applications</th>
+                                <th>Image</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                        <?php if(!empty($pumps)): $i=1; foreach($pumps as $p): ?>
+                            <tr>
+                                <td><?= $i++ ?></td>
+                                <td><?= $p->pump_title ?></td>
+                                <td><?= $p->pump_details ?></td>
+                                <td>
+                                    <?php
+                                      $apps = explode(',', $p->pump_applications);
+                                      foreach($apps as $a){
+                                          echo '<span class="badge bg-secondary me-1">'.$a.'</span>';
+                                      }
+                                    ?>
+                                </td>
+                                <td>
+                                    <img src="<?= base_url('uploads/'.$p->pump_image) ?>" 
+                                         width="60" 
+                                         class="rounded shadow-sm">
+                                </td>
+                                <td>
+									<a href="<?= base_url('product/edit_solar_water_pump/'.$p->id) ?>" 
+       class="btn btn-sm btn-primary">
+       &#9998;
+    </a>
+                                    <a href="<?= base_url('product/delete_solar_water_pump/'.$p->id) ?>" 
+                                       class="btn btn-sm btn-danger"
+                                       onclick="return confirm('Are you sure?')">
+                                       &#128465;
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php endforeach; else: ?>
+                            <tr>
+                                <td colspan="6" class="text-danger">
+                                    No Pumps Found
+                                </td>
+                            </tr>
+                        <?php endif; ?>
+                        </tbody>
+                    </table>
+
+                </div>
             </div>
 
         </div>
     </div>
+
 </div>

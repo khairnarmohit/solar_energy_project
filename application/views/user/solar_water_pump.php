@@ -1,88 +1,98 @@
 <link rel="stylesheet" href="<?= base_url('assets/css/solar_water_pump.css'); ?>">
 
-<section class="py-5 solar-pump-overview section1">
+<?php if(!empty($pumps)): ?>
+<?php $i = 0; foreach($pumps as $p): $i++; ?>
 
+<section class="py-5 <?= ($i % 2 == 0) ? 'section2 bg-white' : 'section1' ?>">
   <div class="container">
     <div class="row align-items-center">
 
-      <!-- IMAGE SIDE -->
-      <div class="col-md-6 mb-4 mb-md-0">
-        <div class="image-break-wrapper reveal-image">
+      <?php if($i % 2 != 0): ?>
 
-          <!-- image pieces -->
-          <div class="img-piece p1"></div>
-          <div class="img-piece p2"></div>
-          <div class="img-piece p3"></div>
-          <div class="img-piece p4"></div>
+        <!-- IMAGE SIDE (4 PIECES - ANIMATION SAME) -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="image-break-wrapper reveal-image"
+               style="background-image:url('<?= base_url('uploads/'.$p->pump_image) ?>');">
 
+            <div class="img-piece p1"
+                 style="background-image:url('<?= base_url('uploads/'.$p->pump_image) ?>');"></div>
+
+            <div class="img-piece p2"
+                 style="background-image:url('<?= base_url('uploads/'.$p->pump_image) ?>');"></div>
+
+            <div class="img-piece p3"
+                 style="background-image:url('<?= base_url('uploads/'.$p->pump_image) ?>');"></div>
+
+            <div class="img-piece p4"
+                 style="background-image:url('<?= base_url('uploads/'.$p->pump_image) ?>');"></div>
+
+          </div>
         </div>
-      </div>
 
-      <!-- CONTENT SIDE -->
-      <div class="col-md-6">
-        <h1 class="fw-bold mb-3">Solar Water Pumps</h1>
+        <!-- CONTENT SIDE -->
+        <div class="col-md-6">
+          <h2 class="fw-bold mb-3"><?= $p->pump_title ?></h2>
 
-        <p class="text-muted">
-          Solar Water Pumps use renewable solar energy to efficiently pump water
-          without relying on electricity or fuel. They are ideal for agriculture,
-          farms, gardens, households, and commercial applications.
-        </p>
+          <p class="text-muted">
+            <?= $p->pump_details ?>
+          </p>
 
-        <div class="d-flex flex-wrap gap-2 mt-3">
-          <span class="app-tag">Agriculture</span>
-          <span class="app-tag">Farms</span>
-          <span class="app-tag">Gardens</span>
-          <span class="app-tag">Households</span>
-          <span class="app-tag">Commercial Use</span>
+          <div class="d-flex flex-wrap gap-2 mt-3">
+            <?php 
+            $apps = explode(',', $p->pump_applications);
+            foreach($apps as $a): ?>
+              <span class="app-tag"><?= trim($a) ?></span>
+            <?php endforeach; ?>
+          </div>
         </div>
-      </div>
+
+      <?php else: ?>
+
+        <!-- CONTENT SIDE -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h2 class="fw-bold mb-3"><?= $p->pump_title ?></h2>
+
+          <p class="text-muted">
+            <?= $p->pump_details ?>
+          </p>
+
+          <div class="d-flex flex-wrap gap-2 mt-3">
+            <?php 
+            $apps = explode(',', $p->pump_applications);
+            foreach($apps as $a): ?>
+              <span class="app-tag"><?= trim($a) ?></span>
+            <?php endforeach; ?>
+          </div>
+        </div>
+
+        <!-- IMAGE SIDE -->
+        <div class="col-md-6">
+          <div class="image-break-wrapper reveal-image"
+               style="background-image:url('<?= base_url('uploads/'.$p->pump_image) ?>');">
+
+            <div class="img-piece p1"
+                 style="background-image:url('<?= base_url('uploads/'.$p->pump_image) ?>');"></div>
+
+            <div class="img-piece p2"
+                 style="background-image:url('<?= base_url('uploads/'.$p->pump_image) ?>');"></div>
+
+            <div class="img-piece p3"
+                 style="background-image:url('<?= base_url('uploads/'.$p->pump_image) ?>');"></div>
+
+            <div class="img-piece p4"
+                 style="background-image:url('<?= base_url('uploads/'.$p->pump_image) ?>');"></div>
+
+          </div>
+        </div>
+
+      <?php endif; ?>
 
     </div>
   </div>
 </section>
 
-
-<section class="py-5 bg-white section2">
-  <div class="container">
-    <div class="row align-items-center">
-
-      <!-- CONTENT SIDE -->
-      <div class="col-md-6 mb-4 mb-md-0">
-        <h2 class="fw-bold mb-3 text-uppercase">
-          Let the Sun Fulfill Your Water Supply Needs!
-        </h2>
-
-        <p class="text-muted mb-3">
-          In many rural and remote areas, access to a reliable water supply
-          remains a major challenge. Traditional water pumping systems often
-          depend on diesel fuel or unstable grid electricity, which leads to
-          high operating costs, fuel shortages, and frequent power interruptions.
-        </p>
-
-        <p class="text-muted mb-3">
-          Solar water pumping systems provide a sustainable and cost-effective
-          solution by utilizing abundant solar energy. These systems eliminate
-          fuel dependency, reduce operational expenses, and ensure uninterrupted
-          water supply throughout the day.
-        </p>
-
-        <p class="text-muted">
-          Solar water pumps are ideal for agriculture, irrigation, and domestic
-          water usage, helping farmers and households achieve energy independence
-          while supporting environmentally friendly water management.
-        </p>
-      </div>
-
-      <!-- IMAGE SIDE -->
-      <div class="col-md-6 text-center">
-        <img src="<?= base_url()?>assets/image/subpump2.jpg"
-             alt="Solar Water Pump System for Agriculture and Irrigation"
-             class="img-fluid rounded">
-      </div>
-
-    </div>
-  </div>
-</section>
+<?php endforeach; ?>
+<?php endif; ?>
 
 
 <script>

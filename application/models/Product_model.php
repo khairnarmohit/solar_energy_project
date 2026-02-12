@@ -73,6 +73,7 @@ class Product_model extends CI_Model
         redirect('product/solar_water_heater');
     }
 
+	
 
 	
 }

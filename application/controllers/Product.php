@@ -197,42 +197,111 @@ public function update_solar_water_heater()
     redirect('product/solar_water_heater');
 }
 
- // Show Page
-    public function solar_water_pump() {
-        $data['pumps'] = $this->Solar_water_pump_model->get_all();
-        $this->load->view('solar_water_pump', $data);
-    }
+// ================= SOLAR WATER PUMP ADMIN =================
 
-    public function save_solar_water_pump()
+public function solar_pumps()
 {
-    $this->load->model('Solar_water_pump_model');
-    $this->load->library('upload');
+    $data['pumps'] = $this->Solar_water_pump_model->get_all();
 
-    $config['upload_path']   = './uploads/';
-    $config['allowed_types'] = 'jpg|jpeg|png|webp';
-    $config['max_size']      = 2048;
+    $this->load->view('admin/navbar');
+    $this->load->view('product/solar_pumps', $data);
+    $this->load->view('admin/footer');
+}
 
-    $this->upload->initialize($config);
+public function save_solar_water_pump()
+{
+    $config = [
+        'upload_path'   => FCPATH.'uploads/',
+        'allowed_types' => 'jpg|jpeg|png|webp',
+        'file_name'     => time()
+    ];
+
+    $this->load->library('upload', $config);
 
     if(!$this->upload->do_upload('pump_image')){
         echo $this->upload->display_errors();
-        return;
+        die;
     }
 
-    $upload_data = $this->upload->data();
+    $img = $this->upload->data();
+    $apps = $this->input->post('pump_applications');
 
-    $data = [
-        'pump_title'       => $this->input->post('pump_title'),
-        'pump_description' => $this->input->post('pump_description'),
-        'applications'     => implode(',', $this->input->post('applications')),
-        'pump_image'       => $upload_data['file_name']
-    ];
+    $pump_title   = isset($_POST['pump_title']) ? $_POST['pump_title'] : '';
+$pump_details = isset($_POST['pump_details']) ? $_POST['pump_details'] : '';
+$apps         = isset($_POST['pump_applications']) ? $_POST['pump_applications'] : [];
+
+$data = [
+    'pump_title'        => $pump_title,
+    'pump_details'      => $pump_details,
+    'pump_applications' => is_array($apps) ? implode(',', $apps) : '',
+    'pump_image'        => $img['file_name']
+];
+
 
     $this->Solar_water_pump_model->insert($data);
-
-    redirect('user/solar_water_pump');
+    redirect('product/solar_pumps');
 }
 
+public function delete_solar_water_pump($id)
+{
+    $pump = $this->Solar_water_pump_model->get_by_id($id);
+
+    if($pump){
+        $imgPath = FCPATH.'uploads/'.$pump->pump_image;
+        if(file_exists($imgPath)){
+            unlink($imgPath);
+        }
+        $this->Solar_water_pump_model->delete($id);
+    }
+
+    redirect('product/solar_pumps');
+}
+
+// ================= EDIT =================
+public function edit_solar_water_pump($id)
+{
+    $data['pump'] = $this->Solar_water_pump_model->get_by_id($id);
+
+    $this->load->view('admin/navbar');
+    $this->load->view('product/edit_solar_water_pump', $data);
+    $this->load->view('admin/footer');
+}
+
+
+// ================= UPDATE =================
+public function update_solar_water_pump()
+{
+    $id = $this->input->post('id');
+
+    $apps = $this->input->post('pump_applications');
+
+    $data = [
+        'pump_title'        => $this->input->post('pump_title'),
+        'pump_details'      => $this->input->post('pump_details'),
+        'pump_applications' => is_array($apps) ? implode(',', $apps) : ''
+    ];
+
+    // If new image uploaded
+    if(!empty($_FILES['pump_image']['name'])){
+
+        $config = [
+            'upload_path'   => FCPATH.'uploads/',
+            'allowed_types' => 'jpg|jpeg|png|webp',
+            'file_name'     => time()
+        ];
+
+        $this->load->library('upload', $config);
+
+        if($this->upload->do_upload('pump_image')){
+            $img = $this->upload->data();
+            $data['pump_image'] = $img['file_name'];
+        }
+    }
+
+    $this->Solar_water_pump_model->update($id, $data);
+
+    redirect('product/solar_pumps');
+}
 
 
 
