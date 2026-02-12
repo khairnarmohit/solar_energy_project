@@ -11,7 +11,6 @@
       <?php if($i % 2 != 0): ?>
       <!-- IMAGE LEFT -->
       <div class="col-md-6 text-center">
-      <div class="col-md-6 mb-4 mb-md-0 text-center">
         <img src="<?= base_url('uploads/'.$h->heater_image) ?>"
              alt="<?= $h->heater_title ?>"
              class="img-fluid reveal-img">
@@ -29,32 +28,19 @@
         <h5 class="fw-bold mb-2 text-success">Available Capacity</h5>
 
         <ul class="list-unstyled d-flex flex-wrap gap-2">
-          <?php
+          <?php 
             $caps = explode(',', $h->heater_capacity);
-            foreach ($caps as $cap):
+            foreach ($caps as $cap): 
           ?>
             <li class="capacity-box"><?= trim($cap) ?> LPD</li>
           <?php endforeach; ?>
         </ul>
-				<ul class="list-unstyled d-flex flex-wrap gap-2">
- <ul class="list-unstyled d-flex flex-wrap gap-2">
-<?php
-  $caps = explode(',', $h->heater_capacity);
-  foreach ($caps as $cap):
-?>
-  <li class="capacity-box"><?= trim($cap) ?> LPD</li>
-<?php endforeach; ?>
-</ul>
 
-
-
-       
       </div>
 
       <?php if($i % 2 == 0): ?>
       <!-- IMAGE RIGHT -->
       <div class="col-md-6 text-center">
-      <div class="col-md-6 mt-4 mt-md-0 text-center">
         <img src="<?= base_url('uploads/'.$h->heater_image) ?>"
              alt="<?= $h->heater_title ?>"
              class="img-fluid reveal-img">
@@ -66,7 +52,6 @@
 </section>
 
 <?php endforeach; ?>
-
 <?php else: ?>
   <div class="text-center py-5">
     <h4 class="text-danger">No Solar Water Heaters Available</h4>
@@ -74,13 +59,15 @@
 <?php endif; ?>
 
 
-<!-- ================= SCROLL ANIMATION JS (UNCHANGED) ================= -->
+
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+
         entry.target.classList.add('show');
 
         if (entry.target.classList.contains('reveal-content')) {
@@ -88,14 +75,14 @@ document.addEventListener("DOMContentLoaded", function () {
           boxes.forEach((box, i) => {
             setTimeout(() => {
               box.classList.add('show');
-            }, 140 * i);
+            }, 200 * i); // smoother wave
           });
         }
 
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.35 });
+  }, { threshold: 0.01 });
 
   document.querySelectorAll('.reveal-img, .reveal-content')
     .forEach(el => observer.observe(el));
