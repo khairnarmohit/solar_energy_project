@@ -75,7 +75,7 @@
 
       <!-- IMAGE SIDE -->
       <div class="col-md-6 text-center">
-        <img src="<?= base_url()?>assets/image/subpump2.webp"
+        <img src="<?= base_url()?>assets/image/subpump2.jpg"
              alt="Solar Water Pump System for Agriculture and Irrigation"
              class="img-fluid rounded">
       </div>
