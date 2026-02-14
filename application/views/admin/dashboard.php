@@ -22,20 +22,20 @@ const ctx = document.getElementById('monthlyChart').getContext('2d');
 const months = <?= $months ?>;
 const totals = <?= $totals ?>;
 
-// Create second wave dynamically (variation effect)
+// Safer variation (no negative values)
 const variationWave = totals.map((val, index) => {
-    let variation = Math.sin(index) * 5;
+    let variation = Math.abs(Math.sin(index)) * 3; 
     return val + variation;
 });
 
-// Gradient 1
+// Gradient 1 (Blue)
 const gradient1 = ctx.createLinearGradient(0, 0, 0, 320);
-gradient1.addColorStop(0, 'rgba(0,123,255,0.5)');
+gradient1.addColorStop(0, 'rgba(0,123,255,0.45)');
 gradient1.addColorStop(1, 'rgba(0,123,255,0.05)');
 
-// Gradient 2
+// Gradient 2 (Green)
 const gradient2 = ctx.createLinearGradient(0, 0, 0, 320);
-gradient2.addColorStop(0, 'rgba(40,167,69,0.5)');
+gradient2.addColorStop(0, 'rgba(40,167,69,0.45)');
 gradient2.addColorStop(1, 'rgba(40,167,69,0.05)');
 
 new Chart(ctx, {
@@ -44,20 +44,21 @@ new Chart(ctx, {
         labels: months,
         datasets: [
         {
+            label: "Monthly Quotes",
             data: totals,
             backgroundColor: gradient1,
-            borderColor: 'rgba(0,123,255,0.8)',
+            borderColor: 'rgba(0,123,255,0.9)',
             fill: true,
-            tension: 0.5,
+            tension: 0.45,
             borderWidth: 2,
             pointRadius: 0
         },
         {
             data: variationWave,
             backgroundColor: gradient2,
-            borderColor: 'rgba(40,167,69,0.8)',
+            borderColor: 'rgba(40,167,69,0.9)',
             fill: true,
-            tension: 0.5,
+            tension: 0.45,
             borderWidth: 2,
             pointRadius: 0
         }
@@ -67,17 +68,29 @@ new Chart(ctx, {
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-            legend: { display: false }
+            legend: { display: false },
+            tooltip: {
+                backgroundColor: "#1f2937",
+                titleColor: "#fff",
+                bodyColor: "#fff"
+            }
         },
         scales: {
-            x: { grid: { display: false }},
+            x: {
+                grid: { display: false }
+            },
             y: {
                 beginAtZero: true,
-                grid: { color: "rgba(0,0,0,0.05)" }
+                ticks: {
+                    stepSize: 2
+                },
+                grid: {
+                    color: "rgba(0,0,0,0.05)"
+                }
             }
         },
         animation: {
-            duration: 1500,
+            duration: 1600,
             easing: 'easeInOutQuart'
         }
     }
