@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Solar Energy Dashboard</title>
+<link rel="icon" type="image/png" href="<?= base_url('assets/image/web_logo.webp') ?>">
 
   <link href="<?=base_url() ?>assets/admin/css/app.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
