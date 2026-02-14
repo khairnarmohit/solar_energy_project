@@ -57,7 +57,29 @@ class Admin extends CI_Controller {
         }
 
         $this->load->view('admin/navbar');
-        $this->load->view('admin/dashboard');
+        $this->db->select("MONTH(created_at) as month, COUNT(id) as total");
+$this->db->where("YEAR(created_at)", date('Y'));
+$this->db->group_by("MONTH(created_at)");
+$result = $this->db->get("quotes")->result();
+
+$months = [];
+$totals = [];
+
+// 12 months default 0
+for ($i = 1; $i <= 12; $i++) {
+    $months[] = date("M", mktime(0, 0, 0, $i, 10));
+    $totals[$i] = 0;
+}
+
+foreach ($result as $row) {
+    $totals[$row->month] = (int)$row->total;
+}
+
+$data['months'] = json_encode($months);
+$data['totals'] = json_encode(array_values($totals));
+
+        $this->load->view('admin/dashboard',$data);
+        
         $this->load->view('admin/footer');
     }
 
@@ -77,5 +99,31 @@ class Admin extends CI_Controller {
       {
         $this->load->view('admin/footer');
       }
+
+public function quotes()
+{
+     $this->navbar();
+    $data['quotes'] = $this->db->order_by('id','DESC')->get('quotes')->result();
+    $this->load->view('admin/quotes_list', $data);
+    $this->footer();
+}
+public function delete_quote($id)
+{
+    if(!empty($id)){
+
+        $this->db->where('id', $id);
+        $this->db->delete('quotes');
+
+        $this->session->set_flashdata('success','Quote Deleted Successfully!');
+    }
+
+    redirect('admin/quotes');
+}
+
+
+
+
+
+      
       
 }

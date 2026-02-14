@@ -55,33 +55,44 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
 <!-- Get Quote Modal -->
-<div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+<!-- Get Quote Modal -->
+<div class="modal fade" id="quoteModal" tabindex="-1">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
+
       <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title" id="quoteModalLabel"><i class="fas fa-sun"></i> Get a Quote</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title">Get a Quote</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
+
       <div class="modal-body">
-        <form id="quoteForm">
+
+        <!-- Success / Error Message -->
+        <div id="formMessage"></div>
+
+        <form id="quoteForm" novalidate>
+
           <div class="row">
             <div class="col-md-6 mb-3">
-              <label for="name" class="form-label">Name *</label>
-              <input type="text" class="form-control" id="name" name="name" required>
+              <label class="form-label">Name *</label>
+              <input type="text" class="form-control" name="name">
             </div>
+
             <div class="col-md-6 mb-3">
-              <label for="email" class="form-label">Email *</label>
-              <input type="email" class="form-control" id="email" name="email" required>
+              <label class="form-label">Email *</label>
+              <input type="email" class="form-control" name="email">
             </div>
           </div>
+
           <div class="row">
             <div class="col-md-6 mb-3">
-              <label for="phone" class="form-label">Phone *</label>
-              <input type="tel" class="form-control" id="phone" name="phone" required>
+              <label class="form-label">Phone *</label>
+              <input type="text" class="form-control" name="phone">
             </div>
+
             <div class="col-md-6 mb-3">
-              <label for="service" class="form-label">Service Type *</label>
-              <select class="form-control" id="service" name="service" required>
+              <label class="form-label">Service Type *</label>
+              <select class="form-control" name="service">
                 <option value="">Select Service</option>
                 <option value="residential">Residential</option>
                 <option value="commercial">Commercial</option>
@@ -93,14 +104,16 @@
               </select>
             </div>
           </div>
+
           <div class="mb-3">
-            <label for="quantity" class="form-label">Quantity Of Product</label>
-            <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1">
-            <small class="form-text text-muted">Optional For solar services leave blank</small>
+            <label class="form-label">Quantity Of Product</label>
+            <input type="number" class="form-control" name="quantity" value="1" min="1">
+            <small class="text-muted">Optional for solar services leave blank</small>
           </div>
+
           <div class="mb-3">
-            <label for="source" class="form-label">How Did You Come To Know About Convex Solar? *</label>
-            <select class="form-control" id="source" name="source" required>
+            <label class="form-label">How Did You Come To Know About Convex Solar? *</label>
+            <select class="form-control" name="source">
               <option value="">Select</option>
               <option value="Casual Internet Surfing">Casual Internet Surfing</option>
               <option value="Outdoor Advertisement">Outdoor Advertisement</option>
@@ -111,16 +124,25 @@
               <option value="Others">Others</option>
             </select>
           </div>
+
           <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" name="message" rows="3" placeholder="Tell us more about your requirements..."></textarea>
+            <label class="form-label">Message</label>
+            <textarea class="form-control" name="message" rows="3"
+              placeholder="Tell us more about your requirements..."></textarea>
           </div>
+
         </form>
       </div>
+
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fas fa-times"></i> Close</button>
-        <button type="button" class="btn btn-primary" onclick="submitQuote()"><i class="fas fa-paper-plane"></i> Submit Quote Request</button>
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+        <button type="button" id="submitBtn" onclick="submitQuote()" class="btn btn-primary">
+          <span id="btnText">Submit Quote Request</span>
+          <span id="btnSpinner" class="spinner-border spinner-border-sm d-none"></span>
+        </button>
       </div>
+
     </div>
   </div>
 </div>
@@ -133,31 +155,106 @@
    <span class="whatsapp-text">Connect with us</span>
 </a>
 
+<?php if($this->session->flashdata('success')) { ?>
+    <div style="color:green;">
+        <?= $this->session->flashdata('success'); ?>
+    </div>
+<?php } ?>
+
+<?php if($this->session->flashdata('error')) { ?>
+    <div style="color:red;">
+        <?= $this->session->flashdata('error'); ?>
+    </div>
+<?php } ?>
+
+
 </body>
 </html>
 
 <script>
 function submitQuote() {
-  // Simple validation
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const phone = document.getElementById('phone').value;
-  const service = document.getElementById('service').value;
-  const source = document.getElementById('source').value;
-  
-  if (!name || !email || !phone || !service || !source) {
-    alert('Please fill in all required fields.');
-    return;
-  }
-  
-  // For now, just show an alert. In a real app, submit to server.
-  alert('Thank you for your quote request! We will contact you soon.');
-  
-  // Close the modal
-  const modal = bootstrap.Modal.getInstance(document.getElementById('quoteModal'));
-  modal.hide();
-  
-  // Reset form
-  document.getElementById('quoteForm').reset();
+
+    const form = document.getElementById('quoteForm');
+    const formData = new FormData(form);
+    const messageBox = document.getElementById('formMessage');
+    const submitBtn = document.getElementById('submitBtn');
+    const spinner = document.getElementById('btnSpinner');
+    const btnText = document.getElementById('btnText');
+
+    let isValid = true;
+    messageBox.innerHTML = "";
+    document.querySelectorAll('.error-msg').forEach(e => e.remove());
+
+    function showError(input, message) {
+        const error = document.createElement('div');
+        error.className = 'text-danger error-msg mt-1';
+        error.innerText = message;
+        input.parentNode.appendChild(error);
+        isValid = false;
+    }
+
+    const name = form.querySelector('[name="name"]');
+    const email = form.querySelector('[name="email"]');
+    const phone = form.querySelector('[name="phone"]');
+    const service = form.querySelector('[name="service"]');
+    const source = form.querySelector('[name="source"]');
+
+    if (name.value.trim() === '') showError(name, "Name is required");
+
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+    if (email.value.trim() === '') {
+        showError(email, "Email is required");
+    } else if (!emailPattern.test(email.value.trim())) {
+        showError(email, "Enter valid email");
+    }
+
+    if (phone.value.trim() === '') {
+        showError(phone, "Phone number is required");
+    } else if (phone.value.trim().length < 10) {
+        showError(phone, "Enter valid phone number");
+    }
+
+    if (service.value === '') showError(service, "Please select service type");
+    if (source.value === '') showError(source, "Please select source");
+
+    if (!isValid) return;
+
+    spinner.classList.remove('d-none');
+    btnText.innerText = "Submitting...";
+    submitBtn.disabled = true;
+
+    fetch("<?= site_url('user/save_quote') ?>", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+
+        messageBox.innerHTML = `
+            <div class="alert alert-success">
+                ${data}
+            </div>
+        `;
+
+        form.reset();
+
+        setTimeout(() => {
+            const modal = bootstrap.Modal.getInstance(document.getElementById('quoteModal'));
+            modal.hide();
+            messageBox.innerHTML = "";
+        }, 2000);
+    })
+    .catch(() => {
+        messageBox.innerHTML = `
+            <div class="alert alert-danger">
+                Something went wrong!
+            </div>
+        `;
+    })
+    .finally(() => {
+        spinner.classList.add('d-none');
+        btnText.innerText = "Submit Quote Request";
+        submitBtn.disabled = false;
+    });
 }
 </script>

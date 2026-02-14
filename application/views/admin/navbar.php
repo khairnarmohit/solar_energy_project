@@ -20,11 +20,20 @@
       </a>
 
       <ul class="sidebar-nav">
+
         <li class="sidebar-item active">
           <a class="sidebar-link" href="<?=base_url()?>admin">
             <span class="align-middle">Dashboard</span>
           </a>
         </li>
+
+        <li class="sidebar-item">
+  <a class="sidebar-link" href="<?=base_url()?>admin/quotes">
+    <span class="align-middle">Quote Requests</span>
+  </a>
+</li>
+
+
 
         <li class="sidebar-item">
   <a data-bs-toggle="collapse" href="#homePages" class="sidebar-link">

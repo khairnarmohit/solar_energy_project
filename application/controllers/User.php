@@ -179,4 +179,39 @@ public function blog_details($id)
         $this->load->view("user/footer");
     }
 
+public function save_quote()
+{
+    $name     = $this->input->post('name', TRUE);
+    $email    = $this->input->post('email', TRUE);
+    $phone    = $this->input->post('phone', TRUE);
+    $service  = $this->input->post('service', TRUE);
+    $quantity = $this->input->post('quantity', TRUE);
+    $source   = $this->input->post('source', TRUE);
+    $message  = $this->input->post('message', TRUE);
+
+    // Basic Validation
+    if (empty($name) || empty($email) || empty($phone) || empty($service) || empty($source)) {
+        echo "Please fill all required fields!";
+        return;
+    }
+
+    // Insert Data
+    $data = array(
+        'name'         => $name,
+        'email'        => $email,
+        'phone'        => $phone,
+        'service_type' => $service,
+        'quantity'     => $quantity,
+        'source'       => $source,
+        'message'      => $message,
+        'status'       => 'New',
+        'created_at'   => date('Y-m-d H:i:s')
+    );
+
+    if($this->db->insert('quotes', $data)){
+        echo "Quote Submitted Successfully!";
+    } else {
+        echo "Something went wrong. Please try again.";
+    }
+}
 }

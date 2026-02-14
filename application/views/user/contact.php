@@ -25,8 +25,7 @@
     </svg>
 
 </section>
-
-
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 <!-- ================= CONTACT DETAILS ================= -->
 <section class="contact-section">
     <div class="contact-container">
@@ -50,7 +49,8 @@
         <div class="contact-right">
             <h3>Contact Us</h3>
 
-            <form>
+           
+     <form method="post" action="<?= base_url('contact/submit') ?>">
                 <div class="form-row">
                     <div class="form-group">
                         <label>Full Name *</label>
@@ -90,11 +90,9 @@
                         <input type="text">
                     </div>
                 </div>
-
-                <div class="captcha-box">
-                    <input type="checkbox"> I'm not a robot
-                </div>
-
+            <div class="h-captcha" 
+                 data-sitekey="694ee9aa-f820-409e-848a-74fc55fa7196">
+            </div>
                 <button class="btn-connect">CONNECT</button>
             </form>
         </div>
