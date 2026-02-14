@@ -73,7 +73,26 @@
       <li class="sidebar-item">
   <a data-bs-toggle="collapse" href="#aboutPages" class="sidebar-link">
     <span class="align-middle">About Page</span>
-  </a>
+  </a><ul id="aboutPages" class="sidebar-dropdown list-unstyled collapse">
+   
+
+    <li class="sidebar-item">
+      <a class="sidebar-link" href="<?= base_url('about/home_brand') ?>">Brand Section</a>
+    </li>
+
+    <li class="sidebar-item">
+      <a class="sidebar-link" href="<?= base_url('about/home_vision') ?>">Vision Section</a>
+    </li>
+
+    <li class="sidebar-item">
+      <a class="sidebar-link" href="<?= base_url('about/home_team') ?>">Our Team</a>
+    </li>
+
+    <li class="sidebar-item">
+      <a class="sidebar-link" href="<?= base_url('about/home_verticals') ?>">Business Verticals</a>
+    </li>
+  </ul>
+</li>
 
 <li class="sidebar-item">
   <a data-bs-toggle="collapse" href="#productPages" class="sidebar-link">
@@ -185,26 +204,7 @@
 
 
 
-  <ul id="aboutPages" class="sidebar-dropdown list-unstyled collapse">
-   
-
-    <li class="sidebar-item">
-      <a class="sidebar-link" href="<?= base_url('about/home_brand') ?>">Brand Section</a>
-    </li>
-
-    <li class="sidebar-item">
-      <a class="sidebar-link" href="<?= base_url('about/home_vision') ?>">Vision Section</a>
-    </li>
-
-    <li class="sidebar-item">
-      <a class="sidebar-link" href="<?= base_url('about/home_team') ?>">Our Team</a>
-    </li>
-
-    <li class="sidebar-item">
-      <a class="sidebar-link" href="<?= base_url('about/home_verticals') ?>">Business Verticals</a>
-    </li>
-  </ul>
-</li>
+  
 
       <li class="sidebar-item">
   <a data-bs-toggle="collapse" href="#industrialPages" class="sidebar-link">
