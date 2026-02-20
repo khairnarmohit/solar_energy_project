@@ -1,21 +1,22 @@
-# Use lightweight Node image
-FROM node:18-alpine
+# Use official PHP Apache image
+FROM php:8.1-apache
 
-# Create app directory inside container
-WORKDIR /app
+# Enable Apache rewrite module
+RUN a2enmod rewrite
 
-# Copy package files first (for caching)
-COPY package*.json ./
+# Install required PHP extensions
+RUN docker-php-ext-install mysqli
 
-# Install dependencies
-RUN npm install --production
+# Copy project files to Apache directory
+COPY . /var/www/html/
 
-# Copy remaining project files
-COPY . .
+# Set correct permissions
+RUN chown -R www-data:www-data /var/www/html
 
-# Expose app port
-EXPOSE 3306
+# Expose Apache port
+EXPOSE 80
 
-# Start the application
-CMD ["node", "index.js"]
+CMD ["apache2-foreground"]
+
+
 
